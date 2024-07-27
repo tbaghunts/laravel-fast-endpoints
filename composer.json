@@ -1,0 +1,60 @@
+{
+    "name": "baghunts/laravel-fast-endpoints",
+    "description": "Laravel routes new (fast) experience",
+    "type": "library",
+    "version": "1.0.0",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Baghunts\\LaravelFastEndpoint\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Baghunts",
+            "homepage": "https://baghunts.com",
+            "email": "tatul.baghunts@gmail.com",
+            "role": "Creator"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "orchestra/testbench": "@stable",
+        "mockery/mockery": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Baghunts\\LaravelFastEndpoint\\ServiceProvider"
+            ],
+            "aliasses": {
+                "LaravelFastEndpoint": "Baghunts\\LaravelFastEndpoint\\ServiceProvider"
+            }
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/",
+            "Tests\\": "./tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "test": [
+            "@php vendor/bin/phpunit"
+        ]
+    }
+}
