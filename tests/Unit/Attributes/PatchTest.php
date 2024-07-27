@@ -16,7 +16,7 @@ class PatchTest extends MethodTestCase
 
     protected function getPathArg(): string
     {
-        return "path/to/patch";
+        return "/path/to/patch";
     }
 
     public function test_method()

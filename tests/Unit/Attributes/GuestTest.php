@@ -23,7 +23,7 @@ class GuestTest extends TestCase
 
     public function test_guestMiddlewareShouldBeAppendedInsteadOfOverwrite()
     {
-        $this->getInstance(["middleware-1", "middleware-2"]);
+        $this->endpointConfig->setMiddleware(["middleware-1", "middleware-2"]);
 
         $this->assertEquals(
             ["middleware-1", "middleware-2", "guest"],

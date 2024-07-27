@@ -4,6 +4,8 @@ namespace Tests\Unit\Attributes;
 
 use Baghunts\LaravelFastEndpoint\Attributes\WithTrashed;
 
+use Tests\Unit\Attributes\Abstract\TestCase;
+
 class WithTrashedTest extends TestCase
 {
 

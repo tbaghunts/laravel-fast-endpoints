@@ -11,17 +11,14 @@ trait EndpointConfigWhereNumber
         return $this->whereNumber;
     }
 
-    public function setWhereNumber(array $whereNumber): EndpointConfigContract
+    public function setWhereNumber(array|string $whereNumber): EndpointConfigContract
     {
-        $this->whereNumber = $whereNumber;
+        $this->whereNumber = collect($whereNumber)->toArray();
         return $this;
     }
     public function addWhereNumber(array|string $parameters): EndpointConfigContract
     {
-        collect($parameters)->each(function(string $parameter) {
-            $this->whereNumber[] = $parameter;
-        });
-
+        $this->whereNumber = array_merge($this->whereNumber, collect($parameters)->toArray());
         return $this;
     }
 }

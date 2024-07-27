@@ -3,6 +3,7 @@
 namespace Tests\Unit\Attributes;
 
 use Baghunts\LaravelFastEndpoint\Attributes\Middleware;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
 
 use Tests\Unit\Attributes\Abstract\TestCase;
 
@@ -13,11 +14,18 @@ class MiddlewareTest extends TestCase
         return Middleware::class;
     }
 
+    private function makeInstance(string|array $middleware): EndpointConfigContract
+    {
+        return $this->getInstance([
+            "middleware" => $middleware
+        ]);
+    }
+
     public function test_shouldAddSingleMiddlewareToList()
     {
         $this->assertEquals(
             ["web"],
-            $this->getInstance(["web"])->getMiddleware()
+            $this->makeInstance("web")->getMiddleware()
         );
     }
 
@@ -25,7 +33,7 @@ class MiddlewareTest extends TestCase
     {
         $this->assertEquals(
             ["web", "api", "auth"],
-            $this->getInstance(["web", "api", "auth"])->getMiddleware()
+            $this->makeInstance(["web", "api", "auth"])->getMiddleware()
         );
     }
 }

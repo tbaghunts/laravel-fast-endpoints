@@ -2,32 +2,31 @@
 
 namespace Tests\Unit\Attributes;
 
-use Orchestra\Testbench\TestCase;
-
 use Baghunts\LaravelFastEndpoint\Attributes\WhereIn;
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+
+use Tests\Unit\Attributes\Abstract\TestCase;
 
 class WhereInTest extends TestCase
 {
-    private ?EndpointConfig $endpointConfig;
-
-    public function getInstance(array|string $name, array $values): WhereIn
+    protected function getNamespace(): string
     {
-        $this->endpointConfig = new EndpointConfig();
+        return WhereIn::class;
+    }
 
-        $instance = new WhereIn($name, $values);
-        $instance->apply($this->endpointConfig);
-
-        return $instance;
+    private function makeInstance(
+        array|string $parameters,
+        array $values
+    ): EndpointConfigContract
+    {
+        return $this->getInstance([
+            "parameters" => $parameters,
+            "values" => $values,
+        ]);
     }
 
     public function test_singleNameCase()
     {
-        $this->getInstance(
-            "status",
-            [1, 2, 3]
-        );
-
         $this->assertEquals(
             [
                 [
@@ -35,19 +34,20 @@ class WhereInTest extends TestCase
                     [1, 2, 3]
                 ]
             ],
-            $this->endpointConfig->getWhereIn()
+            $this->makeInstance("status", [1,2,3])->getWhereIn()
         );
     }
 
     public function test_multipleNameCase()
     {
-        $this->getInstance(["status", "user_status"], [1, 2]);
-
         $this->assertEquals(
             [
                 [["status", "user_status"], [1, 2]],
             ],
-            $this->endpointConfig->getWhereIn()
+            $this->makeInstance(
+                ["status", "user_status"],
+                [1, 2]
+            )->getWhereIn()
         );
     }
 

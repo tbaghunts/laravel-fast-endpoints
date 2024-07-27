@@ -11,11 +11,7 @@ trait EndpointConfigMiddleware
 
     public function setMiddleware(array|string $middleware): self
     {
-        if (is_string($middleware)) {
-            $middleware = [$middleware];
-        }
-
-        $this->middleware = $middleware;
+        $this->middleware = collect($middleware)->toArray();
 
         return $this;
     }

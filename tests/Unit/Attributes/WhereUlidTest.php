@@ -1,30 +1,30 @@
 <?php
 
-namespace Tests\Unit\Attributes;
+namespace Baghunts\tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\WhereAlpha;
+use Baghunts\LaravelFastEndpoint\Attributes\WhereUlid;
 
 use Tests\Unit\Attributes\Abstract\SingleParametricWhereTestCase;
 
-class WhereAlphaTest extends SingleParametricWhereTestCase
+class WhereUlidTest extends SingleParametricWhereTestCase
 {
     protected function getNamespace(): string
     {
-        return WhereAlpha::class;
+        return WhereUlid::class;
     }
 
     protected function getSingleValue(): string
     {
-        return "name";
+        return "param";
     }
 
     protected function getMultipleValues(): array
     {
-        return ["username", "password"];
+        return ["first-param", "second-param"];
     }
 
     protected function getMethodName(): string
     {
-        return "getWhereAlpha";
+        return "getWhereUlid";
     }
 }

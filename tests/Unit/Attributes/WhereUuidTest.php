@@ -2,43 +2,29 @@
 
 namespace Tests\Unit\Attributes;
 
-use Orchestra\Testbench\TestCase;
-
 use Baghunts\LaravelFastEndpoint\Attributes\WhereUuid;
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
 
-class WhereUuidTest extends TestCase
+use Tests\Unit\Attributes\Abstract\SingleParametricWhereTestCase;
+
+class WhereUuidTest extends SingleParametricWhereTestCase
 {
-    private ?EndpointConfig $endpointConfig;
-
-    public function getInstance(array|string $parameters): WhereUuid
+    protected function getNamespace(): string
     {
-        $this->endpointConfig = new EndpointConfig();
-
-        $instance = new WhereUuid($parameters);
-        $instance->apply($this->endpointConfig);
-
-        return $instance;
+        return WhereUuid::class;
     }
 
-    public function test_singleParameterCase()
+    protected function getSingleValue(): string
     {
-        $this->getInstance("secure");
-
-        $this->assertEquals(
-            ["secure"],
-            $this->endpointConfig->getWhereUuid()
-        );
+        return "param";
     }
 
-    public function test_multipleParametersCase()
+    protected function getMultipleValues(): array
     {
-        $this->getInstance(["secure", "user", "transaction", "history"]);
-
-        $this->assertEquals(
-            ["secure", "user", "transaction", "history"],
-            $this->endpointConfig->getWhereUuid()
-        );
+        return ["first-param", "second-param"];
     }
 
+    protected function getMethodName(): string
+    {
+        return "getWhereUuid";
+    }
 }

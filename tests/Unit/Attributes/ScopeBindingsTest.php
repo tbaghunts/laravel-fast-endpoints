@@ -2,46 +2,38 @@
 
 namespace Tests\Unit\Attributes;
 
-use Orchestra\Testbench\TestCase;
-
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
 use Baghunts\LaravelFastEndpoint\Attributes\ScopeBindings;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+
+use Tests\Unit\Attributes\Abstract\TestCase;
 
 class ScopeBindingsTest extends TestCase
 {
-    private ?EndpointConfig $endpointConfig;
-
-    public function getInstance(null|bool|int $scopeBindings = 0): ScopeBindings
+    protected function getNamespace(): string
     {
-        $this->endpointConfig = new EndpointConfig();
+        return ScopeBindings::class;
+    }
 
-        $instance = !is_numeric($scopeBindings) ? new ScopeBindings($scopeBindings) : new ScopeBindings();
-        $instance->apply($this->endpointConfig);
-
-        return $instance;
+    private function makeInstance(?bool $scopeBindings): EndpointConfigContract
+    {
+        return $this->getInstance([
+            "scopeBindings" => $scopeBindings,
+        ]);
     }
 
     public function test_defaultShouldBeTrue()
     {
-        $this->getInstance();
-
-        $this->assertTrue($this->endpointConfig->getScopeBindings());
+        $this->assertTrue($this->getInstance()->getScopeBindings());
     }
-
 
     public function test_booleanValues()
     {
-        $this->getInstance(false);
-        $this->assertFalse($this->endpointConfig->getScopeBindings());
-
-        $this->getInstance(true);
-        $this->assertTrue($this->endpointConfig->getScopeBindings());
+        $this->assertFalse($this->makeInstance(false)->getScopeBindings());
+        $this->assertTrue($this->makeInstance(true)->getScopeBindings());
     }
 
     public function test_nullValue()
     {
-        $this->getInstance(null);
-
-        $this->assertNull($this->endpointConfig->getScopeBindings());
+        $this->assertNull($this->makeInstance(null)->getScopeBindings());
     }
 }
