@@ -20,7 +20,6 @@ abstract class TestCase extends TestbenchTestCase
         $this->endpointConfig = new EndpointConfig();
     }
 
-
     protected function getInstance(array $args = []): EndpointConfigContract
     {
         /**

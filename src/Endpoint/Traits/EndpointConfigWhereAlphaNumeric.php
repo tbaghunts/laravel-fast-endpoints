@@ -11,17 +11,14 @@ trait EndpointConfigWhereAlphaNumeric
         return $this->whereAlphaNumeric;
     }
 
-    public function setWhereAlphaNumeric(array $whereAlphaNumeric): EndpointConfigContract
+    public function setWhereAlphaNumeric(array|string $whereAlphaNumeric): EndpointConfigContract
     {
-        $this->whereAlphaNumeric = $whereAlphaNumeric;
+        $this->whereAlphaNumeric = collect($whereAlphaNumeric)->toArray();
         return $this;
     }
     public function addWhereAlphaNumeric(array|string $parameters): EndpointConfigContract
     {
-        collect($parameters)->each(function(string $parameter) {
-            $this->whereAlphaNumeric[] = $parameter;
-        });
-
+        $this->whereAlphaNumeric = array_merge($this->whereAlphaNumeric, collect($parameters)->toArray());
         return $this;
     }
 }

@@ -11,17 +11,14 @@ trait EndpointConfigWhereAlpha
         return $this->whereAlpha;
     }
 
-    public function setWhereAlpha(array $whereAlpha): EndpointConfigContract
+    public function setWhereAlpha(array|string $whereAlpha): EndpointConfigContract
     {
-        $this->whereAlpha = $whereAlpha;
+        $this->whereAlpha = collect($whereAlpha)->toArray();
         return $this;
     }
     public function addWhereAlpha(array|string $parameters): EndpointConfigContract
     {
-        collect($parameters)->each(function(string $parameter) {
-            $this->whereAlpha[] = $parameter;
-        });
-
+        $this->whereAlpha = array_merge($this->whereAlpha, collect($parameters)->toArray());
         return $this;
     }
 }

@@ -2,44 +2,38 @@
 
 namespace Tests\Unit\Attributes;
 
-use Orchestra\Testbench\TestCase;
-
 use Baghunts\LaravelFastEndpoint\Attributes\Where;
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+
+use Tests\Unit\Attributes\Abstract\TestCase;
 
 class WhereTest extends TestCase
 {
-    private EndpointConfig $endpointConfig;
-
-    private function getInstance(string|array $name, ?string $expression = null): void
+    protected function getNamespace(): string
     {
-        $this->endpointConfig = new EndpointConfig();
+        return Where::class;
+    }
 
-        $instance = new Where($name, $expression);
-        $instance->apply($this->endpointConfig);
-
+    private function makeInstance(string|array $name, ?string $expression = null): EndpointConfigContract
+    {
+        return $this->getInstance([
+            "name" => $name,
+            "expression" => $expression,
+        ]);
     }
 
     public function test_singleWhereShouldBeAddedToList()
     {
-        $this->getInstance("whereName", "whereExpression");
-
         $this->assertEquals(
             [
                 ["whereName", "whereExpression"],
             ],
-            $this->endpointConfig->getWhere()
+            $this->makeInstance("whereName", "whereExpression")->getWhere()
         );
     }
 
     public function test_multipleWhereShouldBeAddedToList()
     {
-        $this->getInstance([
-            "where1" => "where1Expression",
-            "where2" => "where2Expression",
-            "where3" => "where3Expression",
-        ]);
-
         $this->assertEquals(
             [
                 [
@@ -48,7 +42,11 @@ class WhereTest extends TestCase
                     "where3" => "where3Expression",
                 ],
             ],
-            $this->endpointConfig->getWhere()
+            $this->makeInstance([
+                "where1" => "where1Expression",
+                "where2" => "where2Expression",
+                "where3" => "where3Expression",
+            ])->getWhere()
         );
     }
 }

@@ -2,29 +2,30 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\WhereNumber;
+use Baghunts\LaravelFastEndpoint\Attributes\WhereAlphaNumeric;
 
 use Tests\Unit\Attributes\Abstract\SingleParametricWhereTestCase;
 
-class WhereNumberTest extends SingleParametricWhereTestCase
+class WhereAlphaNumericTest extends SingleParametricWhereTestCase
 {
+
     protected function getNamespace(): string
     {
-        return WhereNumber::class;
+        return WhereAlphaNumeric::class;
     }
 
     protected function getMethodName(): string
     {
-        return 'getWhereNumber';
+        return 'getWhereAlphaNumeric';
     }
 
     protected function getSingleValue(): string
     {
-        return "id";
+        return "sku";
     }
 
     protected function getMultipleValues(): array
     {
-        return ["id", "age", "status"];
+        return ["sku", "uuid"];
     }
 }

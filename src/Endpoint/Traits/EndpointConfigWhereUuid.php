@@ -11,17 +11,14 @@ trait EndpointConfigWhereUuid
         return $this->whereUuid;
     }
 
-    public function setWhereUuid(array $whereUuid): EndpointConfigContract
+    public function setWhereUuid(array|string $whereUuid): EndpointConfigContract
     {
-        $this->whereUuid = $whereUuid;
+        $this->whereUuid = collect($whereUuid)->toArray();
         return $this;
     }
     public function addWhereUuid(array|string $parameters): EndpointConfigContract
     {
-        collect($parameters)->each(function (string $parameter) {
-            $this->whereUuid[] = $parameter;
-        });
-
+        $this->whereUuid = array_merge($this->whereUuid, collect($parameters)->toArray());
         return $this;
     }
 }

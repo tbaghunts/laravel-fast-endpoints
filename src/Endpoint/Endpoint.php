@@ -2,8 +2,8 @@
 
 namespace Baghunts\LaravelFastEndpoint\Endpoint;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
 use Baghunts\LaravelFastEndpoint\Contracts\EndpointContract;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
 
 abstract class Endpoint implements EndpointContract
 {

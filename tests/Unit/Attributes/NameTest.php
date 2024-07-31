@@ -17,7 +17,7 @@ class NameTest extends TestCase
     {
         $this->assertEquals(
             null,
-            $this->getInstance()->getName()
+            $this->endpointConfig->getName()
         );
     }
 
@@ -25,7 +25,9 @@ class NameTest extends TestCase
     {
         $this->assertEquals(
             "cool.route.name",
-            $this->getInstance(["cool.route.name"])->getName()
+            $this->getInstance([
+                "name" => "cool.route.name",
+            ])->getName()
         );
     }
 }

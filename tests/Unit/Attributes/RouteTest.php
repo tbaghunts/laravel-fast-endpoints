@@ -4,6 +4,7 @@ namespace Tests\Unit\Attributes;
 
 use Baghunts\LaravelFastEndpoint\Attributes\Route;
 use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
 
 use Tests\Unit\Attributes\Abstract\TestCase;
 
@@ -14,9 +15,20 @@ class RouteTest extends TestCase
         return Route::class;
     }
 
+    private function makeInstance(string $path, ...$args): EndpointConfigContract
+    {
+        return $this->getInstance([
+            "path" => $path,
+            "args" => $args,
+        ]);
+    }
+
     public function test_method()
     {
-        $config = $this->getInstance(["/route/with/single/method", EnumEndpointMethod::POST]);
+        $config = $this->makeInstance(
+            "/route/with/single/method",
+            EnumEndpointMethod::POST
+        );
 
         $this->assertEquals(
             [EnumEndpointMethod::POST],
@@ -30,12 +42,12 @@ class RouteTest extends TestCase
 
     public function test_methods()
     {
-        $config = $this->getInstance([
+        $config = $this->makeInstance(
             "/route/with/multi/methods",
             EnumEndpointMethod::GET,
             EnumEndpointMethod::POST,
             [EnumEndpointMethod::DELETE, EnumEndpointMethod::OPTIONS]
-        ]);
+        );
 
         $this->assertEquals(
             [
