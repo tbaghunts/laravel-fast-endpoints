@@ -13,15 +13,13 @@ abstract class RouteWherePipe extends RoutePipe
 
     public function handle(RouteGeneratorContract $generator, Closure $next): void
     {
+        $method = $this->getRouteMethodKey();
         $values = $this->getRouteProperty($generator);
+
         if (!empty($values)) {
+            $router = $generator->getRoute();
             foreach ($values as $value) {
-                $generator->addStateMent(
-                    sprintf(
-                        "%s('%s')",
-                        $this->getRouteMethodKey(), $value
-                    )
-                );
+                $router->{$method}($value);
             }
         }
 

@@ -3,18 +3,6 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Fast endpoints routes prefix
-    |--------------------------------------------------------------------------
-    |
-    | All routes declared as fast-endpoints will wrapped by this prefix. If you
-    | don't want to have a prefix, leave this value empty.
-    |
-    */
-
-    "prefix" => "fast",
-
-    /*
-    |--------------------------------------------------------------------------
     | Fast endpoints filesystem destination
     |--------------------------------------------------------------------------
     |
@@ -25,16 +13,77 @@ return [
     |
     */
 
-    "dist" => app_path("Http/Fast"),
+    "dist" => app_path("Http/Endpoints"),
 
     /*
     |--------------------------------------------------------------------------
-    | Fast endpoints cache key
+    | Fast endpoints routes prefix
     |--------------------------------------------------------------------------
     |
-    | The fast-endpoints package routes caching key
+    | All routes declared as fast-endpoints will wrapped by this prefix.
+    | If you don't want to have a prefix, leave this value empty.
     |
     */
 
-    "cache_key" => "fast-endpoints-cache",
+    "prefix" => "fast",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Fast endpoints routes domain
+    |--------------------------------------------------------------------------
+    |
+    | TODO: Write comment
+    |
+    */
+    "domain" => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Fast endpoints routes middleware
+    |--------------------------------------------------------------------------
+    |
+    | TODO: Write comment
+    |
+    */
+    "middleware" => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Fast endpoints routes groups
+    |--------------------------------------------------------------------------
+    |
+    | TODO: Write comment
+    |
+    */
+    "groups" => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Fast endpoints routes namespaces
+    |--------------------------------------------------------------------------
+    |
+    | TODO: Write comment
+    |
+    */
+    "namespaces" => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Fast endpoints request handler
+    |--------------------------------------------------------------------------
+    |
+    | TODO: Write comment
+    |
+    */
+    "request" => \Illuminate\Support\Facades\Request::class,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Fast endpoints response handler
+    |--------------------------------------------------------------------------
+    |
+    | TODO: Write comment
+    |
+    */
+    "response" => \Illuminate\Support\Facades\Response::class,
 ];

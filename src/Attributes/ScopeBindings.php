@@ -4,7 +4,7 @@ namespace Baghunts\LaravelFastEndpoint\Attributes;
 
 use Attribute;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\EndpointConfigScopeBindingsContract;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\ScopeBindingsContract;
 
 #[Attribute(Attribute::TARGET_CLASS)]
 class ScopeBindings extends EndpointAttribute
@@ -15,7 +15,7 @@ class ScopeBindings extends EndpointAttribute
     {
     }
 
-    public function apply(EndpointConfigScopeBindingsContract $endpointConfig): self
+    public function apply(ScopeBindingsContract $endpointConfig): self
     {
         $endpointConfig->setScopeBindings($this->scopeBindings);
         return $this;

@@ -2,10 +2,11 @@
 
 namespace Baghunts\LaravelFastEndpoint\Contracts;
 
+use Illuminate\Routing\Route;
+
 interface RouteGeneratorContract
 {
-    public function output(): string;
-    public function getEndpointClassNamespace(): string;
-    public function addStatement(string $statement): self;
+    public function getRoute(): ?Route;
+    public function generate(): ?Route;
     public function getEndpointConfiguration(): EndpointConfigContract;
 }

@@ -55,6 +55,10 @@
         ],
         "test": [
             "@php vendor/bin/phpunit"
+        ],
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "lint": [
+            "@php vendor/bin/phpstan analyse"
         ]
     }
 }

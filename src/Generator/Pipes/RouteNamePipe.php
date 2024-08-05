@@ -12,12 +12,7 @@ class RouteNamePipe extends RoutePipe
     {
         $endpointName = $generator->getEndpointConfiguration()->getName();
         if (!empty($endpointName)) {
-            $generator->addStateMent(
-                sprintf(
-                    "name('%s')",
-                    $endpointName
-                )
-            );
+            $generator->getRoute()->name($endpointName);
         }
 
         $next($generator);

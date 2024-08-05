@@ -4,7 +4,7 @@ namespace Baghunts\LaravelFastEndpoint\Attributes;
 
 use Attribute;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\EndpointConfigWhereContract;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WhereContract;
 
 #[Attribute(Attribute::TARGET_CLASS | Attribute::IS_REPEATABLE)]
 class Where extends EndpointAttribute
@@ -16,7 +16,7 @@ class Where extends EndpointAttribute
     {
     }
 
-    public function apply(EndpointConfigWhereContract $endpointConfig): self
+    public function apply(WhereContract $endpointConfig): self
     {
         $endpointConfig->addWhere($this->name, $this->expression);
         return $this;

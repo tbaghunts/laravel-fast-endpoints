@@ -12,12 +12,7 @@ class WherePipe extends RoutePipe
     {
         $endpointWhere = $generator->getEndpointConfiguration()->getWhere();
         if (!empty($endpointWhere)) {
-            $generator->addStatement(
-                sprintf(
-                    "setWheres(json_decode('%s',true))",
-                    json_encode($endpointWhere)
-                )
-            );
+            $generator->getRoute()->where($endpointWhere);
         }
 
         $next($generator);

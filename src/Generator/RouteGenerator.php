@@ -2,75 +2,141 @@
 
 namespace Baghunts\LaravelFastEndpoint\Generator;
 
+use Illuminate\Support\Str;
+use Illuminate\Routing\Route;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Pipeline;
 
+use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
 use Baghunts\LaravelFastEndpoint\Contracts\{
     RouteGeneratorContract,
-    EndpointConfigContract
+    EndpointConfigContract,
 };
 use Baghunts\LaravelFastEndpoint\Generator\Pipes\{
+    CanPipe,
+    BlockPipe,
+    GroupPipe,
     WherePipe,
+    WhereInPipe,
+    DefaultsPipe,
+    FallbackPipe,
     RouteNamePipe,
     WhereUuidPipe,
     WhereUlidPipe,
     WhereAlphaPipe,
+    MiddlewarePipe,
     WithTrashedPipe,
     WhereNumberPipe,
     ScopeBindingsPipe,
-    RouteDeclarationPipe,
+    WithoutBlockingPipe,
+    WithoutMiddlewarePipe,
     WhereAlphaNumericPipe
 };
 
 class RouteGenerator implements RouteGeneratorContract
 {
-    private array $statements = [];
+    private ?Route $route = null;
 
     public function __construct(
-        private readonly string $classNamespace,
+        private readonly Router                 $router,
+        private readonly string                 $classNamespace,
         private readonly EndpointConfigContract $endpointConfig,
     )
     {
+        $this->initRoute();
     }
 
+    private function initRoute(): void
+    {
+        $methods = $this->getMethods();
+        $path = $this->endpointConfig->getPath();
+
+        if (empty($methods) || empty($path)) {
+            return;
+        }
+
+        $this->route = $this->router->addRoute($methods, $path, $this->classNamespace);
+    }
+    private function getMethods(): array
+    {
+        return array_map(fn(EnumEndpointMethod $method) => $method->value, $this->endpointConfig->getMethod());
+    }
+
+    public function getRoute(): ?Route
+    {
+        return $this->route;
+    }
     public function getEndpointConfiguration(): EndpointConfigContract
     {
         return $this->endpointConfig;
     }
-    public function getEndpointClassNamespace(): string
+
+    public function generate(): ?Route
     {
-        return $this->classNamespace;
+        if (!$this->getRoute()) {
+            return null;
+        }
+
+        return $this
+            ->margeNamespaceConfig()
+            ->execPipes();
     }
 
-    public function addStatement(string $statement): self
+    protected function margeNamespaceConfig(): self
     {
-        $this->statements[] = $statement;
+        $namespaceScopedConfigs = $this->detectNamespaceScopeConfig();
+        if (!is_null($namespaceScopedConfigs)) {
+            $this->endpointConfig->mergeCollection(
+                $namespaceScopedConfigs
+            );
+        }
+
         return $this;
     }
 
-    public function output(): string
+    protected function detectNamespaceScopeConfig(): ?array
     {
-        return $this->generateCode();
+        $namespaces = config("fast-endpoints.namespaces");
+
+        if (empty($namespaces)) {
+            return null;
+        }
+
+        $strOf = Str::of($this->classNamespace);
+
+        return collect($namespaces)
+            ->filter(fn(array $config, string $namespace) => $strOf->contains($namespace))
+            ->values()
+            ->toArray();
     }
-    protected function generateCode(): string
+
+    protected function execPipes(): ?Route
     {
-        Pipeline::send($this)
+        return Pipeline::send($this)
+            // Should be first for default configs and groups configs merge,
+            // before a main pipeline execution
+            ->through(GroupPipe::class)
             ->through([
-                RouteDeclarationPipe::class, // Required to be the first
+                DefaultsPipe::class,
+                RouteNamePipe::class,
+
+                CanPipe::class,
+                BlockPipe::class,
+                MiddlewarePipe::class,
+                WithoutBlockingPipe::class,
+                WithoutMiddlewarePipe::class,
+
+                FallbackPipe::class,
+                WithTrashedPipe::class,
+                ScopeBindingsPipe::class,
 
                 WherePipe::class,
-                RouteNamePipe::class,
+                WhereInPipe::class,
                 WhereUuidPipe::class,
                 WhereUlidPipe::class,
                 WhereAlphaPipe::class,
                 WhereNumberPipe::class,
-                WithTrashedPipe::class,
-                ScopeBindingsPipe::class,
                 WhereAlphaNumericPipe::class,
             ])->thenReturn();
-
-        return sprintf(
-            "%s;",
-            implode("->", $this->statements),
-        );
     }
 }

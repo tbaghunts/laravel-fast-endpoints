@@ -4,7 +4,7 @@ namespace Baghunts\LaravelFastEndpoint\Attributes;
 
 use Attribute;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\EndpointConfigWhereUlidContract;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WhereUlidContract;
 
 #[Attribute(Attribute::TARGET_CLASS | Attribute::IS_REPEATABLE)]
 class WhereUlid extends EndpointAttribute
@@ -15,7 +15,7 @@ class WhereUlid extends EndpointAttribute
     {
     }
 
-    public function apply(EndpointConfigWhereUlidContract $endpointConfig): self
+    public function apply(WhereUlidContract $endpointConfig): self
     {
         $endpointConfig->addWhereUlid($this->parameters);
         return $this;

@@ -31,6 +31,11 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->bootCommands();
     }
 
+    public function register(): void
+    {
+        $this->mergeConfigFrom(__DIR__ . '/config/fast-endpoints.php', 'fast-endpoints');
+    }
+
     private function binding(): void
     {
         $this->app->bind(EndpointConfigContract::class, EndpointConfig::class);
@@ -38,8 +43,8 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->app->bind(RouterGeneratorContract::class, RouterGenerator::class);
         $this->app->bind(ScannerContract::class,  function () {
             return $this->app->make(Scanner::class, [
+                "signature" => Endpoint::class,
                 "dir" => config('fast-endpoints.dist'),
-                "signature" => Endpoint::class
             ]);
         });
     }
@@ -49,19 +54,15 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->publishes([
             __DIR__ . "/config/fast-endpoints.php" => config_path('fast-endpoints.php'),
         ]);
-        $this->mergeConfigFrom(__DIR__ . '/config/fast-endpoints.php', 'fast-endpoints');
     }
 
     private function bootRouters(): void
     {
-        if (app()->runningInConsole()) {
+        if ($this->app->routesAreCached()) {
             return;
         }
 
-        [$tmpPath, $file] = app(RouterGeneratorContract::class)->getRoutesGeneratedFileMeta();
-
-        $this->loadRoutesFrom($tmpPath);
-        fclose($file);
+        app(RouterGeneratorContract::class)->generate();
     }
 
     private function bootCommands(): void

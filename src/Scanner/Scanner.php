@@ -6,7 +6,9 @@ use ReflectionClass;
 use ReflectionAttribute;
 use ReflectionException;
 
-use Illuminate\Support\Collection;
+use RecursiveIteratorIterator;
+use RecursiveDirectoryIterator;
+
 use Illuminate\Support\Facades\File;
 
 use Baghunts\LaravelFastEndpoint\Contracts\ScannerContract;
@@ -24,37 +26,44 @@ class Scanner implements ScannerContract
         private readonly string $signature
     )
     {
-        $this->files = $this->findPHPFiles();
+        $this->files = $this->findPhpFiles();
+    }
+
+    public function getFiles(): array
+    {
+        return $this->files;
     }
 
     /**
      * @throws ReflectionException
      */
-    public function findEndpoints(): Collection
+    public function findEndpoints(): array
     {
         $data = [];
 
         foreach ($this->findClasses() as $class) {
             $reflectionClass = new ReflectionClass($class);
 
-            if ($reflectionClass->isSubclassOf($this->signature)) {
-                $endpointConfig = $this->getEndpointConfiguration($reflectionClass);
-                if (empty($endpointConfig->getMethod())) {
-                    continue;
-                }
-
-                $data[$reflectionClass->getName()] = $this->getEndpointConfiguration($reflectionClass);
+            if (!$reflectionClass->isSubclassOf($this->signature)) {
+                continue;
             }
+
+            $endpointConfig = $this->getEndpointConfiguration($reflectionClass);
+            if (empty($endpointConfig->getMethod())) {
+                continue;
+            }
+
+            $data[$reflectionClass->getName()] = $endpointConfig;
         }
 
-        return collect($data);
+        return $data;
     }
 
     protected function findClasses(): array
     {
         $data = [];
 
-        foreach ($this->files as $filePath) {
+        foreach ($this->getFiles() as $filePath) {
             $fileClassNamespace = $this->getClassNamespace($filePath);
             if (is_null($fileClassNamespace)) {
                 continue;
@@ -66,7 +75,7 @@ class Scanner implements ScannerContract
         return $data;
     }
 
-    protected function findPHPFiles(): array
+    protected function findPhpFiles(): array
     {
         if (!File::exists($this->dir)) {
             return [];
@@ -74,8 +83,8 @@ class Scanner implements ScannerContract
 
         $data = [];
 
-        $iterator = new \RecursiveIteratorIterator(
-            new \RecursiveDirectoryIterator($this->dir)
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($this->dir)
         );
 
         foreach ($iterator as $file) {
@@ -83,7 +92,8 @@ class Scanner implements ScannerContract
                 continue;
             }
 
-            if (pathinfo($file->getFilename(), PATHINFO_EXTENSION) === 'php') {
+            $file_extension = pathinfo($file->getFilename(), PATHINFO_EXTENSION);
+            if ($file_extension === 'php') {
                 $data[] = $file->getPathname();
             }
         }
@@ -111,7 +121,6 @@ class Scanner implements ScannerContract
 
     protected function getEndpointConfiguration(ReflectionClass $reflectionClass): EndpointConfigContract
     {
-
         $endpointConfigContract = app(EndpointConfigContract::class);
         $endpointAttributes = $reflectionClass->getAttributes(
             EndpointAttributeContract::class,
@@ -128,5 +137,4 @@ class Scanner implements ScannerContract
 
         return $endpointConfigContract;
     }
-
 }

@@ -4,7 +4,7 @@ namespace Baghunts\LaravelFastEndpoint\Attributes;
 
 use Attribute;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\EndpointConfigMethodContract;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\MethodContract;
 
 #[Attribute(Attribute::TARGET_CLASS)]
 class Name extends EndpointAttribute
@@ -15,7 +15,7 @@ class Name extends EndpointAttribute
     {
     }
 
-    public function apply(EndpointConfigMethodContract $endpointConfig): self
+    public function apply(MethodContract $endpointConfig): self
     {
         $endpointConfig->setName($this->name);
         return $this;

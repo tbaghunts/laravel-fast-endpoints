@@ -3,7 +3,7 @@
 namespace Baghunts\LaravelFastEndpoint\Attributes;
 
 use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\EndpointConfigMethodContract;
+use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\MethodContract;
 
 abstract class Method extends EndpointAttribute
 {
@@ -15,7 +15,7 @@ abstract class Method extends EndpointAttribute
     {
     }
 
-    public function apply(EndpointConfigMethodContract $endpointConfig): self
+    public function apply(MethodContract $endpointConfig): self
     {
         $endpointConfig->setMethod($this->method);
         $endpointConfig->setPath($this->path);
