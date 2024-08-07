@@ -22,7 +22,7 @@ class WhereTest extends EndpointConfigTestCase
 
         $this->endpointConfig->addWhere("where-name", "where-expression");
         $this->assertEquals(
-            ["where-1", "where-2", ["where-name", "where-expression"]],
+            ["where-1", "where-2", "where-name" => "where-expression"],
             $this->endpointConfig->getWhere()
         );
     }
@@ -34,7 +34,7 @@ class WhereTest extends EndpointConfigTestCase
         // On multiple inserting expression should be skipped
         $this->endpointConfig->addWhere(["where-name-1" => 1, "where-name-2" => 2], "where-expression");
         $this->assertEquals(
-            ["where-1", "where-2", ["where-name-1" => 1, "where-name-2" => 2]],
+            ["where-1", "where-2", "where-name-1" => 1, "where-name-2" => 2],
             $this->endpointConfig->getWhere()
         );
     }

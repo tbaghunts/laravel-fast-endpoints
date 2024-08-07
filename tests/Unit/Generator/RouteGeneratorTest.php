@@ -110,7 +110,7 @@ class RouteGeneratorTest extends TestCase
             EnumEndpointMethod::ANY,
             EnumEndpointMethod::OPTIONS,
         ]);
-        $this->assertEquals(["PUT", "ANY", "OPTIONS"], $method->invoke($instance));
+        $this->assertEquals("any", $method->invoke($instance));
     }
 
     public function test_routePipesShouldNotBeExecutedIfRouteIsNotAdded()

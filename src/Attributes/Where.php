@@ -11,7 +11,7 @@ class Where extends EndpointAttribute
 {
     public function __construct(
         private readonly string|array $name,
-        private readonly ?string $expression,
+        private readonly ?string $expression = null,
     )
     {
     }

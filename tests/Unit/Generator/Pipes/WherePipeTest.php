@@ -28,7 +28,7 @@ class WherePipeTest extends PipeTestCase
             "guid" => "uuid",
             "name" => "string",
         ]);
-        $this->routeMock->expects($this->once())->method('where')->with([
+        $this->routeMock->expects($this->once())->method('setWheres')->with([
             "in" => [1, 2],
             "guid" => "uuid",
             "name" => "string",

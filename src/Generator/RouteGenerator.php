@@ -19,7 +19,6 @@ use Baghunts\LaravelFastEndpoint\Generator\Pipes\{
     WherePipe,
     WhereInPipe,
     DefaultsPipe,
-    FallbackPipe,
     RouteNamePipe,
     WhereUuidPipe,
     WhereUlidPipe,
@@ -51,15 +50,34 @@ class RouteGenerator implements RouteGeneratorContract
         $methods = $this->getMethods();
         $path = $this->endpointConfig->getPath();
 
-        if (empty($methods) || empty($path)) {
+        $isNotProcessableRoute = empty($methods) || empty($path);
+
+        if ($isNotProcessableRoute) {
             return;
         }
 
-        $this->route = $this->router->addRoute($methods, $path, $this->classNamespace);
+        $this->route = $this->createRoute($methods, $path);
     }
-    private function getMethods(): array
+    private function getMethods(): array|string
     {
-        return array_map(fn(EnumEndpointMethod $method) => $method->value, $this->endpointConfig->getMethod());
+        $data = [];
+
+        foreach ($this->endpointConfig->getMethod() as $method) {
+            if ($method === EnumEndpointMethod::ANY) {
+                return "any";
+            }
+
+            $data[] = $method->value;
+        }
+
+        return $data;
+    }
+    private function createRoute(array|string $methods, string $path): Route
+    {
+        return match ($methods) {
+            "any" => $this->router->any($path, $this->classNamespace),
+            default => $this->router->addRoute($methods, $path, $this->classNamespace),
+        };
     }
 
     public function getRoute(): ?Route
@@ -113,10 +131,11 @@ class RouteGenerator implements RouteGeneratorContract
     protected function execPipes(): ?Route
     {
         return Pipeline::send($this)
-            // Should be first for default configs and groups configs merge,
-            // before a main pipeline execution
-            ->through(GroupPipe::class)
             ->through([
+                // Should be first for default configs and groups configs merge,
+                // before a main pipeline execution
+                GroupPipe::class,
+
                 DefaultsPipe::class,
                 RouteNamePipe::class,
 
@@ -126,7 +145,6 @@ class RouteGenerator implements RouteGeneratorContract
                 WithoutBlockingPipe::class,
                 WithoutMiddlewarePipe::class,
 
-                FallbackPipe::class,
                 WithTrashedPipe::class,
                 ScopeBindingsPipe::class,
 

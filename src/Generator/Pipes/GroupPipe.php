@@ -17,7 +17,6 @@ class GroupPipe extends RoutePipe
 
         $groupsMergerIsPossible = !empty($configGroups) && !empty($groups);
 
-
         if ($groupsMergerIsPossible) {
             $discoveredGroups = collect($groups)
                 ->filter(fn(string $group) => array_key_exists($group, $configGroups))

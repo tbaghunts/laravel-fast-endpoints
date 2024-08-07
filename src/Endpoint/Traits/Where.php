@@ -17,12 +17,9 @@ trait Where
     public function addWhere(array|string $name, ?string $expression = null): self
     {
         if (is_array($name)) {
-            $this->where[] = $name;
+            $this->where = array_merge($this->where, $name);
         } else {
-            $this->where[] = [
-                $name,
-                $expression,
-            ];
+            $this->where[$name] = $expression;
         }
 
         return $this;

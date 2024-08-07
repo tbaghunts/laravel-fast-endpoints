@@ -6,7 +6,7 @@ use Attribute;
 
 use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\GroupContract;
 
-#[Attribute(Attribute::TARGET_CLASS | Attribute::TARGET_PROPERTY)]
+#[Attribute(Attribute::TARGET_CLASS | Attribute::IS_REPEATABLE)]
 class Group extends EndpointAttribute
 {
     public function __construct(

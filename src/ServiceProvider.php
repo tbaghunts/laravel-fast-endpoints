@@ -5,7 +5,7 @@ namespace Baghunts\LaravelFastEndpoint;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Cache\Console\ClearCommand as IlluminateClearCommand;
-use \Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
+use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
 use Baghunts\LaravelFastEndpoint\Scanner\Scanner;
 use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;

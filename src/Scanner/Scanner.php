@@ -19,6 +19,10 @@ class Scanner implements ScannerContract
 {
     private array $files;
 
+    private array $endpoints = [];
+
+    private array $parentalEndpoints = [];
+
     const string NAMESPACE_AND_CLASSNAME_FROM_FILE_CONTENT_REGEXP = "/namespace\s{1,}(.*);.*|\n*class\s{1,}([a-zA-Z0-1]*)/m";
 
     public function __construct(
@@ -39,8 +43,6 @@ class Scanner implements ScannerContract
      */
     public function findEndpoints(): array
     {
-        $data = [];
-
         foreach ($this->findClasses() as $class) {
             $reflectionClass = new ReflectionClass($class);
 
@@ -53,12 +55,11 @@ class Scanner implements ScannerContract
                 continue;
             }
 
-            $data[$reflectionClass->getName()] = $endpointConfig;
+            $this->endpoints[$reflectionClass->getName()] = $endpointConfig;
         }
 
-        return $data;
+        return $this->freeParentalEndpoints();
     }
-
     protected function findClasses(): array
     {
         $data = [];
@@ -73,6 +74,17 @@ class Scanner implements ScannerContract
         }
 
         return $data;
+    }
+
+    protected function freeParentalEndpoints(): array
+    {
+        foreach ($this->parentalEndpoints as $parentClass) {
+            if (!empty($this->endpoints[$parentClass])) {
+                unset($this->endpoints[$parentClass]);
+            }
+        }
+
+        return $this->endpoints;
     }
 
     protected function findPhpFiles(): array
@@ -122,10 +134,7 @@ class Scanner implements ScannerContract
     protected function getEndpointConfiguration(ReflectionClass $reflectionClass): EndpointConfigContract
     {
         $endpointConfigContract = app(EndpointConfigContract::class);
-        $endpointAttributes = $reflectionClass->getAttributes(
-            EndpointAttributeContract::class,
-            ReflectionAttribute::IS_INSTANCEOF
-        );
+        $endpointAttributes = $this->collectAttributesRecursively($reflectionClass);
 
         foreach ($endpointAttributes as $attribute) {
             /**
@@ -136,5 +145,29 @@ class Scanner implements ScannerContract
         }
 
         return $endpointConfigContract;
+    }
+
+    private function collectAttributesRecursively(ReflectionClass $reflectionClass): array
+    {
+        $data = [];
+        $isParentClassIteration = false;
+
+        do {
+            $data = array_merge($data, $reflectionClass->getAttributes(
+                EndpointAttributeContract::class,
+                ReflectionAttribute::IS_INSTANCEOF
+            ));
+
+            if (!$isParentClassIteration) {
+                $isParentClassIteration = true;
+                continue;
+            }
+
+            if (!empty($data)) {
+                $this->parentalEndpoints[] = $reflectionClass->getName();
+            }
+        } while ($reflectionClass = $reflectionClass->getParentClass());
+
+        return $data;
     }
 }
