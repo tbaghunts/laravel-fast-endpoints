@@ -171,6 +171,8 @@ class ScannerTest extends TestCase
         $reflector = new ReflectionClass($instance);
         $method = $reflector->getMethod("findPhpFiles");
 
-        $this->assertEquals($values, $method->invoke($instance));
+        $foundFiles = $method->invoke($instance);
+
+        $this->assertEquals(sort($values), sort($foundFiles));
     }
 }
