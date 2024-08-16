@@ -4,7 +4,17 @@
          bootstrap="vendor/autoload.php"
          colors="true"
 >
-    <coverage />
+    <coverage>
+        <report>
+            <clover outputFile="coverage/clover.xml"/>
+            <cobertura outputFile="coverage/cobertura.xml"/>
+            <crap4j outputFile="coverage/crap4j.xml" threshold="50"/>
+            <html outputDirectory="coverage/html-coverage" />
+            <php outputFile="coverage/coverage.php"/>
+            <text outputFile="coverage/coverage.txt" showOnlySummary="true"/>
+            <xml outputDirectory="coverage/xml-coverage"/>
+        </report>
+    </coverage>
     <testsuites>
         <testsuite name="Feature">
             <directory suffix="Test.php">tests/Feature</directory>

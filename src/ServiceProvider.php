@@ -14,14 +14,12 @@ use Baghunts\LaravelFastEndpoint\Contracts\{
     RouteGeneratorContract,
     RouterGeneratorContract,
     ClassGeneratorContract,
-    ClassGeneratorStateContract,
 };
 use Baghunts\LaravelFastEndpoint\Commands\{MakeEndpointCommand};
 use Baghunts\LaravelFastEndpoint\Generator\{
     RouteGenerator,
     RouterGenerator,
     ClassGenerator,
-    ClassGeneratorState,
 };
 
 class ServiceProvider extends IlluminateServiceProvider
@@ -49,7 +47,6 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->app->bind(RouteGeneratorContract::class, RouteGenerator::class);
         $this->app->bind(RouterGeneratorContract::class, RouterGenerator::class);
         $this->app->bind(ClassGeneratorContract::class, ClassGenerator::class);
-        $this->app->bind(ClassGeneratorStateContract::class, ClassGeneratorState::class);
         $this->app->bind(ScannerContract::class,  function () {
             return $this->app->make(Scanner::class, [
                 'signature' => Endpoint::class,
