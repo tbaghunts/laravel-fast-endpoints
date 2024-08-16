@@ -1,9 +1,8 @@
 <?php
 
-namespace Baghunts\tests\Unit\Generator\Pipes;
+namespace Tests\Unit\Generator\Pipes;
 
 use Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereUuidPipe;
-
 use Tests\Unit\Generator\Pipes\Abstract\PipeWhereTestCase;
 
 class WhereUuidPipeTest extends PipeWhereTestCase

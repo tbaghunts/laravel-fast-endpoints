@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\tests\Feature\Basic;
+namespace Tests\Feature\Basic;
 
 use Tests\Feature\TestCase;
 

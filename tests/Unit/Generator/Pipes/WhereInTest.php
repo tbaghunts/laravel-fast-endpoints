@@ -3,7 +3,6 @@
 namespace Tests\Unit\Generator\Pipes;
 
 use Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereInPipe;
-
 use Tests\Unit\Generator\Pipes\Abstract\PipeWhereTestCase;
 
 class WhereInTest extends PipeWhereTestCase

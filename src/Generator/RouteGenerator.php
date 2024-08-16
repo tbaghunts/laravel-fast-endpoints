@@ -2,34 +2,35 @@
 
 namespace Baghunts\LaravelFastEndpoint\Generator;
 
+use Illuminate\Routing\{
+    Route,
+    Router,
+};
 use Illuminate\Support\Str;
-use Illuminate\Routing\Route;
-use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Pipeline;
 
 use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
 use Baghunts\LaravelFastEndpoint\Contracts\{
-    RouteGeneratorContract,
     EndpointConfigContract,
+    RouteGeneratorContract,
 };
 use Baghunts\LaravelFastEndpoint\Generator\Pipes\{
     CanPipe,
-    BlockPipe,
-    GroupPipe,
     WherePipe,
+    GroupPipe,
     WhereInPipe,
     DefaultsPipe,
-    RouteNamePipe,
-    WhereUuidPipe,
+    ThrottlePipe,
     WhereUlidPipe,
-    WhereAlphaPipe,
+    WhereUuidPipe,
+    RouteNamePipe,
     MiddlewarePipe,
-    WithTrashedPipe,
+    WhereAlphaPipe,
     WhereNumberPipe,
+    WithTrashedPipe,
     ScopeBindingsPipe,
-    WithoutBlockingPipe,
+    WhereAlphaNumericPipe,
     WithoutMiddlewarePipe,
-    WhereAlphaNumericPipe
 };
 
 class RouteGenerator implements RouteGeneratorContract
@@ -103,7 +104,7 @@ class RouteGenerator implements RouteGeneratorContract
     protected function margeNamespaceConfig(): self
     {
         $namespaceScopedConfigs = $this->detectNamespaceScopeConfig();
-        if (!is_null($namespaceScopedConfigs)) {
+        if (!empty($namespaceScopedConfigs)) {
             $this->endpointConfig->mergeCollection(
                 $namespaceScopedConfigs
             );
@@ -140,9 +141,8 @@ class RouteGenerator implements RouteGeneratorContract
                 RouteNamePipe::class,
 
                 CanPipe::class,
-                BlockPipe::class,
+                ThrottlePipe::class,
                 MiddlewarePipe::class,
-                WithoutBlockingPipe::class,
                 WithoutMiddlewarePipe::class,
 
                 WithTrashedPipe::class,

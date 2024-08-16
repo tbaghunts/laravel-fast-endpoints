@@ -13,6 +13,6 @@ use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
 class NamedEndpoint extends Endpoint {
     public function __invoke(Request $request): string
     {
-        return $request->get("data");
+        return $request->get("data") ?? "Basic";
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Baghunts\tests\Feature\Permissions;
+namespace Tests\Feature\Permissions;
 
+use Tests\Feature\Assets\Middlewares\SecureMiddleware;
 use Tests\Feature\TestCase;
-use Tests\Feature\Assets\SecureMiddleware;
 
 class MiddlewareTest extends TestCase
 {

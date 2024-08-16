@@ -3,7 +3,6 @@
 namespace Tests\Unit\Generator\Pipes;
 
 use Baghunts\LaravelFastEndpoint\Generator\Pipes\ScopeBindingsPipe;
-
 use Tests\Unit\Generator\Pipes\Abstract\PipeTestCase;
 
 class ScopeBindingsPipeTest extends PipeTestCase

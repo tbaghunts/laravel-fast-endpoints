@@ -5,7 +5,7 @@ namespace Tests\Feature\Permissions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use Tests\Feature\TestCase;
-use Tests\Feature\Models\User;
+use Tests\Feature\Assets\Models\User;
 
 class GuestTest extends TestCase
 {

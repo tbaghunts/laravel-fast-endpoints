@@ -3,7 +3,6 @@
 namespace Tests\Unit\Generator\Pipes;
 
 use Baghunts\LaravelFastEndpoint\Generator\Pipes\WithTrashedPipe;
-
 use Tests\Unit\Generator\Pipes\Abstract\PipeBooleanDependentCallTestCase;
 
 class WithTrashedPipeTest extends PipeBooleanDependentCallTestCase

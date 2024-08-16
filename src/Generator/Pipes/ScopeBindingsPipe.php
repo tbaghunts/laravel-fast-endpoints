@@ -2,10 +2,8 @@
 
 namespace Baghunts\LaravelFastEndpoint\Generator\Pipes;
 
-use Closure;
-
 use Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract;
-use function PHPUnit\Framework\matches;
+use Closure;
 
 class ScopeBindingsPipe extends RoutePipe
 {

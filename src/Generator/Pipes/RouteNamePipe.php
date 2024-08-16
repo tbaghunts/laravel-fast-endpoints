@@ -2,9 +2,8 @@
 
 namespace Baghunts\LaravelFastEndpoint\Generator\Pipes;
 
-use Closure;
-
 use Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract;
+use Closure;
 
 class RouteNamePipe extends RoutePipe
 {

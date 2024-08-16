@@ -1,0 +1,18 @@
+<?php
+
+namespace {{ NAMESPACE }};
+
+{{ IMPORTS }}
+
+class {{ CLASS }} extends {{ BASE }}
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @return array<string, mixed>
+     */
+    public function toArray({{ REQUEST }}): array
+    {
+        return [];
+    }
+}

@@ -2,14 +2,12 @@
 
 namespace Tests\Feature\Dist\Permissions;
 
-use Illuminate\Http\Request;
-
 use Baghunts\LaravelFastEndpoint\Attributes\Get;
+use Baghunts\LaravelFastEndpoint\Attributes\Middleware;
 use Baghunts\LaravelFastEndpoint\Attributes\Name;
 use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
-use Baghunts\LaravelFastEndpoint\Attributes\Middleware;
-
-use Tests\Feature\Assets\SecureMiddleware;
+use Tests\Feature\Assets\Middlewares\SecureMiddleware;
+use Illuminate\Http\Request;
 
 #[Name("route.with.middleware")]
 #[Middleware(SecureMiddleware::class)]

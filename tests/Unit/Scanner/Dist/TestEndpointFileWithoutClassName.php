@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\tests\Unit\Scanner\Dist;
+namespace Tests\Unit\Scanner\Dist;
 
 $className = "TestEndpointFileWithoutClassName";
 

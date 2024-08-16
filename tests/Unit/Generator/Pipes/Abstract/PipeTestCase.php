@@ -2,18 +2,14 @@
 
 namespace Tests\Unit\Generator\Pipes\Abstract;
 
-use Closure;
-
-use PHPUnit\Framework\MockObject\Exception;
-use PHPUnit\Framework\MockObject\MockObject;
-
-use Orchestra\Testbench\TestCase;
-
-use Illuminate\Routing\Route;
-
-use Baghunts\LaravelFastEndpoint\Generator\Pipes\RoutePipe;
 use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
 use Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract;
+use Baghunts\LaravelFastEndpoint\Generator\Pipes\RoutePipe;
+use Closure;
+use Illuminate\Routing\Route;
+use Orchestra\Testbench\TestCase;
+use PHPUnit\Framework\MockObject\Exception;
+use PHPUnit\Framework\MockObject\MockObject;
 
 abstract class PipeTestCase extends TestCase
 {

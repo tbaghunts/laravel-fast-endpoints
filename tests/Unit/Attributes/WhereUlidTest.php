@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\tests\Unit\Attributes;
+namespace Tests\Unit\Attributes;
 
 use Baghunts\LaravelFastEndpoint\Attributes\WhereUlid;
 

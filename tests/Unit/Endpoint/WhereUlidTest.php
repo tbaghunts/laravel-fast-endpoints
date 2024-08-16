@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\tests\Unit\Endpoint;
+namespace Tests\Unit\Endpoint;
 
 use Tests\Unit\Endpoint\Abstract\EndpointConfigTestCase;
 

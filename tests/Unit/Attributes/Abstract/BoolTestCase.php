@@ -2,8 +2,6 @@
 
 namespace Tests\Unit\Attributes\Abstract;
 
-use Tests\Unit\Attributes\Abstract\TestCase;
-
 abstract class BoolTestCase extends TestCase
 {
 
@@ -19,7 +17,7 @@ abstract class BoolTestCase extends TestCase
         $this->assertEquals($this->getDefaultValue(), $this->getConfigValue());
     }
 
-    public function test_apliedCase()
+    public function test_appliedCase()
     {
         $this->getInstance();
         $this->assertTrue($this->getConfigValue());

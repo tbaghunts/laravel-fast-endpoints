@@ -9,6 +9,7 @@ use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
 use Baghunts\LaravelFastEndpoint\Attributes\Get;
 use Baghunts\LaravelFastEndpoint\Attributes\Defaults;
 
+
 #[Defaults("required", "req")]
 #[Defaults("sometimes", 1030)]
 #[Get("/basic/defaults/{required?}/{sometimes?}")]

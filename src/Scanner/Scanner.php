@@ -4,7 +4,6 @@ namespace Baghunts\LaravelFastEndpoint\Scanner;
 
 use ReflectionClass;
 use ReflectionAttribute;
-use ReflectionException;
 
 use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
@@ -38,12 +37,13 @@ class Scanner implements ScannerContract
         return $this->files;
     }
 
-    /**
-     * @throws ReflectionException
-     */
     public function findEndpoints(): array
     {
         foreach ($this->findClasses() as $class) {
+            if (!class_exists($class)) {
+                continue;
+            }
+
             $reflectionClass = new ReflectionClass($class);
 
             if (!$reflectionClass->isSubclassOf($this->signature)) {

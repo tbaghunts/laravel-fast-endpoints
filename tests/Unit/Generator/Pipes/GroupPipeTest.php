@@ -2,10 +2,8 @@
 
 namespace Tests\Unit\Generator\Pipes;
 
-use Illuminate\Support\Facades\Config;
-
 use Baghunts\LaravelFastEndpoint\Generator\Pipes\GroupPipe;
-
+use Illuminate\Support\Facades\Config;
 use Tests\Unit\Generator\Pipes\Abstract\PipeTestCase;
 
 class GroupPipeTest extends PipeTestCase

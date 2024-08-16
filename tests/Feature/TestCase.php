@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
 
 use Baghunts\LaravelFastEndpoint\ServiceProvider;
+use Tests\Feature\Assets\Models\User;
 
 abstract class TestCase extends TestbenchTestCase
 {
@@ -35,6 +36,6 @@ abstract class TestCase extends TestbenchTestCase
     {
         parent::setUp();
 
-        $this->loadMigrationsFrom(__DIR__ . '/./migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/./Assets/migrations');
     }
 }
