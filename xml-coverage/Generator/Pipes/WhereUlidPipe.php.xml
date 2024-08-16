@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="WhereUlidPipe.php" path="/Generator/Pipes">
+    <totals>
+      <lines total="16" comments="0" code="16" executable="2" executed="2" percent="100.00"/>
+      <methods count="2" tested="2" percent="100.00"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="1" percent="100.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereUlidPipe" start="5" executable="2" executed="2" crap="2">
+      <namespace name="Baghunts\LaravelFastEndpoint\Generator\Pipes"/>
+      <method name="getRouteConfigProperty" signature="getRouteConfigProperty(): string" start="7" end="10" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getRouteMethodKey" signature="getRouteMethodKey(): string" start="12" end="15" crap="1" executable="1" executed="1" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="9">
+        <covered by="Tests\Feature\Basic\DefaultsTest::test_parametersShouldBeWithDefaultValues"/>
+        <covered by="Tests\Feature\Basic\DefaultsTest::test_sometimesShouldBeWithDefaultsValue"/>
+        <covered by="Tests\Feature\Basic\DefaultsTest::test_botValuesShouldReturnProvidedValues"/>
+        <covered by="Tests\Feature\Basic\GroupedTest::test_userPageGroupShouldBeApplied"/>
+        <covered by="Tests\Feature\Basic\GroupedTest::test_numericRouteParamsGroupShouldBeApplied"/>
+        <covered by="Tests\Feature\Basic\NamedRouteTest::test_routeShouldReturnValidUrlByName"/>
+        <covered by="Tests\Feature\Basic\NamespacedTest::test_namespaceConfigShouldNotBeAppliedToRequestMethodsEndpoints"/>
+        <covered by="Tests\Feature\Basic\NamespacedTest::test_namespaceConfigShouldBeAppliedToBasicEndpoints"/>
+        <covered by="Tests\Feature\Binding\ScopeBindingsTest::test_routeShouldBeNotFoundedAsForPostBelongsToSecondsUser"/>
+        <covered by="Tests\Feature\Binding\ScopeBindingsTest::test_postShouldBeFound"/>
+        <covered by="Tests\Feature\Binding\WithTrashedTest::test_recordShouldBeFoundIfNotTrashed"/>
+        <covered by="Tests\Feature\Binding\WithTrashedTest::test_recordShouldBeFoundIfTrashed"/>
+        <covered by="Tests\Feature\Permissions\CanTest::test_regularUserShouldNotHavePermission"/>
+        <covered by="Tests\Feature\Permissions\CanTest::test_regularUserShouldHavePermission"/>
+        <covered by="Tests\Feature\Permissions\GuestTest::test_guestRequestShouldBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\GuestTest::test_guestRequestShouldNotBeAcceptedWithAuthenticatedUser"/>
+        <covered by="Tests\Feature\Permissions\MiddlewareTest::test_middlewareShouldNotBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\MiddlewareTest::test_middlewareShouldBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\ThrottleTest::test_oneRequestPerMinuteShouldBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\ThrottleTest::test_twoRequestsPerMinuteShouldBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\ThrottleTest::test_thirdRequestsPerMinuteShouldNotBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\ThrottleTest::test_fourthAndFifthRequestAfterTimeoutShouldBeAcceptedAndSeventhShouldBeFailed"/>
+        <covered by="Tests\Feature\Permissions\WithoutMiddlewareTest::test_namedRouteShouldNotBeAvailableBecauseGlobalMiddleware"/>
+        <covered by="Tests\Feature\Permissions\WithoutMiddlewareTest::test_withoutMiddlewareShouldBeAvailable"/>
+        <covered by="Tests\Feature\Permissions\WithoutThrottleTest::test_secondGuestRequestShouldNotBeAcceptedBecauseAllMiddlewaresUnderThrottle"/>
+        <covered by="Tests\Feature\Permissions\WithoutThrottleTest::test_endpointWithWithoutMiddlewareShouldAcceptRequests"/>
+        <covered by="Tests\Feature\RequestMethods\AnyTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\DeleteTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\GetTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\OptionsTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\PatchTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\PostTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\PutTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\RouteTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\Validations\WhereAlphaNumericTest::test_requiredParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereAlphaNumericTest::test_sometimesParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereAlphaNumericTest::test_requiredParameterShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereAlphaNumericTest::test_bothParametersShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereInTest::test_requiredParamShouldNotBeValidated"/>
+        <covered by="Tests\Feature\Validations\WhereInTest::test_sometimesParamShouldNotBeValidated"/>
+        <covered by="Tests\Feature\Validations\WhereInTest::test_allParamsShouldBeValidated"/>
+        <covered by="Tests\Feature\Validations\WhereNumberTest::test_requiredParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereNumberTest::test_sometimesParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereNumberTest::test_requiredParameterShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereNumberTest::test_bothParametersShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereTest::test_requiredParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereTest::test_sometimesParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereTest::test_requiredParameterShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereTest::test_bothParametersShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUlidTest::test_requiredParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUlidTest::test_sometimesParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUlidTest::test_requiredParameterShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUlidTest::test_bothParametersShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUuidTest::test_requiredParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUuidTest::test_sometimesParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUuidTest::test_requiredParameterShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUuidTest::test_bothParametersShouldBeValid"/>
+        <covered by="Tests\Unit\Generator\Pipes\WhereUlidPipeTest::test_pipeNextClosureShouldBeCalledWithGenerator"/>
+        <covered by="Tests\Unit\Generator\Pipes\WhereUlidPipeTest::test_routeShouldNotContainRuleIfConfigIsEmpty"/>
+        <covered by="Tests\Unit\Generator\Pipes\WhereUlidPipeTest::test_routeShouldBeMarkedOnceAsWhereRuleIfConfigHasSingleValue"/>
+        <covered by="Tests\Unit\Generator\Pipes\WhereUlidPipeTest::test_routeShouldBeMarkedMultipleTimeAsWhereRuleIfConfigHasMultipleValues"/>
+        <covered by="Tests\Unit\Generator\RouteGeneratorTest::test_routeShouldBeInitializedIfMethodsAndPathIsProvided"/>
+        <covered by="Tests\Unit\Generator\RouteGeneratorTest::test_routeShouldNotMergeNamespaceConfigIfNotDetected"/>
+        <covered by="Tests\Unit\Generator\RouteGeneratorTest::test_routeShouldMergeNamespaceConfigIfDetected"/>
+      </line>
+      <line nr="14">
+        <covered by="Tests\Feature\Basic\DefaultsTest::test_parametersShouldBeWithDefaultValues"/>
+        <covered by="Tests\Feature\Basic\DefaultsTest::test_sometimesShouldBeWithDefaultsValue"/>
+        <covered by="Tests\Feature\Basic\DefaultsTest::test_botValuesShouldReturnProvidedValues"/>
+        <covered by="Tests\Feature\Basic\GroupedTest::test_userPageGroupShouldBeApplied"/>
+        <covered by="Tests\Feature\Basic\GroupedTest::test_numericRouteParamsGroupShouldBeApplied"/>
+        <covered by="Tests\Feature\Basic\NamedRouteTest::test_routeShouldReturnValidUrlByName"/>
+        <covered by="Tests\Feature\Basic\NamespacedTest::test_namespaceConfigShouldNotBeAppliedToRequestMethodsEndpoints"/>
+        <covered by="Tests\Feature\Basic\NamespacedTest::test_namespaceConfigShouldBeAppliedToBasicEndpoints"/>
+        <covered by="Tests\Feature\Binding\ScopeBindingsTest::test_routeShouldBeNotFoundedAsForPostBelongsToSecondsUser"/>
+        <covered by="Tests\Feature\Binding\ScopeBindingsTest::test_postShouldBeFound"/>
+        <covered by="Tests\Feature\Binding\WithTrashedTest::test_recordShouldBeFoundIfNotTrashed"/>
+        <covered by="Tests\Feature\Binding\WithTrashedTest::test_recordShouldBeFoundIfTrashed"/>
+        <covered by="Tests\Feature\Permissions\CanTest::test_regularUserShouldNotHavePermission"/>
+        <covered by="Tests\Feature\Permissions\CanTest::test_regularUserShouldHavePermission"/>
+        <covered by="Tests\Feature\Permissions\GuestTest::test_guestRequestShouldBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\GuestTest::test_guestRequestShouldNotBeAcceptedWithAuthenticatedUser"/>
+        <covered by="Tests\Feature\Permissions\MiddlewareTest::test_middlewareShouldNotBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\MiddlewareTest::test_middlewareShouldBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\ThrottleTest::test_oneRequestPerMinuteShouldBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\ThrottleTest::test_twoRequestsPerMinuteShouldBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\ThrottleTest::test_thirdRequestsPerMinuteShouldNotBeAccepted"/>
+        <covered by="Tests\Feature\Permissions\ThrottleTest::test_fourthAndFifthRequestAfterTimeoutShouldBeAcceptedAndSeventhShouldBeFailed"/>
+        <covered by="Tests\Feature\Permissions\WithoutMiddlewareTest::test_namedRouteShouldNotBeAvailableBecauseGlobalMiddleware"/>
+        <covered by="Tests\Feature\Permissions\WithoutMiddlewareTest::test_withoutMiddlewareShouldBeAvailable"/>
+        <covered by="Tests\Feature\Permissions\WithoutThrottleTest::test_secondGuestRequestShouldNotBeAcceptedBecauseAllMiddlewaresUnderThrottle"/>
+        <covered by="Tests\Feature\Permissions\WithoutThrottleTest::test_endpointWithWithoutMiddlewareShouldAcceptRequests"/>
+        <covered by="Tests\Feature\RequestMethods\AnyTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\DeleteTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\GetTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\OptionsTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\PatchTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\PostTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\PutTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\RequestMethods\RouteTest::test_execMethodTests"/>
+        <covered by="Tests\Feature\Validations\WhereAlphaNumericTest::test_requiredParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereAlphaNumericTest::test_sometimesParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereAlphaNumericTest::test_requiredParameterShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereAlphaNumericTest::test_bothParametersShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereInTest::test_requiredParamShouldNotBeValidated"/>
+        <covered by="Tests\Feature\Validations\WhereInTest::test_sometimesParamShouldNotBeValidated"/>
+        <covered by="Tests\Feature\Validations\WhereInTest::test_allParamsShouldBeValidated"/>
+        <covered by="Tests\Feature\Validations\WhereNumberTest::test_requiredParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereNumberTest::test_sometimesParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereNumberTest::test_requiredParameterShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereNumberTest::test_bothParametersShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereTest::test_requiredParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereTest::test_sometimesParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereTest::test_requiredParameterShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereTest::test_bothParametersShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUlidTest::test_requiredParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUlidTest::test_sometimesParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUlidTest::test_requiredParameterShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUlidTest::test_bothParametersShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUuidTest::test_requiredParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUuidTest::test_sometimesParameterShouldNotBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUuidTest::test_requiredParameterShouldBeValid"/>
+        <covered by="Tests\Feature\Validations\WhereUuidTest::test_bothParametersShouldBeValid"/>
+        <covered by="Tests\Unit\Generator\Pipes\WhereUlidPipeTest::test_pipeNextClosureShouldBeCalledWithGenerator"/>
+        <covered by="Tests\Unit\Generator\Pipes\WhereUlidPipeTest::test_routeShouldNotContainRuleIfConfigIsEmpty"/>
+        <covered by="Tests\Unit\Generator\Pipes\WhereUlidPipeTest::test_routeShouldBeMarkedOnceAsWhereRuleIfConfigHasSingleValue"/>
+        <covered by="Tests\Unit\Generator\Pipes\WhereUlidPipeTest::test_routeShouldBeMarkedMultipleTimeAsWhereRuleIfConfigHasMultipleValues"/>
+        <covered by="Tests\Unit\Generator\RouteGeneratorTest::test_routeShouldBeInitializedIfMethodsAndPathIsProvided"/>
+        <covered by="Tests\Unit\Generator\RouteGeneratorTest::test_routeShouldNotMergeNamespaceConfigIfNotDetected"/>
+        <covered by="Tests\Unit\Generator\RouteGeneratorTest::test_routeShouldMergeNamespaceConfigIfDetected"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_QUALIFIED">Baghunts\LaravelFastEndpoint\Generator\Pipes</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">WhereUlidPipe</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EXTENDS">extends</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">RouteWherePipe</token>
+      </line>
+      <line no="6">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="7">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getRouteConfigProperty</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+      </line>
+      <line no="8">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="9">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'getWhereUlid'</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="10">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="11"/>
+      <line no="12">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getRouteMethodKey</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+      </line>
+      <line no="13">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="14">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'whereUlid'</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="15">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="16">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+    </source>
+  </file>
+</phpunit>

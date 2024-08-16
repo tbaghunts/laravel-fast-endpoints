@@ -1,0 +1,3720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.49718785151856" branch-rate="0" lines-covered="442" lines-valid="889" branches-covered="0" branches-valid="0" complexity="344" version="0.4" timestamp="1723834268">
+  <sources>
+    <source>/Users/tatulharutyunyan/Development/Workspace/Baghunts/composer/LaravelFastEndpoints/src</source>
+  </sources>
+  <packages>
+    <package name="Attributes/Any.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Any" filename="Attributes/Any.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Can.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Can" filename="Attributes/Can.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="array|string $ability, array|string|null $models" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="17" hits="60"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\CanContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="60"/>
+                <line number="22" hits="60"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="60"/>
+            <line number="21" hits="60"/>
+            <line number="22" hits="60"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Defaults.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Defaults" filename="Attributes/Defaults.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="__construct" signature="string|array $key, mixed $value" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="17" hits="60"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract $endpointConfig" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="21" hits="60"/>
+                <line number="22" hits="2"/>
+                <line number="24" hits="59"/>
+                <line number="27" hits="60"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="60"/>
+            <line number="21" hits="60"/>
+            <line number="22" hits="2"/>
+            <line number="24" hits="59"/>
+            <line number="27" hits="60"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Delete.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Delete" filename="Attributes/Delete.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/EndpointAttribute.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\EndpointAttribute" filename="Attributes/EndpointAttribute.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Get.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Get" filename="Attributes/Get.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Group.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Group" filename="Attributes/Group.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="array|string $groups" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="59"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\GroupContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="59"/>
+                <line number="21" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="59"/>
+            <line number="20" hits="59"/>
+            <line number="21" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Guest.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Guest" filename="Attributes/Guest.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\MiddlewareContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="59"/>
+                <line number="15" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="59"/>
+            <line number="15" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Method.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Method" filename="Attributes/Method.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="string $path" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="73"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\MethodContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="73"/>
+                <line number="21" hits="73"/>
+                <line number="23" hits="73"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="73"/>
+            <line number="20" hits="73"/>
+            <line number="21" hits="73"/>
+            <line number="23" hits="73"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Middleware.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Middleware" filename="Attributes/Middleware.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="string|array $middleware" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="59"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\MiddlewareContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="59"/>
+                <line number="21" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="59"/>
+            <line number="20" hits="59"/>
+            <line number="21" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Name.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Name" filename="Attributes/Name.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="string $name" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="61"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\MethodContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="61"/>
+                <line number="21" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="61"/>
+            <line number="20" hits="61"/>
+            <line number="21" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Options.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Options" filename="Attributes/Options.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Patch.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Patch" filename="Attributes/Patch.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Post.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Post" filename="Attributes/Post.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Put.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Put" filename="Attributes/Put.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Route.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Route" filename="Attributes/Route.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="string $path, $args" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="59"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\MethodContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="59"/>
+                <line number="27" hits="59"/>
+                <line number="29" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="59"/>
+            <line number="26" hits="59"/>
+            <line number="27" hits="59"/>
+            <line number="29" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/ScopeBindings.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\ScopeBindings" filename="Attributes/ScopeBindings.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="bool|null $scopeBindings" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="60"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\ScopeBindingsContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="60"/>
+                <line number="21" hits="60"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="60"/>
+            <line number="20" hits="60"/>
+            <line number="21" hits="60"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Throttle.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Throttle" filename="Attributes/Throttle.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="int $requests, int $perMinute" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="17" hits="61"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\ThrottleContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="61"/>
+                <line number="22" hits="61"/>
+                <line number="23" hits="61"/>
+                <line number="24" hits="61"/>
+                <line number="25" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="61"/>
+            <line number="21" hits="61"/>
+            <line number="22" hits="61"/>
+            <line number="23" hits="61"/>
+            <line number="24" hits="61"/>
+            <line number="25" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/Where.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\Where" filename="Attributes/Where.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="string|array $name, ?string $expression" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="17" hits="59"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WhereContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="59"/>
+                <line number="22" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="59"/>
+            <line number="21" hits="59"/>
+            <line number="22" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/WhereAlpha.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\WhereAlpha" filename="Attributes/WhereAlpha.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="string|array $parameters" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="59"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WhereAlphaContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="59"/>
+                <line number="21" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="59"/>
+            <line number="20" hits="59"/>
+            <line number="21" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/WhereAlphaNumeric.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\WhereAlphaNumeric" filename="Attributes/WhereAlphaNumeric.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="string|array $parameters" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="59"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WhereAlphaNumericContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="59"/>
+                <line number="21" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="59"/>
+            <line number="20" hits="59"/>
+            <line number="21" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/WhereIn.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\WhereIn" filename="Attributes/WhereIn.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="string|array $parameters, array $values" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="17" hits="60"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WhereInContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="60"/>
+                <line number="22" hits="60"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="60"/>
+            <line number="21" hits="60"/>
+            <line number="22" hits="60"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/WhereNumber.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\WhereNumber" filename="Attributes/WhereNumber.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="array|string $parameters" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="59"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WhereNumberContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="59"/>
+                <line number="21" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="59"/>
+            <line number="20" hits="59"/>
+            <line number="21" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/WhereUlid.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\WhereUlid" filename="Attributes/WhereUlid.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="string|array $parameters" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="59"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WhereUlidContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="59"/>
+                <line number="21" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="59"/>
+            <line number="20" hits="59"/>
+            <line number="21" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/WhereUuid.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\WhereUuid" filename="Attributes/WhereUuid.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="string|array $parameters" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="59"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WhereUuidContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="59"/>
+                <line number="21" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="59"/>
+            <line number="20" hits="59"/>
+            <line number="21" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/WithTrashed.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\WithTrashed" filename="Attributes/WithTrashed.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WithTrashedContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="58"/>
+                <line number="15" hits="58"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="58"/>
+            <line number="15" hits="58"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/WithoutMiddleware.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\WithoutMiddleware" filename="Attributes/WithoutMiddleware.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="array|string $middleware" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="60"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WithoutMiddlewareContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="60"/>
+                <line number="21" hits="60"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="60"/>
+            <line number="20" hits="60"/>
+            <line number="21" hits="60"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Attributes/WithoutThrottle.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Attributes\WithoutThrottle" filename="Attributes/WithoutThrottle.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="__construct" signature="int|string $requests, int $perMinute" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="17" hits="61"/>
+              </lines>
+            </method>
+            <method name="apply" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="61"/>
+                <line number="22" hits="61"/>
+              </lines>
+            </method>
+            <method name="getName" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="27" hits="61"/>
+                <line number="28" hits="4"/>
+                <line number="31" hits="58"/>
+                <line number="32" hits="58"/>
+                <line number="33" hits="58"/>
+                <line number="34" hits="58"/>
+                <line number="35" hits="58"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="61"/>
+            <line number="21" hits="61"/>
+            <line number="22" hits="61"/>
+            <line number="27" hits="61"/>
+            <line number="28" hits="4"/>
+            <line number="31" hits="58"/>
+            <line number="32" hits="58"/>
+            <line number="33" hits="58"/>
+            <line number="34" hits="58"/>
+            <line number="35" hits="58"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Commands/MakeEndpointCommand.php" line-rate="0" branch-rate="0" complexity="35">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Commands\MakeEndpointCommand" filename="Commands/MakeEndpointCommand.php" line-rate="0" branch-rate="0" complexity="35">
+          <methods>
+            <method name="handle" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="81" hits="0"/>
+                <line number="83" hits="0"/>
+                <line number="84" hits="0"/>
+                <line number="85" hits="0"/>
+                <line number="86" hits="0"/>
+                <line number="87" hits="0"/>
+                <line number="89" hits="0"/>
+              </lines>
+            </method>
+            <method name="setPartial" signature="string $name, Baghunts\LaravelFastEndpoint\Contracts\ClassGeneratorContract $generator" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="94" hits="0"/>
+              </lines>
+            </method>
+            <method name="getPartial" signature="string $name" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="99" hits="0"/>
+              </lines>
+            </method>
+            <method name="tryGenerateRequest" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="104" hits="0"/>
+                <line number="106" hits="0"/>
+                <line number="107" hits="0"/>
+                <line number="108" hits="0"/>
+                <line number="109" hits="0"/>
+                <line number="110" hits="0"/>
+                <line number="111" hits="0"/>
+                <line number="112" hits="0"/>
+                <line number="113" hits="0"/>
+                <line number="116" hits="0"/>
+              </lines>
+            </method>
+            <method name="tryGenerateResponse" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="121" hits="0"/>
+                <line number="123" hits="0"/>
+                <line number="124" hits="0"/>
+                <line number="125" hits="0"/>
+                <line number="126" hits="0"/>
+                <line number="127" hits="0"/>
+                <line number="128" hits="0"/>
+                <line number="129" hits="0"/>
+                <line number="130" hits="0"/>
+                <line number="131" hits="0"/>
+                <line number="132" hits="0"/>
+                <line number="135" hits="0"/>
+              </lines>
+            </method>
+            <method name="tryGenerateEndpoint" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="140" hits="0"/>
+                <line number="141" hits="0"/>
+                <line number="142" hits="0"/>
+                <line number="143" hits="0"/>
+                <line number="144" hits="0"/>
+                <line number="145" hits="0"/>
+                <line number="146" hits="0"/>
+                <line number="147" hits="0"/>
+                <line number="148" hits="0"/>
+                <line number="149" hits="0"/>
+                <line number="150" hits="0"/>
+                <line number="151" hits="0"/>
+                <line number="153" hits="0"/>
+              </lines>
+            </method>
+            <method name="saveFiles" signature="" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="158" hits="0"/>
+                <line number="160" hits="0"/>
+                <line number="161" hits="0"/>
+                <line number="162" hits="0"/>
+                <line number="163" hits="0"/>
+                <line number="165" hits="0"/>
+                <line number="166" hits="0"/>
+                <line number="169" hits="0"/>
+                <line number="170" hits="0"/>
+                <line number="171" hits="0"/>
+                <line number="172" hits="0"/>
+                <line number="173" hits="0"/>
+                <line number="174" hits="0"/>
+                <line number="175" hits="0"/>
+                <line number="177" hits="0"/>
+                <line number="178" hits="0"/>
+                <line number="179" hits="0"/>
+                <line number="183" hits="0"/>
+                <line number="186" hits="0"/>
+                <line number="187" hits="0"/>
+              </lines>
+            </method>
+            <method name="successMessage" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="193" hits="0"/>
+                <line number="194" hits="0"/>
+                <line number="195" hits="0"/>
+                <line number="196" hits="0"/>
+                <line number="197" hits="0"/>
+                <line number="198" hits="0"/>
+              </lines>
+            </method>
+            <method name="getEndpointDist" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="203" hits="0"/>
+                <line number="204" hits="0"/>
+                <line number="205" hits="0"/>
+                <line number="208" hits="0"/>
+              </lines>
+            </method>
+            <method name="generateEndpointDistByPath" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="214" hits="0"/>
+                <line number="215" hits="0"/>
+                <line number="216" hits="0"/>
+                <line number="217" hits="0"/>
+                <line number="218" hits="0"/>
+                <line number="219" hits="0"/>
+                <line number="220" hits="0"/>
+                <line number="221" hits="0"/>
+                <line number="222" hits="0"/>
+                <line number="223" hits="0"/>
+                <line number="224" hits="0"/>
+                <line number="227" hits="0"/>
+                <line number="228" hits="0"/>
+                <line number="229" hits="0"/>
+                <line number="231" hits="0"/>
+                <line number="233" hits="0"/>
+              </lines>
+            </method>
+            <method name="getEndpointFullDist" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="238" hits="0"/>
+                <line number="239" hits="0"/>
+                <line number="241" hits="0"/>
+                <line number="242" hits="0"/>
+                <line number="243" hits="0"/>
+                <line number="246" hits="0"/>
+              </lines>
+            </method>
+            <method name="getMethodForFileName" signature="" line-rate="0" branch-rate="0" complexity="5">
+              <lines>
+                <line number="251" hits="0"/>
+                <line number="252" hits="0"/>
+                <line number="253" hits="0"/>
+                <line number="255" hits="0"/>
+                <line number="256" hits="0"/>
+                <line number="259" hits="0"/>
+                <line number="260" hits="0"/>
+                <line number="263" hits="0"/>
+                <line number="266" hits="0"/>
+                <line number="267" hits="0"/>
+                <line number="270" hits="0"/>
+              </lines>
+            </method>
+            <method name="getRequestNamespace" signature="" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="275" hits="0"/>
+                <line number="276" hits="0"/>
+                <line number="277" hits="0"/>
+                <line number="280" hits="0"/>
+              </lines>
+            </method>
+            <method name="getResponseNamespace" signature="" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="285" hits="0"/>
+                <line number="286" hits="0"/>
+                <line number="287" hits="0"/>
+                <line number="290" hits="0"/>
+              </lines>
+            </method>
+            <method name="getWithOptionValue" signature="string $stringValueKey" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="295" hits="0"/>
+                <line number="297" hits="0"/>
+                <line number="298" hits="0"/>
+                <line number="301" hits="0"/>
+                <line number="302" hits="0"/>
+                <line number="304" hits="0"/>
+                <line number="305" hits="0"/>
+                <line number="306" hits="0"/>
+                <line number="307" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="81" hits="0"/>
+            <line number="83" hits="0"/>
+            <line number="84" hits="0"/>
+            <line number="85" hits="0"/>
+            <line number="86" hits="0"/>
+            <line number="87" hits="0"/>
+            <line number="89" hits="0"/>
+            <line number="94" hits="0"/>
+            <line number="99" hits="0"/>
+            <line number="104" hits="0"/>
+            <line number="106" hits="0"/>
+            <line number="107" hits="0"/>
+            <line number="108" hits="0"/>
+            <line number="109" hits="0"/>
+            <line number="110" hits="0"/>
+            <line number="111" hits="0"/>
+            <line number="112" hits="0"/>
+            <line number="113" hits="0"/>
+            <line number="116" hits="0"/>
+            <line number="121" hits="0"/>
+            <line number="123" hits="0"/>
+            <line number="124" hits="0"/>
+            <line number="125" hits="0"/>
+            <line number="126" hits="0"/>
+            <line number="127" hits="0"/>
+            <line number="128" hits="0"/>
+            <line number="129" hits="0"/>
+            <line number="130" hits="0"/>
+            <line number="131" hits="0"/>
+            <line number="132" hits="0"/>
+            <line number="135" hits="0"/>
+            <line number="140" hits="0"/>
+            <line number="141" hits="0"/>
+            <line number="142" hits="0"/>
+            <line number="143" hits="0"/>
+            <line number="144" hits="0"/>
+            <line number="145" hits="0"/>
+            <line number="146" hits="0"/>
+            <line number="147" hits="0"/>
+            <line number="148" hits="0"/>
+            <line number="149" hits="0"/>
+            <line number="150" hits="0"/>
+            <line number="151" hits="0"/>
+            <line number="153" hits="0"/>
+            <line number="158" hits="0"/>
+            <line number="160" hits="0"/>
+            <line number="161" hits="0"/>
+            <line number="162" hits="0"/>
+            <line number="163" hits="0"/>
+            <line number="165" hits="0"/>
+            <line number="166" hits="0"/>
+            <line number="169" hits="0"/>
+            <line number="170" hits="0"/>
+            <line number="171" hits="0"/>
+            <line number="172" hits="0"/>
+            <line number="173" hits="0"/>
+            <line number="174" hits="0"/>
+            <line number="175" hits="0"/>
+            <line number="177" hits="0"/>
+            <line number="178" hits="0"/>
+            <line number="179" hits="0"/>
+            <line number="183" hits="0"/>
+            <line number="186" hits="0"/>
+            <line number="187" hits="0"/>
+            <line number="193" hits="0"/>
+            <line number="194" hits="0"/>
+            <line number="195" hits="0"/>
+            <line number="196" hits="0"/>
+            <line number="197" hits="0"/>
+            <line number="198" hits="0"/>
+            <line number="203" hits="0"/>
+            <line number="204" hits="0"/>
+            <line number="205" hits="0"/>
+            <line number="208" hits="0"/>
+            <line number="214" hits="0"/>
+            <line number="215" hits="0"/>
+            <line number="216" hits="0"/>
+            <line number="217" hits="0"/>
+            <line number="218" hits="0"/>
+            <line number="219" hits="0"/>
+            <line number="220" hits="0"/>
+            <line number="221" hits="0"/>
+            <line number="222" hits="0"/>
+            <line number="223" hits="0"/>
+            <line number="224" hits="0"/>
+            <line number="227" hits="0"/>
+            <line number="228" hits="0"/>
+            <line number="229" hits="0"/>
+            <line number="231" hits="0"/>
+            <line number="233" hits="0"/>
+            <line number="238" hits="0"/>
+            <line number="239" hits="0"/>
+            <line number="241" hits="0"/>
+            <line number="242" hits="0"/>
+            <line number="243" hits="0"/>
+            <line number="246" hits="0"/>
+            <line number="251" hits="0"/>
+            <line number="252" hits="0"/>
+            <line number="253" hits="0"/>
+            <line number="255" hits="0"/>
+            <line number="256" hits="0"/>
+            <line number="259" hits="0"/>
+            <line number="260" hits="0"/>
+            <line number="263" hits="0"/>
+            <line number="266" hits="0"/>
+            <line number="267" hits="0"/>
+            <line number="270" hits="0"/>
+            <line number="275" hits="0"/>
+            <line number="276" hits="0"/>
+            <line number="277" hits="0"/>
+            <line number="280" hits="0"/>
+            <line number="285" hits="0"/>
+            <line number="286" hits="0"/>
+            <line number="287" hits="0"/>
+            <line number="290" hits="0"/>
+            <line number="295" hits="0"/>
+            <line number="297" hits="0"/>
+            <line number="298" hits="0"/>
+            <line number="301" hits="0"/>
+            <line number="302" hits="0"/>
+            <line number="304" hits="0"/>
+            <line number="305" hits="0"/>
+            <line number="306" hits="0"/>
+            <line number="307" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Contracts/ClassGenerator/EndpointClassGeneratorContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/ClassGenerator/EndpointWithRequestGeneratorContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/ClassGeneratorContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointAttributeContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/CanContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/DefaultsContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/EndpointConfigMergeContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/GroupContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/MethodContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/MiddlewareContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/ScopeBindingsContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/ThrottleContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/WhereAlphaContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/WhereAlphaNumericContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/WhereContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/WhereInContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/WhereNumberContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/WhereUlidContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/WhereUuidContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/WithTrashedContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/WithoutMiddlewareContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfig/WithoutThrottleContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointConfigContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/EndpointContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/RouteGeneratorContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/RouterGeneratorContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/ScannerContract.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Endpoint/Endpoint.php" line-rate="0.5" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Endpoint" filename="Endpoint/Endpoint.php" line-rate="0.5" branch-rate="0" complexity="2">
+          <methods>
+            <method name="__construct" signature="Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract $config" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="44"/>
+              </lines>
+            </method>
+            <method name="getConfiguration" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="44"/>
+            <line number="20" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/EndpointConfig.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig" filename="Endpoint/EndpointConfig.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="__construct" signature="array $can, array $where, ?string $path, ?string $name, array $groups, array $method, array $whereIn, array $defaults, array $throttles, array $whereUuid, array $whereUlid, array $middleware, array $whereAlpha, array $whereNumber, bool $withTrashed, ?bool $scopeBindings, array $whereAlphaNumeric, array $withoutMiddleware" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="69" hits="176"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="69" hits="176"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/Can.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\Can" filename="Endpoint/Traits/Can.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="getCan" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="61"/>
+              </lines>
+            </method>
+            <method name="setCan" signature="array|string $ability, array|string|null $models" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="14" hits="60"/>
+                <line number="15" hits="59"/>
+                <line number="16" hits="59"/>
+                <line number="17" hits="59"/>
+                <line number="20" hits="60"/>
+                <line number="22" hits="60"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="61"/>
+            <line number="14" hits="60"/>
+            <line number="15" hits="59"/>
+            <line number="16" hits="59"/>
+            <line number="17" hits="59"/>
+            <line number="20" hits="60"/>
+            <line number="22" hits="60"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/Defaults.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\Defaults" filename="Endpoint/Traits/Defaults.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="getDefaults" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="61"/>
+              </lines>
+            </method>
+            <method name="setDefaults" signature="array $defaults" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="2"/>
+                <line number="15" hits="2"/>
+              </lines>
+            </method>
+            <method name="addDefault" signature="string $key, $default" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="59"/>
+                <line number="21" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="61"/>
+            <line number="14" hits="2"/>
+            <line number="15" hits="2"/>
+            <line number="20" hits="59"/>
+            <line number="21" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/EndpointConfigMerge.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\EndpointConfigMerge" filename="Endpoint/Traits/EndpointConfigMerge.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="mergeCollection" signature="array $configs" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="9" hits="5"/>
+                <line number="10" hits="5"/>
+                <line number="13" hits="5"/>
+              </lines>
+            </method>
+            <method name="merge" signature="array $config" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="18" hits="7"/>
+                <line number="19" hits="7"/>
+                <line number="20" hits="1"/>
+                <line number="23" hits="7"/>
+                <line number="24" hits="7"/>
+                <line number="26" hits="5"/>
+                <line number="30" hits="7"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="5"/>
+            <line number="10" hits="5"/>
+            <line number="13" hits="5"/>
+            <line number="18" hits="7"/>
+            <line number="19" hits="7"/>
+            <line number="20" hits="1"/>
+            <line number="23" hits="7"/>
+            <line number="24" hits="7"/>
+            <line number="26" hits="5"/>
+            <line number="30" hits="7"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/Group.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\Group" filename="Endpoint/Traits/Group.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getGroups" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="60"/>
+              </lines>
+            </method>
+            <method name="setGroups" signature="array|string $group" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="59"/>
+                <line number="17" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="60"/>
+            <line number="16" hits="59"/>
+            <line number="17" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/Method.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\Method" filename="Endpoint/Traits/Method.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="getPath" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="13" hits="68"/>
+              </lines>
+            </method>
+            <method name="getName" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="17" hits="66"/>
+              </lines>
+            </method>
+            <method name="getMethod" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="72"/>
+              </lines>
+            </method>
+            <method name="setPath" signature="string $path" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="76"/>
+                <line number="27" hits="76"/>
+              </lines>
+            </method>
+            <method name="setName" signature="string $name" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="31" hits="62"/>
+                <line number="32" hits="62"/>
+              </lines>
+            </method>
+            <method name="setMethod" signature="array|\Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod $method" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="36" hits="77"/>
+                <line number="37" hits="77"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="68"/>
+            <line number="17" hits="66"/>
+            <line number="21" hits="72"/>
+            <line number="26" hits="76"/>
+            <line number="27" hits="76"/>
+            <line number="31" hits="62"/>
+            <line number="32" hits="62"/>
+            <line number="36" hits="77"/>
+            <line number="37" hits="77"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/Middleware.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\Middleware" filename="Endpoint/Traits/Middleware.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="getMiddleware" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="68"/>
+              </lines>
+            </method>
+            <method name="setMiddleware" signature="array|string $middleware" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="4"/>
+                <line number="18" hits="4"/>
+              </lines>
+            </method>
+            <method name="addMiddleware" signature="array|string $middleware" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="22" hits="63"/>
+                <line number="24" hits="63"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="68"/>
+            <line number="16" hits="4"/>
+            <line number="18" hits="4"/>
+            <line number="22" hits="63"/>
+            <line number="24" hits="63"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/ScopeBindings.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\ScopeBindings" filename="Endpoint/Traits/ScopeBindings.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="getScopeBindings" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="64"/>
+              </lines>
+            </method>
+            <method name="withoutScopeBindings" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="1"/>
+                <line number="15" hits="1"/>
+              </lines>
+            </method>
+            <method name="withScopeBindings" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="19" hits="1"/>
+                <line number="20" hits="1"/>
+              </lines>
+            </method>
+            <method name="setScopeBindings" signature="bool|null $scopeBindings" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="24" hits="61"/>
+                <line number="25" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="64"/>
+            <line number="14" hits="1"/>
+            <line number="15" hits="1"/>
+            <line number="19" hits="1"/>
+            <line number="20" hits="1"/>
+            <line number="24" hits="61"/>
+            <line number="25" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/Throttle.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\Throttle" filename="Endpoint/Traits/Throttle.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getThrottles" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="64"/>
+              </lines>
+            </method>
+            <method name="setThrottle" signature="int $requests, int $perMinute" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="63"/>
+                <line number="15" hits="63"/>
+                <line number="16" hits="63"/>
+                <line number="17" hits="63"/>
+                <line number="18" hits="63"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="64"/>
+            <line number="14" hits="63"/>
+            <line number="15" hits="63"/>
+            <line number="16" hits="63"/>
+            <line number="17" hits="63"/>
+            <line number="18" hits="63"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/Where.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\Where" filename="Endpoint/Traits/Where.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="getWhere" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="63"/>
+              </lines>
+            </method>
+            <method name="setWhere" signature="array $where" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="3"/>
+                <line number="15" hits="3"/>
+              </lines>
+            </method>
+            <method name="addWhere" signature="array|string $name, ?string $expression" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="19" hits="61"/>
+                <line number="20" hits="59"/>
+                <line number="22" hits="59"/>
+                <line number="25" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="63"/>
+            <line number="14" hits="3"/>
+            <line number="15" hits="3"/>
+            <line number="19" hits="61"/>
+            <line number="20" hits="59"/>
+            <line number="22" hits="59"/>
+            <line number="25" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/WhereAlpha.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\WhereAlpha" filename="Endpoint/Traits/WhereAlpha.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="getWhereAlpha" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="64"/>
+              </lines>
+            </method>
+            <method name="setWhereAlpha" signature="array|string $whereAlpha" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="4"/>
+                <line number="17" hits="4"/>
+              </lines>
+            </method>
+            <method name="addWhereAlpha" signature="array|string $parameters" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="61"/>
+                <line number="22" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="64"/>
+            <line number="16" hits="4"/>
+            <line number="17" hits="4"/>
+            <line number="21" hits="61"/>
+            <line number="22" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/WhereAlphaNumeric.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\WhereAlphaNumeric" filename="Endpoint/Traits/WhereAlphaNumeric.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="getWhereAlphaNumeric" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="64"/>
+              </lines>
+            </method>
+            <method name="setWhereAlphaNumeric" signature="array|string $whereAlphaNumeric" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="4"/>
+                <line number="17" hits="4"/>
+              </lines>
+            </method>
+            <method name="addWhereAlphaNumeric" signature="array|string $parameters" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="61"/>
+                <line number="22" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="64"/>
+            <line number="16" hits="4"/>
+            <line number="17" hits="4"/>
+            <line number="21" hits="61"/>
+            <line number="22" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/WhereIn.php" line-rate="0.75" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\WhereIn" filename="Endpoint/Traits/WhereIn.php" line-rate="0.75" branch-rate="0" complexity="3">
+          <methods>
+            <method name="getWhereIn" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="59"/>
+              </lines>
+            </method>
+            <method name="setWhereIn" signature="array $whereIn" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="0"/>
+                <line number="15" hits="0"/>
+              </lines>
+            </method>
+            <method name="addWhereIn" signature="array|string $parameters, array $values" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="19" hits="60"/>
+                <line number="20" hits="60"/>
+                <line number="21" hits="60"/>
+                <line number="22" hits="60"/>
+                <line number="23" hits="60"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="59"/>
+            <line number="14" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="19" hits="60"/>
+            <line number="20" hits="60"/>
+            <line number="21" hits="60"/>
+            <line number="22" hits="60"/>
+            <line number="23" hits="60"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/WhereNumber.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\WhereNumber" filename="Endpoint/Traits/WhereNumber.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="getWhereNumber" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="67"/>
+              </lines>
+            </method>
+            <method name="setWhereNumber" signature="array|string $whereNumber" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="4"/>
+                <line number="17" hits="4"/>
+              </lines>
+            </method>
+            <method name="addWhereNumber" signature="array|string $parameters" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="61"/>
+                <line number="22" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="67"/>
+            <line number="16" hits="4"/>
+            <line number="17" hits="4"/>
+            <line number="21" hits="61"/>
+            <line number="22" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/WhereUlid.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\WhereUlid" filename="Endpoint/Traits/WhereUlid.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="getWhereUlid" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="64"/>
+              </lines>
+            </method>
+            <method name="setWhereUlid" signature="array|string $whereUlid" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="4"/>
+                <line number="17" hits="4"/>
+              </lines>
+            </method>
+            <method name="addWhereUlid" signature="array|string $parameters" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="61"/>
+                <line number="22" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="64"/>
+            <line number="16" hits="4"/>
+            <line number="17" hits="4"/>
+            <line number="21" hits="61"/>
+            <line number="22" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/WhereUuid.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\WhereUuid" filename="Endpoint/Traits/WhereUuid.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="getWhereUuid" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="64"/>
+              </lines>
+            </method>
+            <method name="setWhereUuid" signature="array|string $whereUuid" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="4"/>
+                <line number="17" hits="4"/>
+              </lines>
+            </method>
+            <method name="addWhereUuid" signature="array|string $parameters" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="61"/>
+                <line number="22" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="64"/>
+            <line number="16" hits="4"/>
+            <line number="17" hits="4"/>
+            <line number="21" hits="61"/>
+            <line number="22" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/WithTrashed.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\WithTrashed" filename="Endpoint/Traits/WithTrashed.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getWithTrashed" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="63"/>
+              </lines>
+            </method>
+            <method name="withTrashed" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="59"/>
+                <line number="15" hits="59"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="63"/>
+            <line number="14" hits="59"/>
+            <line number="15" hits="59"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/WithoutMiddleware.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\WithoutMiddleware" filename="Endpoint/Traits/WithoutMiddleware.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getWithoutMiddleware" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="65"/>
+              </lines>
+            </method>
+            <method name="setWithoutMiddleware" signature="string|array $middleware" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="15" hits="61"/>
+                <line number="16" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="65"/>
+            <line number="15" hits="61"/>
+            <line number="16" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Endpoint/Traits/WithoutThrottle.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Endpoint\Traits\WithoutThrottle" filename="Endpoint/Traits/WithoutThrottle.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="setWithoutThrottle" signature="string $name" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="61"/>
+                <line number="10" hits="61"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="61"/>
+            <line number="10" hits="61"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Enums/EnumEndpointMethod.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Generator/ClassGenerator.php" line-rate="0" branch-rate="0" complexity="24">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator" filename="Generator/ClassGenerator.php" line-rate="0" branch-rate="0" complexity="24">
+          <methods>
+            <method name="getStubName" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="16" hits="0"/>
+              </lines>
+            </method>
+            <method name="__construct" signature="string $dist, string $base" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="23" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="28" hits="0"/>
+              </lines>
+            </method>
+            <method name="getSource" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="34" hits="0"/>
+              </lines>
+            </method>
+            <method name="getImports" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="39" hits="0"/>
+              </lines>
+            </method>
+            <method name="getDist" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="44" hits="0"/>
+              </lines>
+            </method>
+            <method name="getClassName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="49" hits="0"/>
+                <line number="50" hits="0"/>
+              </lines>
+            </method>
+            <method name="getNamespace" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="55" hits="0"/>
+                <line number="56" hits="0"/>
+                <line number="57" hits="0"/>
+                <line number="58" hits="0"/>
+              </lines>
+            </method>
+            <method name="getFileNamespace" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="63" hits="0"/>
+                <line number="64" hits="0"/>
+                <line number="65" hits="0"/>
+                <line number="66" hits="0"/>
+                <line number="67" hits="0"/>
+              </lines>
+            </method>
+            <method name="getBaseClassName" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="72" hits="0"/>
+                <line number="73" hits="0"/>
+                <line number="76" hits="0"/>
+              </lines>
+            </method>
+            <method name="generate" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="81" hits="0"/>
+                <line number="82" hits="0"/>
+                <line number="83" hits="0"/>
+                <line number="84" hits="0"/>
+                <line number="86" hits="0"/>
+                <line number="87" hits="0"/>
+                <line number="88" hits="0"/>
+                <line number="89" hits="0"/>
+                <line number="90" hits="0"/>
+                <line number="92" hits="0"/>
+              </lines>
+            </method>
+            <method name="createReplaceableKeysFrom" signature="array $data" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="97" hits="0"/>
+                <line number="98" hits="0"/>
+                <line number="99" hits="0"/>
+              </lines>
+            </method>
+            <method name="getStub" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="104" hits="0"/>
+                <line number="105" hits="0"/>
+                <line number="106" hits="0"/>
+                <line number="107" hits="0"/>
+                <line number="108" hits="0"/>
+              </lines>
+            </method>
+            <method name="getStubPath" signature="string $name" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="113" hits="0"/>
+                <line number="114" hits="0"/>
+                <line number="115" hits="0"/>
+                <line number="118" hits="0"/>
+              </lines>
+            </method>
+            <method name="setImport" signature="string $namespace, array|string|null $entity" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="123" hits="0"/>
+                <line number="124" hits="0"/>
+                <line number="126" hits="0"/>
+                <line number="127" hits="0"/>
+                <line number="129" hits="0"/>
+                <line number="130" hits="0"/>
+                <line number="134" hits="0"/>
+                <line number="136" hits="0"/>
+              </lines>
+            </method>
+            <method name="getReplaceableData" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="141" hits="0"/>
+                <line number="142" hits="0"/>
+                <line number="143" hits="0"/>
+                <line number="144" hits="0"/>
+                <line number="145" hits="0"/>
+                <line number="146" hits="0"/>
+              </lines>
+            </method>
+            <method name="getReplaceable" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="151" hits="0"/>
+              </lines>
+            </method>
+            <method name="getImportsSource" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="156" hits="0"/>
+                <line number="157" hits="0"/>
+                <line number="158" hits="0"/>
+                <line number="159" hits="0"/>
+                <line number="160" hits="0"/>
+                <line number="161" hits="0"/>
+                <line number="162" hits="0"/>
+              </lines>
+            </method>
+            <method name="generateImportNamespaceEntities" signature="array $entities" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="167" hits="0"/>
+                <line number="168" hits="0"/>
+                <line number="171" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="39" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="49" hits="0"/>
+            <line number="50" hits="0"/>
+            <line number="55" hits="0"/>
+            <line number="56" hits="0"/>
+            <line number="57" hits="0"/>
+            <line number="58" hits="0"/>
+            <line number="63" hits="0"/>
+            <line number="64" hits="0"/>
+            <line number="65" hits="0"/>
+            <line number="66" hits="0"/>
+            <line number="67" hits="0"/>
+            <line number="72" hits="0"/>
+            <line number="73" hits="0"/>
+            <line number="76" hits="0"/>
+            <line number="81" hits="0"/>
+            <line number="82" hits="0"/>
+            <line number="83" hits="0"/>
+            <line number="84" hits="0"/>
+            <line number="86" hits="0"/>
+            <line number="87" hits="0"/>
+            <line number="88" hits="0"/>
+            <line number="89" hits="0"/>
+            <line number="90" hits="0"/>
+            <line number="92" hits="0"/>
+            <line number="97" hits="0"/>
+            <line number="98" hits="0"/>
+            <line number="99" hits="0"/>
+            <line number="104" hits="0"/>
+            <line number="105" hits="0"/>
+            <line number="106" hits="0"/>
+            <line number="107" hits="0"/>
+            <line number="108" hits="0"/>
+            <line number="113" hits="0"/>
+            <line number="114" hits="0"/>
+            <line number="115" hits="0"/>
+            <line number="118" hits="0"/>
+            <line number="123" hits="0"/>
+            <line number="124" hits="0"/>
+            <line number="126" hits="0"/>
+            <line number="127" hits="0"/>
+            <line number="129" hits="0"/>
+            <line number="130" hits="0"/>
+            <line number="134" hits="0"/>
+            <line number="136" hits="0"/>
+            <line number="141" hits="0"/>
+            <line number="142" hits="0"/>
+            <line number="143" hits="0"/>
+            <line number="144" hits="0"/>
+            <line number="145" hits="0"/>
+            <line number="146" hits="0"/>
+            <line number="151" hits="0"/>
+            <line number="156" hits="0"/>
+            <line number="157" hits="0"/>
+            <line number="158" hits="0"/>
+            <line number="159" hits="0"/>
+            <line number="160" hits="0"/>
+            <line number="161" hits="0"/>
+            <line number="162" hits="0"/>
+            <line number="167" hits="0"/>
+            <line number="168" hits="0"/>
+            <line number="171" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/EndpointClassGenerator.php" line-rate="0" branch-rate="0" complexity="24">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\EndpointClassGenerator" filename="Generator/ClassGenerator/EndpointClassGenerator.php" line-rate="0" branch-rate="0" complexity="24">
+          <methods>
+            <method name="getStubName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="48" hits="0"/>
+              </lines>
+            </method>
+            <method name="getReplaceable" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="53" hits="0"/>
+                <line number="55" hits="0"/>
+                <line number="56" hits="0"/>
+                <line number="57" hits="0"/>
+                <line number="58" hits="0"/>
+                <line number="59" hits="0"/>
+                <line number="60" hits="0"/>
+                <line number="61" hits="0"/>
+                <line number="62" hits="0"/>
+              </lines>
+            </method>
+            <method name="runPipeline" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="67" hits="0"/>
+                <line number="68" hits="0"/>
+                <line number="69" hits="0"/>
+                <line number="70" hits="0"/>
+                <line number="71" hits="0"/>
+                <line number="73" hits="0"/>
+                <line number="74" hits="0"/>
+                <line number="75" hits="0"/>
+                <line number="76" hits="0"/>
+                <line number="77" hits="0"/>
+                <line number="78" hits="0"/>
+                <line number="80" hits="0"/>
+                <line number="81" hits="0"/>
+                <line number="83" hits="0"/>
+                <line number="84" hits="0"/>
+                <line number="85" hits="0"/>
+                <line number="86" hits="0"/>
+                <line number="87" hits="0"/>
+                <line number="88" hits="0"/>
+              </lines>
+            </method>
+            <method name="getAttributes" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="93" hits="0"/>
+              </lines>
+            </method>
+            <method name="setRoutePath" signature="string $path" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="98" hits="0"/>
+                <line number="99" hits="0"/>
+              </lines>
+            </method>
+            <method name="setAttribute" signature="string $name, array|string|null $args" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="104" hits="0"/>
+                <line number="105" hits="0"/>
+                <line number="107" hits="0"/>
+              </lines>
+            </method>
+            <method name="getAttributesNamespace" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="112" hits="0"/>
+                <line number="113" hits="0"/>
+                <line number="114" hits="0"/>
+              </lines>
+            </method>
+            <method name="getRoutePath" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="119" hits="0"/>
+              </lines>
+            </method>
+            <method name="getAttributesSource" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="124" hits="0"/>
+                <line number="125" hits="0"/>
+                <line number="126" hits="0"/>
+                <line number="127" hits="0"/>
+                <line number="128" hits="0"/>
+                <line number="129" hits="0"/>
+                <line number="130" hits="0"/>
+              </lines>
+            </method>
+            <method name="generateAttributeArgs" signature="array $args" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="135" hits="0"/>
+                <line number="136" hits="0"/>
+                <line number="139" hits="0"/>
+                <line number="140" hits="0"/>
+                <line number="141" hits="0"/>
+                <line number="143" hits="0"/>
+              </lines>
+            </method>
+            <method name="getReturnSource" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="149" hits="0"/>
+              </lines>
+            </method>
+            <method name="getRequestSource" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="154" hits="0"/>
+                <line number="156" hits="0"/>
+                <line number="157" hits="0"/>
+                <line number="160" hits="0"/>
+              </lines>
+            </method>
+            <method name="getResponseSource" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="165" hits="0"/>
+                <line number="167" hits="0"/>
+                <line number="168" hits="0"/>
+                <line number="171" hits="0"/>
+                <line number="172" hits="0"/>
+                <line number="173" hits="0"/>
+                <line number="174" hits="0"/>
+                <line number="175" hits="0"/>
+              </lines>
+            </method>
+            <method name="getRequestParamSource" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="180" hits="0"/>
+                <line number="182" hits="0"/>
+                <line number="183" hits="0"/>
+                <line number="186" hits="0"/>
+                <line number="187" hits="0"/>
+                <line number="188" hits="0"/>
+                <line number="189" hits="0"/>
+                <line number="190" hits="0"/>
+              </lines>
+            </method>
+            <method name="getClassCommentSource" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="195" hits="0"/>
+                <line number="197" hits="0"/>
+                <line number="198" hits="0"/>
+                <line number="199" hits="0"/>
+                <line number="202" hits="0"/>
+                <line number="203" hits="0"/>
+                <line number="204" hits="0"/>
+                <line number="205" hits="0"/>
+              </lines>
+            </method>
+            <method name="getRequestVariableName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="210" hits="0"/>
+              </lines>
+            </method>
+            <method name="getOptions" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="215" hits="0"/>
+              </lines>
+            </method>
+            <method name="loadOptions" signature="array $options" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="220" hits="0"/>
+                <line number="221" hits="0"/>
+              </lines>
+            </method>
+            <method name="getOption" signature="string $name, $default" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="226" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="48" hits="0"/>
+            <line number="53" hits="0"/>
+            <line number="55" hits="0"/>
+            <line number="56" hits="0"/>
+            <line number="57" hits="0"/>
+            <line number="58" hits="0"/>
+            <line number="59" hits="0"/>
+            <line number="60" hits="0"/>
+            <line number="61" hits="0"/>
+            <line number="62" hits="0"/>
+            <line number="67" hits="0"/>
+            <line number="68" hits="0"/>
+            <line number="69" hits="0"/>
+            <line number="70" hits="0"/>
+            <line number="71" hits="0"/>
+            <line number="73" hits="0"/>
+            <line number="74" hits="0"/>
+            <line number="75" hits="0"/>
+            <line number="76" hits="0"/>
+            <line number="77" hits="0"/>
+            <line number="78" hits="0"/>
+            <line number="80" hits="0"/>
+            <line number="81" hits="0"/>
+            <line number="83" hits="0"/>
+            <line number="84" hits="0"/>
+            <line number="85" hits="0"/>
+            <line number="86" hits="0"/>
+            <line number="87" hits="0"/>
+            <line number="88" hits="0"/>
+            <line number="93" hits="0"/>
+            <line number="98" hits="0"/>
+            <line number="99" hits="0"/>
+            <line number="104" hits="0"/>
+            <line number="105" hits="0"/>
+            <line number="107" hits="0"/>
+            <line number="112" hits="0"/>
+            <line number="113" hits="0"/>
+            <line number="114" hits="0"/>
+            <line number="119" hits="0"/>
+            <line number="124" hits="0"/>
+            <line number="125" hits="0"/>
+            <line number="126" hits="0"/>
+            <line number="127" hits="0"/>
+            <line number="128" hits="0"/>
+            <line number="129" hits="0"/>
+            <line number="130" hits="0"/>
+            <line number="135" hits="0"/>
+            <line number="136" hits="0"/>
+            <line number="139" hits="0"/>
+            <line number="140" hits="0"/>
+            <line number="141" hits="0"/>
+            <line number="143" hits="0"/>
+            <line number="149" hits="0"/>
+            <line number="154" hits="0"/>
+            <line number="156" hits="0"/>
+            <line number="157" hits="0"/>
+            <line number="160" hits="0"/>
+            <line number="165" hits="0"/>
+            <line number="167" hits="0"/>
+            <line number="168" hits="0"/>
+            <line number="171" hits="0"/>
+            <line number="172" hits="0"/>
+            <line number="173" hits="0"/>
+            <line number="174" hits="0"/>
+            <line number="175" hits="0"/>
+            <line number="180" hits="0"/>
+            <line number="182" hits="0"/>
+            <line number="183" hits="0"/>
+            <line number="186" hits="0"/>
+            <line number="187" hits="0"/>
+            <line number="188" hits="0"/>
+            <line number="189" hits="0"/>
+            <line number="190" hits="0"/>
+            <line number="195" hits="0"/>
+            <line number="197" hits="0"/>
+            <line number="198" hits="0"/>
+            <line number="199" hits="0"/>
+            <line number="202" hits="0"/>
+            <line number="203" hits="0"/>
+            <line number="204" hits="0"/>
+            <line number="205" hits="0"/>
+            <line number="210" hits="0"/>
+            <line number="215" hits="0"/>
+            <line number="220" hits="0"/>
+            <line number="221" hits="0"/>
+            <line number="226" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/EndpointRequestClassGeneratorContract.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\EndpointRequestClassGeneratorContract" filename="Generator/ClassGenerator/EndpointRequestClassGeneratorContract.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="getStubName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="15" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/EndpointResponseClassGenerator.php" line-rate="0" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\EndpointResponseClassGenerator" filename="Generator/ClassGenerator/EndpointResponseClassGenerator.php" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="getStubName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="0"/>
+              </lines>
+            </method>
+            <method name="getReplaceable" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+              </lines>
+            </method>
+            <method name="getRequestParamDeclaration" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="28" hits="0"/>
+                <line number="29" hits="0"/>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="35" hits="0"/>
+                <line number="36" hits="0"/>
+                <line number="37" hits="0"/>
+                <line number="38" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="29" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="37" hits="0"/>
+            <line number="38" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/CanPipe.php" line-rate="0" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\CanPipe" filename="Generator/ClassGenerator/Pipes/CanPipe.php" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="13" hits="0"/>
+                <line number="14" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="19" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="26" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0"/>
+            <line number="14" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="26" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/DefaultsPipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\DefaultsPipe" filename="Generator/ClassGenerator/Pipes/DefaultsPipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="19" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="23" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="23" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/GuestPipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\GuestPipe" filename="Generator/ClassGenerator/Pipes/GuestPipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="0"/>
+                <line number="13" hits="0"/>
+                <line number="14" hits="0"/>
+                <line number="17" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0"/>
+            <line number="13" hits="0"/>
+            <line number="14" hits="0"/>
+            <line number="17" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/MakeEndpointPipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\MakeEndpointPipe" filename="Generator/ClassGenerator/Pipes/MakeEndpointPipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="11" hits="0"/>
+              </lines>
+            </method>
+            <method name="parseOptionValueToStringArgs" signature="?string $value" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="19" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/MethodPipe.php" line-rate="0" branch-rate="0" complexity="9">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\MethodPipe" filename="Generator/ClassGenerator/Pipes/MethodPipe.php" line-rate="0" branch-rate="0" complexity="9">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="0"/>
+                <line number="28" hits="0"/>
+                <line number="30" hits="0"/>
+              </lines>
+            </method>
+            <method name="make" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="35" hits="0"/>
+                <line number="37" hits="0"/>
+                <line number="38" hits="0"/>
+                <line number="40" hits="0"/>
+                <line number="41" hits="0"/>
+                <line number="43" hits="0"/>
+                <line number="44" hits="0"/>
+                <line number="45" hits="0"/>
+                <line number="46" hits="0"/>
+                <line number="47" hits="0"/>
+                <line number="48" hits="0"/>
+                <line number="49" hits="0"/>
+              </lines>
+            </method>
+            <method name="getSelectedMethods" signature="array $options" line-rate="0" branch-rate="0" complexity="5">
+              <lines>
+                <line number="55" hits="0"/>
+                <line number="56" hits="0"/>
+                <line number="57" hits="0"/>
+                <line number="58" hits="0"/>
+                <line number="61" hits="0"/>
+                <line number="62" hits="0"/>
+                <line number="65" hits="0"/>
+                <line number="68" hits="0"/>
+              </lines>
+            </method>
+            <method name="makeRouteAttributeStatement" signature="array $methods" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="73" hits="0"/>
+                <line number="74" hits="0"/>
+                <line number="75" hits="0"/>
+                <line number="76" hits="0"/>
+                <line number="77" hits="0"/>
+                <line number="78" hits="0"/>
+                <line number="79" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="37" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="40" hits="0"/>
+            <line number="41" hits="0"/>
+            <line number="43" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="45" hits="0"/>
+            <line number="46" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="49" hits="0"/>
+            <line number="55" hits="0"/>
+            <line number="56" hits="0"/>
+            <line number="57" hits="0"/>
+            <line number="58" hits="0"/>
+            <line number="61" hits="0"/>
+            <line number="62" hits="0"/>
+            <line number="65" hits="0"/>
+            <line number="68" hits="0"/>
+            <line number="73" hits="0"/>
+            <line number="74" hits="0"/>
+            <line number="75" hits="0"/>
+            <line number="76" hits="0"/>
+            <line number="77" hits="0"/>
+            <line number="78" hits="0"/>
+            <line number="79" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/MiddlewarePipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\MiddlewarePipe" filename="Generator/ClassGenerator/Pipes/MiddlewarePipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="13" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="19" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="29" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="29" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/NamePipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\NamePipe" filename="Generator/ClassGenerator/Pipes/NamePipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="0"/>
+                <line number="13" hits="0"/>
+                <line number="14" hits="0"/>
+                <line number="17" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0"/>
+            <line number="13" hits="0"/>
+            <line number="14" hits="0"/>
+            <line number="17" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/ScopeBindingsPipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\ScopeBindingsPipe" filename="Generator/ClassGenerator/Pipes/ScopeBindingsPipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="0"/>
+                <line number="13" hits="0"/>
+                <line number="16" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0"/>
+            <line number="13" hits="0"/>
+            <line number="16" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/ThrottlePipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\ThrottlePipe" filename="Generator/ClassGenerator/Pipes/ThrottlePipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="0"/>
+                <line number="13" hits="0"/>
+                <line number="14" hits="0"/>
+                <line number="17" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0"/>
+            <line number="13" hits="0"/>
+            <line number="14" hits="0"/>
+            <line number="17" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/WhereAlpha.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\WhereAlpha" filename="Generator/ClassGenerator/Pipes/WhereAlpha.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getAttributeName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="0"/>
+              </lines>
+            </method>
+            <method name="getOptionKey" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="14" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/WhereAlphaNumeric.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\WhereAlphaNumeric" filename="Generator/ClassGenerator/Pipes/WhereAlphaNumeric.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getAttributeName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="0"/>
+              </lines>
+            </method>
+            <method name="getOptionKey" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="14" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/WhereFamilyPipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\WhereFamilyPipe" filename="Generator/ClassGenerator/Pipes/WhereFamilyPipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getOptionKey" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="10" hits="0"/>
+              </lines>
+            </method>
+            <method name="getAttributeName" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="11" hits="0"/>
+              </lines>
+            </method>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="19" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="26" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="0"/>
+            <line number="11" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="26" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/WhereNumber.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\WhereNumber" filename="Generator/ClassGenerator/Pipes/WhereNumber.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getAttributeName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="0"/>
+              </lines>
+            </method>
+            <method name="getOptionKey" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="14" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/WhereUlid.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\WhereUlid" filename="Generator/ClassGenerator/Pipes/WhereUlid.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getAttributeName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="0"/>
+              </lines>
+            </method>
+            <method name="getOptionKey" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="14" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/WhereUuid.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\WhereUuid" filename="Generator/ClassGenerator/Pipes/WhereUuid.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getAttributeName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="0"/>
+              </lines>
+            </method>
+            <method name="getOptionKey" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="14" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/WithTrashedPipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\WithTrashedPipe" filename="Generator/ClassGenerator/Pipes/WithTrashedPipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="0"/>
+                <line number="13" hits="0"/>
+                <line number="16" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0"/>
+            <line number="13" hits="0"/>
+            <line number="16" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/WithoutMiddlewarePipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\WithoutMiddlewarePipe" filename="Generator/ClassGenerator/Pipes/WithoutMiddlewarePipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="13" hits="0"/>
+                <line number="14" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="19" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="30" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0"/>
+            <line number="14" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="30" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Pipes/WithoutThrottlePipe.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\WithoutThrottlePipe" filename="Generator/ClassGenerator/Pipes/WithoutThrottlePipe.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract $generator, Closure $next" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="0"/>
+                <line number="13" hits="0"/>
+                <line number="14" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="20" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0"/>
+            <line number="13" hits="0"/>
+            <line number="14" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="20" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/ClassGenerator/Traits/WithRequestGenerator.php" line-rate="0" branch-rate="0" complexity="10">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Traits\WithRequestGenerator" filename="Generator/ClassGenerator/Traits/WithRequestGenerator.php" line-rate="0" branch-rate="0" complexity="10">
+          <methods>
+            <method name="getRequestClassName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="0"/>
+              </lines>
+            </method>
+            <method name="getRequestNamespace" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="19" hits="0"/>
+              </lines>
+            </method>
+            <method name="setRequestNamespace" signature="?string $request" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="30" hits="0"/>
+              </lines>
+            </method>
+            <method name="getResponseNamespace" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="35" hits="0"/>
+              </lines>
+            </method>
+            <method name="getResponseClassName" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="40" hits="0"/>
+                <line number="41" hits="0"/>
+                <line number="42" hits="0"/>
+              </lines>
+            </method>
+            <method name="setResponseNamespace" signature="?string $response" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="47" hits="0"/>
+                <line number="48" hits="0"/>
+                <line number="49" hits="0"/>
+                <line number="50" hits="0"/>
+                <line number="53" hits="0"/>
+              </lines>
+            </method>
+            <method name="extractClassName" signature="?string $namespace" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="58" hits="0"/>
+                <line number="59" hits="0"/>
+                <line number="62" hits="0"/>
+                <line number="63" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="40" hits="0"/>
+            <line number="41" hits="0"/>
+            <line number="42" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="49" hits="0"/>
+            <line number="50" hits="0"/>
+            <line number="53" hits="0"/>
+            <line number="58" hits="0"/>
+            <line number="59" hits="0"/>
+            <line number="62" hits="0"/>
+            <line number="63" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/CanPipe.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\CanPipe" filename="Generator/Pipes/CanPipe.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="12" hits="64"/>
+                <line number="13" hits="64"/>
+                <line number="14" hits="59"/>
+                <line number="15" hits="59"/>
+                <line number="16" hits="59"/>
+                <line number="20" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="64"/>
+            <line number="13" hits="64"/>
+            <line number="14" hits="59"/>
+            <line number="15" hits="59"/>
+            <line number="16" hits="59"/>
+            <line number="20" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/DefaultsPipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\DefaultsPipe" filename="Generator/Pipes/DefaultsPipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="63"/>
+                <line number="13" hits="63"/>
+                <line number="15" hits="63"/>
+                <line number="16" hits="58"/>
+                <line number="19" hits="63"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="63"/>
+            <line number="13" hits="63"/>
+            <line number="15" hits="63"/>
+            <line number="16" hits="58"/>
+            <line number="19" hits="63"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/GroupPipe.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\GroupPipe" filename="Generator/Pipes/GroupPipe.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="12" hits="66"/>
+                <line number="14" hits="66"/>
+                <line number="15" hits="66"/>
+                <line number="17" hits="66"/>
+                <line number="19" hits="66"/>
+                <line number="20" hits="4"/>
+                <line number="21" hits="4"/>
+                <line number="22" hits="4"/>
+                <line number="24" hits="4"/>
+                <line number="25" hits="4"/>
+                <line number="26" hits="4"/>
+                <line number="27" hits="4"/>
+                <line number="31" hits="66"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="66"/>
+            <line number="14" hits="66"/>
+            <line number="15" hits="66"/>
+            <line number="17" hits="66"/>
+            <line number="19" hits="66"/>
+            <line number="20" hits="4"/>
+            <line number="21" hits="4"/>
+            <line number="22" hits="4"/>
+            <line number="24" hits="4"/>
+            <line number="25" hits="4"/>
+            <line number="26" hits="4"/>
+            <line number="27" hits="4"/>
+            <line number="31" hits="66"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/MiddlewarePipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\MiddlewarePipe" filename="Generator/Pipes/MiddlewarePipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="63"/>
+                <line number="13" hits="63"/>
+                <line number="14" hits="58"/>
+                <line number="17" hits="63"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="63"/>
+            <line number="13" hits="63"/>
+            <line number="14" hits="58"/>
+            <line number="17" hits="63"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/RouteNamePipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\RouteNamePipe" filename="Generator/Pipes/RouteNamePipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="64"/>
+                <line number="14" hits="64"/>
+                <line number="15" hits="58"/>
+                <line number="18" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="64"/>
+            <line number="14" hits="64"/>
+            <line number="15" hits="58"/>
+            <line number="18" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/RoutePipe.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\RoutePipe" filename="Generator/Pipes/RoutePipe.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/RouteWherePipe.php" line-rate="0.91666666666667" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\RouteWherePipe" filename="Generator/Pipes/RouteWherePipe.php" line-rate="0.91666666666667" branch-rate="0" complexity="5">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="15" hits="80"/>
+                <line number="16" hits="80"/>
+                <line number="18" hits="80"/>
+                <line number="19" hits="67"/>
+                <line number="20" hits="67"/>
+                <line number="21" hits="67"/>
+                <line number="25" hits="80"/>
+              </lines>
+            </method>
+            <method name="getRouteProperty" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator" line-rate="0.8" branch-rate="0" complexity="2">
+              <lines>
+                <line number="30" hits="80"/>
+                <line number="31" hits="80"/>
+                <line number="33" hits="80"/>
+                <line number="34" hits="0"/>
+                <line number="37" hits="80"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="80"/>
+            <line number="16" hits="80"/>
+            <line number="18" hits="80"/>
+            <line number="19" hits="67"/>
+            <line number="20" hits="67"/>
+            <line number="21" hits="67"/>
+            <line number="25" hits="80"/>
+            <line number="30" hits="80"/>
+            <line number="31" hits="80"/>
+            <line number="33" hits="80"/>
+            <line number="34" hits="0"/>
+            <line number="37" hits="80"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/ScopeBindingsPipe.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\ScopeBindingsPipe" filename="Generator/Pipes/ScopeBindingsPipe.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="12" hits="64"/>
+                <line number="13" hits="64"/>
+                <line number="14" hits="59"/>
+                <line number="15" hits="59"/>
+                <line number="16" hits="58"/>
+                <line number="17" hits="1"/>
+                <line number="18" hits="59"/>
+                <line number="21" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="64"/>
+            <line number="13" hits="64"/>
+            <line number="14" hits="59"/>
+            <line number="15" hits="59"/>
+            <line number="16" hits="58"/>
+            <line number="17" hits="1"/>
+            <line number="18" hits="59"/>
+            <line number="21" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/ThrottlePipe.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\ThrottlePipe" filename="Generator/Pipes/ThrottlePipe.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="12" hits="64"/>
+                <line number="13" hits="64"/>
+                <line number="14" hits="59"/>
+                <line number="15" hits="59"/>
+                <line number="16" hits="59"/>
+                <line number="17" hits="59"/>
+                <line number="18" hits="59"/>
+                <line number="19" hits="59"/>
+                <line number="20" hits="59"/>
+                <line number="22" hits="59"/>
+                <line number="23" hits="59"/>
+                <line number="27" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="64"/>
+            <line number="13" hits="64"/>
+            <line number="14" hits="59"/>
+            <line number="15" hits="59"/>
+            <line number="16" hits="59"/>
+            <line number="17" hits="59"/>
+            <line number="18" hits="59"/>
+            <line number="19" hits="59"/>
+            <line number="20" hits="59"/>
+            <line number="22" hits="59"/>
+            <line number="23" hits="59"/>
+            <line number="27" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/WhereAlphaNumericPipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereAlphaNumericPipe" filename="Generator/Pipes/WhereAlphaNumericPipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getRouteConfigProperty" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="64"/>
+              </lines>
+            </method>
+            <method name="getRouteMethodKey" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="64"/>
+            <line number="14" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/WhereAlphaPipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereAlphaPipe" filename="Generator/Pipes/WhereAlphaPipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getRouteConfigProperty" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="64"/>
+              </lines>
+            </method>
+            <method name="getRouteMethodKey" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="64"/>
+            <line number="14" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/WhereInPipe.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereInPipe" filename="Generator/Pipes/WhereInPipe.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="12" hits="64"/>
+                <line number="13" hits="64"/>
+                <line number="14" hits="59"/>
+                <line number="15" hits="59"/>
+                <line number="16" hits="59"/>
+                <line number="20" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="64"/>
+            <line number="13" hits="64"/>
+            <line number="14" hits="59"/>
+            <line number="15" hits="59"/>
+            <line number="16" hits="59"/>
+            <line number="20" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/WhereNumberPipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereNumberPipe" filename="Generator/Pipes/WhereNumberPipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getRouteConfigProperty" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="64"/>
+              </lines>
+            </method>
+            <method name="getRouteMethodKey" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="64"/>
+            <line number="14" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/WherePipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\WherePipe" filename="Generator/Pipes/WherePipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="63"/>
+                <line number="13" hits="63"/>
+                <line number="14" hits="58"/>
+                <line number="17" hits="63"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="63"/>
+            <line number="13" hits="63"/>
+            <line number="14" hits="58"/>
+            <line number="17" hits="63"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/WhereUlidPipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereUlidPipe" filename="Generator/Pipes/WhereUlidPipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getRouteConfigProperty" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="64"/>
+              </lines>
+            </method>
+            <method name="getRouteMethodKey" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="64"/>
+            <line number="14" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/WhereUuidPipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereUuidPipe" filename="Generator/Pipes/WhereUuidPipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getRouteConfigProperty" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="64"/>
+              </lines>
+            </method>
+            <method name="getRouteMethodKey" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="64"/>
+            <line number="14" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/WithTrashedPipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\WithTrashedPipe" filename="Generator/Pipes/WithTrashedPipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="64"/>
+                <line number="13" hits="64"/>
+                <line number="14" hits="58"/>
+                <line number="17" hits="64"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="64"/>
+            <line number="13" hits="64"/>
+            <line number="14" hits="58"/>
+            <line number="17" hits="64"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/Pipes/WithoutMiddlewarePipe.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\Pipes\WithoutMiddlewarePipe" filename="Generator/Pipes/WithoutMiddlewarePipe.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract $generator, Closure $next" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="12" hits="63"/>
+                <line number="13" hits="63"/>
+                <line number="14" hits="58"/>
+                <line number="17" hits="63"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="63"/>
+            <line number="13" hits="63"/>
+            <line number="14" hits="58"/>
+            <line number="17" hits="63"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/RouteGenerator.php" line-rate="1" branch-rate="0" complexity="19">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\RouteGenerator" filename="Generator/RouteGenerator.php" line-rate="1" branch-rate="0" complexity="19">
+          <methods>
+            <method name="__construct" signature="Illuminate\Routing\Router $router, string $classNamespace, Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract $endpointConfig" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="46" hits="68"/>
+              </lines>
+            </method>
+            <method name="initRoute" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="51" hits="68"/>
+                <line number="52" hits="68"/>
+                <line number="54" hits="68"/>
+                <line number="56" hits="68"/>
+                <line number="57" hits="10"/>
+                <line number="60" hits="58"/>
+              </lines>
+            </method>
+            <method name="getMethods" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="64" hits="68"/>
+                <line number="66" hits="68"/>
+                <line number="67" hits="60"/>
+                <line number="68" hits="58"/>
+                <line number="71" hits="60"/>
+                <line number="74" hits="68"/>
+              </lines>
+            </method>
+            <method name="createRoute" signature="array|string $methods, string $path" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="79" hits="58"/>
+                <line number="80" hits="58"/>
+              </lines>
+            </method>
+            <method name="getRoute" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="86" hits="60"/>
+              </lines>
+            </method>
+            <method name="getEndpointConfiguration" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="90" hits="60"/>
+              </lines>
+            </method>
+            <method name="generate" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="95" hits="62"/>
+                <line number="96" hits="1"/>
+                <line number="99" hits="61"/>
+                <line number="100" hits="61"/>
+                <line number="101" hits="61"/>
+              </lines>
+            </method>
+            <method name="margeNamespaceConfig" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="106" hits="61"/>
+                <line number="107" hits="61"/>
+                <line number="108" hits="3"/>
+                <line number="109" hits="3"/>
+                <line number="110" hits="3"/>
+                <line number="113" hits="61"/>
+              </lines>
+            </method>
+            <method name="detectNamespaceScopeConfig" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="118" hits="61"/>
+                <line number="120" hits="61"/>
+                <line number="121" hits="57"/>
+                <line number="124" hits="4"/>
+                <line number="126" hits="4"/>
+                <line number="127" hits="4"/>
+                <line number="128" hits="4"/>
+                <line number="129" hits="4"/>
+              </lines>
+            </method>
+            <method name="execPipes" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="134" hits="60"/>
+                <line number="135" hits="60"/>
+                <line number="138" hits="60"/>
+                <line number="140" hits="60"/>
+                <line number="141" hits="60"/>
+                <line number="143" hits="60"/>
+                <line number="144" hits="60"/>
+                <line number="145" hits="60"/>
+                <line number="146" hits="60"/>
+                <line number="148" hits="60"/>
+                <line number="149" hits="60"/>
+                <line number="151" hits="60"/>
+                <line number="152" hits="60"/>
+                <line number="153" hits="60"/>
+                <line number="154" hits="60"/>
+                <line number="155" hits="60"/>
+                <line number="156" hits="60"/>
+                <line number="157" hits="60"/>
+                <line number="158" hits="60"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="46" hits="68"/>
+            <line number="51" hits="68"/>
+            <line number="52" hits="68"/>
+            <line number="54" hits="68"/>
+            <line number="56" hits="68"/>
+            <line number="57" hits="10"/>
+            <line number="60" hits="58"/>
+            <line number="64" hits="68"/>
+            <line number="66" hits="68"/>
+            <line number="67" hits="60"/>
+            <line number="68" hits="58"/>
+            <line number="71" hits="60"/>
+            <line number="74" hits="68"/>
+            <line number="79" hits="58"/>
+            <line number="80" hits="58"/>
+            <line number="86" hits="60"/>
+            <line number="90" hits="60"/>
+            <line number="95" hits="62"/>
+            <line number="96" hits="1"/>
+            <line number="99" hits="61"/>
+            <line number="100" hits="61"/>
+            <line number="101" hits="61"/>
+            <line number="106" hits="61"/>
+            <line number="107" hits="61"/>
+            <line number="108" hits="3"/>
+            <line number="109" hits="3"/>
+            <line number="110" hits="3"/>
+            <line number="113" hits="61"/>
+            <line number="118" hits="61"/>
+            <line number="120" hits="61"/>
+            <line number="121" hits="57"/>
+            <line number="124" hits="4"/>
+            <line number="126" hits="4"/>
+            <line number="127" hits="4"/>
+            <line number="128" hits="4"/>
+            <line number="129" hits="4"/>
+            <line number="134" hits="60"/>
+            <line number="135" hits="60"/>
+            <line number="138" hits="60"/>
+            <line number="140" hits="60"/>
+            <line number="141" hits="60"/>
+            <line number="143" hits="60"/>
+            <line number="144" hits="60"/>
+            <line number="145" hits="60"/>
+            <line number="146" hits="60"/>
+            <line number="148" hits="60"/>
+            <line number="149" hits="60"/>
+            <line number="151" hits="60"/>
+            <line number="152" hits="60"/>
+            <line number="153" hits="60"/>
+            <line number="154" hits="60"/>
+            <line number="155" hits="60"/>
+            <line number="156" hits="60"/>
+            <line number="157" hits="60"/>
+            <line number="158" hits="60"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Generator/RouterGenerator.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Generator\RouterGenerator" filename="Generator/RouterGenerator.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="__construct" signature="Illuminate\Routing\Router $router, Baghunts\LaravelFastEndpoint\Contracts\ScannerContract $scanner" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="20" hits="60"/>
+              </lines>
+            </method>
+            <method name="generate" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="59"/>
+                <line number="26" hits="59"/>
+                <line number="27" hits="1"/>
+                <line number="30" hits="58"/>
+              </lines>
+            </method>
+            <method name="registerRouterGroup" signature="array $endpoints" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="35" hits="58"/>
+                <line number="37" hits="58"/>
+                <line number="38" hits="58"/>
+                <line number="39" hits="58"/>
+                <line number="40" hits="58"/>
+                <line number="41" hits="58"/>
+                <line number="42" hits="58"/>
+                <line number="43" hits="58"/>
+                <line number="44" hits="57"/>
+                <line number="45" hits="58"/>
+                <line number="46" hits="58"/>
+              </lines>
+            </method>
+            <method name="generateRoutes" signature="array $endpoints" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="50" hits="58"/>
+                <line number="51" hits="58"/>
+                <line number="52" hits="58"/>
+                <line number="53" hits="58"/>
+                <line number="54" hits="58"/>
+                <line number="55" hits="58"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="60"/>
+            <line number="24" hits="59"/>
+            <line number="26" hits="59"/>
+            <line number="27" hits="1"/>
+            <line number="30" hits="58"/>
+            <line number="35" hits="58"/>
+            <line number="37" hits="58"/>
+            <line number="38" hits="58"/>
+            <line number="39" hits="58"/>
+            <line number="40" hits="58"/>
+            <line number="41" hits="58"/>
+            <line number="42" hits="58"/>
+            <line number="43" hits="58"/>
+            <line number="44" hits="57"/>
+            <line number="45" hits="58"/>
+            <line number="46" hits="58"/>
+            <line number="50" hits="58"/>
+            <line number="51" hits="58"/>
+            <line number="52" hits="58"/>
+            <line number="53" hits="58"/>
+            <line number="54" hits="58"/>
+            <line number="55" hits="58"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Scanner/Scanner.php" line-rate="0.96923076923077" branch-rate="0" complexity="26">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\Scanner\Scanner" filename="Scanner/Scanner.php" line-rate="0.96923076923077" branch-rate="0" complexity="26">
+          <methods>
+            <method name="__construct" signature="string $dir, string $signature" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="32" hits="63"/>
+              </lines>
+            </method>
+            <method name="getFiles" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="37" hits="59"/>
+              </lines>
+            </method>
+            <method name="findEndpoints" signature="" line-rate="0.90909090909091" branch-rate="0" complexity="5">
+              <lines>
+                <line number="42" hits="58"/>
+                <line number="43" hits="58"/>
+                <line number="44" hits="0"/>
+                <line number="47" hits="58"/>
+                <line number="49" hits="58"/>
+                <line number="50" hits="1"/>
+                <line number="53" hits="58"/>
+                <line number="54" hits="58"/>
+                <line number="55" hits="58"/>
+                <line number="58" hits="58"/>
+                <line number="61" hits="58"/>
+              </lines>
+            </method>
+            <method name="findClasses" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="65" hits="59"/>
+                <line number="67" hits="59"/>
+                <line number="68" hits="59"/>
+                <line number="69" hits="59"/>
+                <line number="70" hits="2"/>
+                <line number="73" hits="59"/>
+                <line number="76" hits="59"/>
+              </lines>
+            </method>
+            <method name="freeParentalEndpoints" signature="" line-rate="0.75" branch-rate="0" complexity="3">
+              <lines>
+                <line number="81" hits="58"/>
+                <line number="82" hits="58"/>
+                <line number="83" hits="0"/>
+                <line number="87" hits="58"/>
+              </lines>
+            </method>
+            <method name="findPhpFiles" signature="" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="92" hits="63"/>
+                <line number="93" hits="1"/>
+                <line number="96" hits="62"/>
+                <line number="98" hits="62"/>
+                <line number="99" hits="62"/>
+                <line number="100" hits="62"/>
+                <line number="102" hits="62"/>
+                <line number="103" hits="62"/>
+                <line number="104" hits="62"/>
+                <line number="107" hits="62"/>
+                <line number="108" hits="62"/>
+                <line number="109" hits="62"/>
+                <line number="113" hits="62"/>
+              </lines>
+            </method>
+            <method name="getClassNamespace" signature="string $filePath" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="118" hits="62"/>
+                <line number="119" hits="62"/>
+                <line number="121" hits="62"/>
+                <line number="122" hits="62"/>
+                <line number="124" hits="62"/>
+                <line number="125" hits="62"/>
+                <line number="127" hits="62"/>
+                <line number="128" hits="4"/>
+                <line number="131" hits="60"/>
+              </lines>
+            </method>
+            <method name="getEndpointConfiguration" signature="ReflectionClass $reflectionClass" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="136" hits="60"/>
+                <line number="137" hits="60"/>
+                <line number="139" hits="60"/>
+                <line number="143" hits="60"/>
+                <line number="144" hits="60"/>
+                <line number="147" hits="60"/>
+              </lines>
+            </method>
+            <method name="collectAttributesRecursively" signature="ReflectionClass $reflectionClass" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="152" hits="60"/>
+                <line number="153" hits="60"/>
+                <line number="156" hits="60"/>
+                <line number="157" hits="60"/>
+                <line number="158" hits="60"/>
+                <line number="159" hits="60"/>
+                <line number="161" hits="60"/>
+                <line number="162" hits="60"/>
+                <line number="163" hits="60"/>
+                <line number="166" hits="58"/>
+                <line number="167" hits="58"/>
+                <line number="169" hits="60"/>
+                <line number="171" hits="60"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="63"/>
+            <line number="37" hits="59"/>
+            <line number="42" hits="58"/>
+            <line number="43" hits="58"/>
+            <line number="44" hits="0"/>
+            <line number="47" hits="58"/>
+            <line number="49" hits="58"/>
+            <line number="50" hits="1"/>
+            <line number="53" hits="58"/>
+            <line number="54" hits="58"/>
+            <line number="55" hits="58"/>
+            <line number="58" hits="58"/>
+            <line number="61" hits="58"/>
+            <line number="65" hits="59"/>
+            <line number="67" hits="59"/>
+            <line number="68" hits="59"/>
+            <line number="69" hits="59"/>
+            <line number="70" hits="2"/>
+            <line number="73" hits="59"/>
+            <line number="76" hits="59"/>
+            <line number="81" hits="58"/>
+            <line number="82" hits="58"/>
+            <line number="83" hits="0"/>
+            <line number="87" hits="58"/>
+            <line number="92" hits="63"/>
+            <line number="93" hits="1"/>
+            <line number="96" hits="62"/>
+            <line number="98" hits="62"/>
+            <line number="99" hits="62"/>
+            <line number="100" hits="62"/>
+            <line number="102" hits="62"/>
+            <line number="103" hits="62"/>
+            <line number="104" hits="62"/>
+            <line number="107" hits="62"/>
+            <line number="108" hits="62"/>
+            <line number="109" hits="62"/>
+            <line number="113" hits="62"/>
+            <line number="118" hits="62"/>
+            <line number="119" hits="62"/>
+            <line number="121" hits="62"/>
+            <line number="122" hits="62"/>
+            <line number="124" hits="62"/>
+            <line number="125" hits="62"/>
+            <line number="127" hits="62"/>
+            <line number="128" hits="4"/>
+            <line number="131" hits="60"/>
+            <line number="136" hits="60"/>
+            <line number="137" hits="60"/>
+            <line number="139" hits="60"/>
+            <line number="143" hits="60"/>
+            <line number="144" hits="60"/>
+            <line number="147" hits="60"/>
+            <line number="152" hits="60"/>
+            <line number="153" hits="60"/>
+            <line number="156" hits="60"/>
+            <line number="157" hits="60"/>
+            <line number="158" hits="60"/>
+            <line number="159" hits="60"/>
+            <line number="161" hits="60"/>
+            <line number="162" hits="60"/>
+            <line number="163" hits="60"/>
+            <line number="166" hits="58"/>
+            <line number="167" hits="58"/>
+            <line number="169" hits="60"/>
+            <line number="171" hits="60"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="ServiceProvider.php" line-rate="0.96666666666667" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Baghunts\LaravelFastEndpoint\ServiceProvider" filename="ServiceProvider.php" line-rate="0.96666666666667" branch-rate="0" complexity="7">
+          <methods>
+            <method name="boot" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="31" hits="57"/>
+                <line number="33" hits="57"/>
+                <line number="34" hits="57"/>
+              </lines>
+            </method>
+            <method name="register" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="39" hits="57"/>
+                <line number="41" hits="57"/>
+              </lines>
+            </method>
+            <method name="binding" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="46" hits="57"/>
+                <line number="47" hits="57"/>
+                <line number="48" hits="57"/>
+                <line number="49" hits="57"/>
+                <line number="50" hits="57"/>
+                <line number="51" hits="57"/>
+                <line number="52" hits="57"/>
+                <line number="53" hits="57"/>
+                <line number="54" hits="57"/>
+                <line number="55" hits="57"/>
+              </lines>
+            </method>
+            <method name="bootConfigs" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="60" hits="57"/>
+                <line number="61" hits="57"/>
+                <line number="62" hits="57"/>
+                <line number="63" hits="57"/>
+                <line number="64" hits="57"/>
+                <line number="65" hits="57"/>
+              </lines>
+            </method>
+            <method name="bootRouters" signature="" line-rate="0.66666666666667" branch-rate="0" complexity="2">
+              <lines>
+                <line number="70" hits="57"/>
+                <line number="71" hits="0"/>
+                <line number="74" hits="57"/>
+              </lines>
+            </method>
+            <method name="registerCommands" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="79" hits="57"/>
+                <line number="80" hits="57"/>
+                <line number="81" hits="57"/>
+                <line number="83" hits="57"/>
+                <line number="84" hits="57"/>
+                <line number="85" hits="57"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="57"/>
+            <line number="33" hits="57"/>
+            <line number="34" hits="57"/>
+            <line number="39" hits="57"/>
+            <line number="41" hits="57"/>
+            <line number="46" hits="57"/>
+            <line number="47" hits="57"/>
+            <line number="48" hits="57"/>
+            <line number="49" hits="57"/>
+            <line number="50" hits="57"/>
+            <line number="51" hits="57"/>
+            <line number="52" hits="57"/>
+            <line number="53" hits="57"/>
+            <line number="54" hits="57"/>
+            <line number="55" hits="57"/>
+            <line number="60" hits="57"/>
+            <line number="61" hits="57"/>
+            <line number="62" hits="57"/>
+            <line number="63" hits="57"/>
+            <line number="64" hits="57"/>
+            <line number="65" hits="57"/>
+            <line number="70" hits="57"/>
+            <line number="71" hits="0"/>
+            <line number="74" hits="57"/>
+            <line number="79" hits="57"/>
+            <line number="80" hits="57"/>
+            <line number="81" hits="57"/>
+            <line number="83" hits="57"/>
+            <line number="84" hits="57"/>
+            <line number="85" hits="57"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="config/fast-endpoints.php" line-rate="1" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+  </packages>
+</coverage>
