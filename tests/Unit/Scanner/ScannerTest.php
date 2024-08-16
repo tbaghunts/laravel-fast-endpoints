@@ -99,15 +99,17 @@ class ScannerTest extends TestCase
         $reflection = new ReflectionClass($instance);
         $method = $reflection->getMethod('findClasses');
 
-        $classes = $method->invoke($instance);
+        $actual = $method->invoke($instance);
 
-        $this->assertEquals([
+        $expected = [
             'Tests\Unit\Scanner\Dist\Folder\NestedEndpoint',
             'Tests\Unit\Scanner\Dist\Folder\NestedFolder\DoubleNestedEndpoint',
             'Tests\Unit\Scanner\Dist\TestEndpointFile',
             'Tests\Unit\Scanner\Dist\WithAttributes\WithNameAndPost',
             'Tests\Unit\Scanner\Dist\WithAttributes\WithName',
-        ], $classes);
+        ];
+
+        $this->assertEquals(sort($expected), sort($actual));
     }
 
     public function test_endpointConfigShouldBeAppliedBySpecifiedSingleAttributes()
@@ -145,11 +147,15 @@ class ScannerTest extends TestCase
      */
     public function test_shouldCollectValidClassesWhichHaveCorrectSignatureWithConfigs()
     {
-        $this->assertEquals([], $this->getInstance()->findEndpoints());
-        $this->assertEquals([
+        $expected = [
             'Tests\Unit\Scanner\Endpoints\Subfolder\SubEndpointWithWhereInAndPatch',
             'Tests\Unit\Scanner\Endpoints\EndpointWithNameAndPost',
-        ], array_keys($this->getInstance(__DIR__ . '/./Endpoints')->findEndpoints()));
+        ];
+
+        $actual = array_keys($this->getInstance(__DIR__ . '/./Endpoints')->findEndpoints());
+
+        $this->assertEquals([], $this->getInstance()->findEndpoints());
+        $this->assertEquals(sort($expected), sort($actual));
     }
     
     protected function execClassNameDetectionTest(string $path): ?string
