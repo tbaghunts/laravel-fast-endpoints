@@ -6,13 +6,13 @@
 >
     <coverage>
         <report>
-            <clover outputFile="coverage/clover.xml"/>
-            <cobertura outputFile="coverage/cobertura.xml"/>
-            <crap4j outputFile="coverage/crap4j.xml" threshold="50"/>
-            <html outputDirectory="coverage/html" />
-            <php outputFile="coverage/coverage.php"/>
-            <text outputFile="coverage/coverage.txt" showOnlySummary="true"/>
-            <xml outputDirectory="coverage/xml"/>
+            <clover outputFile="clover.xml"/>
+            <cobertura outputFile="cobertura.xml"/>
+            <crap4j outputFile="crap4j.xml" threshold="50"/>
+            <html outputDirectory="html-coverage" />
+            <php outputFile="coverage.php"/>
+            <text outputFile="coverage.txt" showOnlySummary="true"/>
+            <xml outputDirectory="xml-coverage"/>
         </report>
     </coverage>
     <testsuites>
