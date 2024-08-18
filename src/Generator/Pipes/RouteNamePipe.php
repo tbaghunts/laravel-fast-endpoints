@@ -1,23 +1,18 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\Pipes;
+namespace Baghunts\LaravelFastEndpoints\Generator\Pipes;
 
+use Baghunts\LaravelFastEndpoints\Contracts\RouteGeneratorContract;
 use Closure;
-
-use Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract;
 
 class RouteNamePipe extends RoutePipe
 {
     public function handle(RouteGeneratorContract $generator, Closure $next): void
     {
         $endpointName = $generator->getEndpointConfiguration()->getName();
+
         if (!empty($endpointName)) {
-            $generator->addStateMent(
-                sprintf(
-                    "name('%s')",
-                    $endpointName
-                )
-            );
+            $generator->getRoute()->name($endpointName);
         }
 
         $next($generator);

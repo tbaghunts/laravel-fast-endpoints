@@ -4,9 +4,9 @@ namespace Tests\Unit\Attributes\Abstract;
 
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
 
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointAttributeContract;
+use Baghunts\LaravelFastEndpoints\Endpoint\EndpointConfig;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointAttributeContract;
 
 abstract class TestCase extends TestbenchTestCase
 {

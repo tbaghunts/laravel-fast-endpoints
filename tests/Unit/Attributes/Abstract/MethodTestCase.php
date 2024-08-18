@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Attributes\Abstract;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
 
 abstract class MethodTestCase extends TestCase
 {

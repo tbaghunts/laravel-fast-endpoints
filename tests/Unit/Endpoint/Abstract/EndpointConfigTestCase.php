@@ -2,10 +2,10 @@
 
 namespace Tests\Unit\Endpoint\Abstract;
 
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
 use Orchestra\Testbench\TestCase;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Endpoint\EndpointConfig;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
 
 abstract class EndpointConfigTestCase extends TestCase
 {

@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\ScopeBindings;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Attributes\ScopeBindings;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
 
 use Tests\Unit\Attributes\Abstract\TestCase;
 

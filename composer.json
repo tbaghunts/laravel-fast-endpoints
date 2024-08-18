@@ -2,11 +2,10 @@
     "name": "baghunts/laravel-fast-endpoints",
     "description": "Laravel routes new (fast) experience",
     "type": "library",
-    "version": "1.0.0",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Baghunts\\LaravelFastEndpoint\\": "src/"
+            "Baghunts\\LaravelFastEndpoints\\": "src/"
         }
     },
     "authors": [
@@ -25,10 +24,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Baghunts\\LaravelFastEndpoint\\ServiceProvider"
+                "Baghunts\\LaravelFastEndpoints\\ServiceProvider"
             ],
             "aliasses": {
-                "LaravelFastEndpoint": "Baghunts\\LaravelFastEndpoint\\ServiceProvider"
+                "LaravelFastEndpoint": "Baghunts\\LaravelFastEndpoints\\ServiceProvider"
             }
         }
     },
@@ -55,6 +54,10 @@
         ],
         "test": [
             "@php vendor/bin/phpunit"
+        ],
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "lint": [
+            "@php vendor/bin/phpstan analyse"
         ]
     }
 }

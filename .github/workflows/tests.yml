@@ -1,0 +1,59 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+  workflow_dispatch:
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php-version: ['8.3']
+        dependency-version: ['latest', 'stable']
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          tools: composer, phpunit
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: composer-${{ matrix.php-version }}-${{ matrix.dependency-version }}-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            composer-${{ matrix.php-version }}-${{ matrix.dependency-version }}
+
+      - name: Install Dependencies
+        run: |
+          composer install --prefer-dist --no-progress --no-interaction
+          if [ "${{ matrix.dependency-version }}" = "latest" ]; then composer update; fi
+
+      - name: Run Tests
+        run: vendor/bin/phpunit --coverage-text --colors=never
+
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          verbose: true
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: true
+          files: xml-coverage/index.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

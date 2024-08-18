@@ -1,32 +1,46 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Contracts;
+namespace Baghunts\LaravelFastEndpoints\Contracts;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\{
-    EndpointConfigWhereContract,
-    EndpointConfigMethodContract,
-    EndpointConfigWhereInContract,
-    EndpointConfigWhereUuidContract,
-    EndpointConfigWhereUlidContract,
-    EndpointConfigWhereAlphaContract,
-    EndpointConfigMiddlewareContract,
-    EndpointConfigWithTrashedContract,
-    EndpointConfigWhereNumberContract,
-    EndpointConfigScopeBindingsContract,
-    EndpointConfigWhereAlphaNumericContract,
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\{
+    CanContract,
+    WhereContract,
+    GroupContract,
+    MethodContract,
+    WhereInContract,
+    DefaultsContract,
+    ThrottleContract,
+    WhereUuidContract,
+    WhereUlidContract,
+    WhereAlphaContract,
+    MiddlewareContract,
+    WithTrashedContract,
+    WhereNumberContract,
+    ScopeBindingsContract,
+    WithoutThrottleContract,
+    WithoutMiddlewareContract,
+    WhereAlphaNumericContract,
+    EndpointConfigMergeContract,
 };
 
 interface EndpointConfigContract extends
-    EndpointConfigWhereContract,
-    EndpointConfigMethodContract,
-    EndpointConfigWhereInContract,
-    EndpointConfigWhereUuidContract,
-    EndpointConfigWhereUlidContract,
-    EndpointConfigWhereAlphaContract,
-    EndpointConfigMiddlewareContract,
-    EndpointConfigWithTrashedContract,
-    EndpointConfigWhereNumberContract,
-    EndpointConfigScopeBindingsContract,
-    EndpointConfigWhereAlphaNumericContract
+    CanContract,
+    WhereContract,
+    GroupContract,
+    MethodContract,
+    WhereInContract,
+    DefaultsContract,
+    ThrottleContract,
+    WhereUuidContract,
+    WhereUlidContract,
+    WhereAlphaContract,
+    MiddlewareContract,
+    WithTrashedContract,
+    WhereNumberContract,
+    ScopeBindingsContract,
+    WithoutThrottleContract,
+    WithoutMiddlewareContract,
+    WhereAlphaNumericContract,
+    EndpointConfigMergeContract
 {
 }

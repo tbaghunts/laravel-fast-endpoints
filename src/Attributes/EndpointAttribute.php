@@ -1,9 +1,9 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Attributes;
+namespace Baghunts\LaravelFastEndpoints\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointAttributeContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointAttributeContract;
 
 abstract class EndpointAttribute implements EndpointAttributeContract
 {

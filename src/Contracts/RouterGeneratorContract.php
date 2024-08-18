@@ -1,9 +1,10 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Contracts;
+namespace Baghunts\LaravelFastEndpoints\Contracts;
+
+use Illuminate\Routing\Router;
 
 interface RouterGeneratorContract
 {
-    public function getRoutesSource(): string;
-    public function getRoutesGeneratedFileMeta(): array;
+    public function generate();
 }

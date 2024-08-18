@@ -2,9 +2,9 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Route;
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Attributes\Route;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
 
 use Tests\Unit\Attributes\Abstract\TestCase;
 

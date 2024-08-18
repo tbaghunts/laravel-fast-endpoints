@@ -1,19 +1,21 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\Pipes;
+namespace Baghunts\LaravelFastEndpoints\Generator\Pipes;
 
+use Baghunts\LaravelFastEndpoints\Contracts\RouteGeneratorContract;
 use Closure;
-
-use Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract;
 
 class ScopeBindingsPipe extends RoutePipe
 {
     public function handle(RouteGeneratorContract $generator, Closure $next): void
     {
         $scopeBindings = $generator->getEndpointConfiguration()->getScopeBindings();
-
-        if (!!$scopeBindings) {
-            $generator->addStatement("scopeBindings()");
+        if (is_bool($scopeBindings)) {
+            $route = $generator->getRoute();
+            match($scopeBindings) {
+                true => $route->scopeBindings(),
+                false => $route->withoutScopedBindings(),
+            };
         }
 
         $next($generator);

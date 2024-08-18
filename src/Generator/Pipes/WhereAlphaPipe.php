@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\Pipes;
+namespace Baghunts\LaravelFastEndpoints\Generator\Pipes;
 
 class WhereAlphaPipe extends RouteWherePipe
 {

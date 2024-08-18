@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Put;
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Attributes\Put;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
 
 use Tests\Unit\Attributes\Abstract\MethodTestCase;
 

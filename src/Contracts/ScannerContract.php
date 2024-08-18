@@ -1,10 +1,9 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Contracts;
-
-use Illuminate\Support\Collection;
+namespace Baghunts\LaravelFastEndpoints\Contracts;
 
 interface ScannerContract
 {
-    public function findEndpoints(): Collection;
+    public function getFiles(): array;
+    public function findEndpoints(): array;
 }

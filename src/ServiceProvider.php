@@ -1,22 +1,26 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint;
+namespace Baghunts\LaravelFastEndpoints;
 
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Foundation\Console\AboutCommand;
-use Illuminate\Cache\Console\ClearCommand as IlluminateClearCommand;
-use \Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
+use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
-use Baghunts\LaravelFastEndpoint\Scanner\Scanner;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
-use Baghunts\LaravelFastEndpoint\Contracts\{EndpointConfigContract,
+use Baghunts\LaravelFastEndpoints\Scanner\Scanner;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Endpoint\EndpointConfig;
+use Baghunts\LaravelFastEndpoints\Contracts\{
     ScannerContract,
+    EndpointConfigContract,
     RouteGeneratorContract,
+    ClassGeneratorContract,
     RouterGeneratorContract,
 };
-use Baghunts\LaravelFastEndpoint\Generator\{RouteGenerator, RouterGenerator};
-use Baghunts\LaravelFastEndpoint\Commands\{CacheCommand, ClearCommand, MakeEndpointCommand};
+use Baghunts\LaravelFastEndpoints\Commands\MakeEndpointCommand;
+use Baghunts\LaravelFastEndpoints\Generator\{
+    RouteGenerator,
+    ClassGenerator,
+    RouterGenerator,
+};
 
 class ServiceProvider extends IlluminateServiceProvider
 {
@@ -28,7 +32,13 @@ class ServiceProvider extends IlluminateServiceProvider
 
         $this->bootConfigs();
         $this->bootRouters();
-        $this->bootCommands();
+    }
+
+    public function register(): void
+    {
+        $this->mergeConfigFrom(__DIR__ . '/./config/fast-endpoints.php', 'fast-endpoints');
+
+        $this->registerCommands();
     }
 
     private function binding(): void
@@ -36,10 +46,11 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->app->bind(EndpointConfigContract::class, EndpointConfig::class);
         $this->app->bind(RouteGeneratorContract::class, RouteGenerator::class);
         $this->app->bind(RouterGeneratorContract::class, RouterGenerator::class);
+        $this->app->bind(ClassGeneratorContract::class, ClassGenerator::class);
         $this->app->bind(ScannerContract::class,  function () {
             return $this->app->make(Scanner::class, [
-                "dir" => config('fast-endpoints.dist'),
-                "signature" => Endpoint::class
+                'signature' => Endpoint::class,
+                'dir' => config('fast-endpoints.dist'),
             ]);
         });
     }
@@ -47,41 +58,31 @@ class ServiceProvider extends IlluminateServiceProvider
     private function bootConfigs(): void
     {
         $this->publishes([
-            __DIR__ . "/config/fast-endpoints.php" => config_path('fast-endpoints.php'),
-        ]);
-        $this->mergeConfigFrom(__DIR__ . '/config/fast-endpoints.php', 'fast-endpoints');
+            __DIR__ . '/./config/fast-endpoints.php' => config_path('fast-endpoints.php'),
+        ], 'config');
+        $this->publishes([
+            __DIR__ . '/./stubs' => base_path('stubs/fast-endpoints'),
+        ], 'stubs');
     }
 
     private function bootRouters(): void
     {
-        if (app()->runningInConsole()) {
+        if ($this->app->routesAreCached()) {
             return;
         }
 
-        [$tmpPath, $file] = app(RouterGeneratorContract::class)->getRoutesGeneratedFileMeta();
-
-        $this->loadRoutesFrom($tmpPath);
-        fclose($file);
+        app(RouterGeneratorContract::class)->generate();
     }
 
-    private function bootCommands(): void
+    private function registerCommands(): void
     {
-        AboutCommand::add("Laravel Fast Endpoints Command", fn() => [
-            "version" => self::FAST_ENDPOINTS_VERSION,
+        AboutCommand::add('Laravel Fast Endpoints Command', fn() => [
+            'version' => self::FAST_ENDPOINTS_VERSION,
         ]);
 
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                CacheCommand::class,
-                ClearCommand::class,
-                MakeEndpointCommand::class,
-            ]);
-
-            $this->app->extend(IlluminateClearCommand::class, function (IlluminateClearCommand $clearCommand) {
-                Artisan::call('fast-endpoint:cache:clear');
-                return $clearCommand;
-            });
-        }
+        $this->commands([
+            MakeEndpointCommand::class,
+        ]);
     }
 
 }

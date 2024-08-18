@@ -1,10 +1,10 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Attributes;
+namespace Baghunts\LaravelFastEndpoints\Attributes;
 
 use Attribute;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\EndpointConfigWhereAlphaNumericContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\WhereAlphaNumericContract;
 
 #[Attribute(Attribute::TARGET_CLASS | Attribute::IS_REPEATABLE)]
 class WhereAlphaNumeric extends EndpointAttribute
@@ -15,7 +15,7 @@ class WhereAlphaNumeric extends EndpointAttribute
     {
     }
 
-    public function apply(EndpointConfigWhereAlphaNumericContract $endpointConfig): self
+    public function apply(WhereAlphaNumericContract $endpointConfig): self
     {
         $endpointConfig->addWhereAlphaNumeric($this->parameters);
         return $this;

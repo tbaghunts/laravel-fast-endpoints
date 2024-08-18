@@ -1,15 +1,15 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Enums;
+namespace Baghunts\LaravelFastEndpoints\Enums;
 
 enum EnumEndpointMethod: string
 {
-    case ANY = "any";
-    case GET = "get";
-    case PUT = "put";
-    case POST = "post";
-    case HEAD = "head";
-    case PATCH = "patch";
-    case DELETE = "delete";
-    case OPTIONS = "options";
+    case ANY = "ANY";
+    case GET = "GET";
+    case PUT = "PUT";
+    case POST = "POST";
+    case HEAD = "HEAD";
+    case PATCH = "PATCH";
+    case DELETE = "DELETE";
+    case OPTIONS = "OPTIONS";
 }

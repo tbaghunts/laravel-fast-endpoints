@@ -5,131 +5,249 @@ namespace Tests\Unit\Generator;
 use ReflectionClass;
 use ReflectionException;
 
+use PHPUnit\Framework\MockObject\Exception;
+use PHPUnit\Framework\MockObject\MockBuilder;
+
 use Orchestra\Testbench\TestCase;
-use Orchestra\Testbench\Concerns\WithWorkbench;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Routing\Route;
+use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Config;
 
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
-use Baghunts\LaravelFastEndpoint\Generator\RouteGenerator;
-use Baghunts\LaravelFastEndpoint\Contracts\{
-    EndpointConfigContract,
-    RouteGeneratorContract
-};
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Generator\RouteGenerator;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
 
 class RouteGeneratorTest extends TestCase
 {
-    use WithWorkbench, RefreshDatabase;
+    private ?Router $routerMock = null;
+    private ?EndpointConfigContract $endpointConfigMock = null;
 
-    private EndpointConfigContract $config;
-
-    private array $defaultConfig = [
-        "name" => "fast.route",
-        "path" => "/fast/route",
-        "middleware" => ["guest", "full-guest"],
-        "withTrashed" => null,
-        "scopeBindings" => true,
-        "where" => [
-            ["number-param" => "[0-9]+"]
-        ],
-        "whereIn" => [
-            ["in-1", [1, 2, 3]],
-            [["in-a", "in-b"], ["a", "b"]],
-        ],
-        "whereUuid" => [
-            "uuid",
-            "guid",
-        ],
-        "whereUlid" => [
-            "ulid",
-        ],
-        "whereAlpha" => [
-            "name"
-        ],
-        "whereNumber" => [
-            "id",
-            "age",
-        ],
-        "whereAlphaNumeric" => [
-            "sku"
-        ],
-        "method" => [
-            EnumEndpointMethod::GET,
-            EnumEndpointMethod::HEAD,
-            EnumEndpointMethod::POST,
-        ],
-    ];
-
-    private function makeConfig(array $config = []): EndpointConfigContract
+    /**
+     * @throws Exception
+     */
+    protected function setUp(): void
     {
-        return app(EndpointConfig::class, $config);
+        parent::setUp();
+
+        $this->routerMock = $this->createMock(Router::class);
+        $this->endpointConfigMock = $this->createMock(EndpointConfigContract::class);
     }
 
-    private function getInstance(array $config): RouteGeneratorContract
+    private function getInstance(): RouteGenerator
     {
-        $this->config = $this->makeConfig($config);
-
         return new RouteGenerator(
-            "RouteClassNamespace",
-            $this->config,
+            $this->routerMock,
+            $classNamespace ?? "App\\Http\\Endpoints\\Users\\CreateUser",
+            $this->endpointConfigMock
         );
     }
 
-    public function test_getEndpointConfiguration(): void
+    private function getMock(): MockBuilder
     {
-        $instance = $this->getInstance($this->defaultConfig);
-        $this->assertSame($instance->getEndpointConfiguration(), $this->config);
+        return $this->getMockBuilder(RouteGenerator::class)
+            ->setConstructorArgs([
+                $this->routerMock,
+                $classNamespace ?? "App\\Http\\Endpoints\\Users\\CreateUser",
+                $this->endpointConfigMock
+            ]);
     }
 
-    public function test_getEndpointClassNamespace(): void
+    private function getRoute(): Route
     {
-        $this->assertEquals(
-            "RouteClassNamespace",
-            $this->getInstance($this->defaultConfig)->getEndpointClassNamespace()
-        );
+        return new Route("GET", "/test", ["TestController@action"]);
+    }
+
+    public function test_routerShouldNotBeInitializedIfMethodsNotProvided()
+    {
+        $this->endpointConfigMock->expects($this->once())->method('getMethod')->willReturn([]);
+        $this->endpointConfigMock->expects($this->once())->method('getPath')->willReturn("/users");
+
+        $this->routerMock->expects($this->never())->method('addRoute');
+
+        $this->assertNull($this->getInstance()->getRoute());
+    }
+
+    public function test_routerShouldNotBeInitializedIfPathNotProvided()
+    {
+        $this->endpointConfigMock->expects($this->once())->method('getMethod')->willReturn([EnumEndpointMethod::POST]);
+        $this->endpointConfigMock->expects($this->once())->method('getPath')->willReturn("");
+
+        $this->routerMock->expects($this->never())->method('addRoute');
+
+        $this->assertNull($this->getInstance()->getRoute());
+    }
+
+    public function test_routeShouldBeInitializedIfMethodsAndPathIsProvided()
+    {
+        $this->endpointConfigMock->method('getMethod')->willReturn([EnumEndpointMethod::POST]);
+        $this->endpointConfigMock->method('getPath')->willReturn("/users");
+
+        $this->routerMock->expects($this->once())->method("addRoute")->with(
+            ["POST"],
+            "/users",
+            "App\\Http\\Endpoints\\Users\\CreateUser"
+        )->willReturn(new Route(["POST"], "/users", ["App\\Http\\Endpoints\\Users\\CreateUser"]));
+
+        $instance = $this->getInstance();
+        $instance->generate();
+
+        $this->assertInstanceOf(Route::class, $instance->getRoute());
     }
 
     /**
      * @throws ReflectionException
      */
-    public function test_addStatement(): void
+    public function test_getMethodsShouldReturnProvidedMethodsEnumsValuesAsString()
     {
-        $instance = $this->getInstance($this->defaultConfig);
-
+        $instance = $this->getInstance();
         $reflector = new ReflectionClass($instance);
-        $property = $reflector->getProperty("statements");
 
-        $this->assertEquals([], $property->getValue($instance));
+        $method = $reflector->getMethod("getMethods");
 
-        $instance->addStatement("testStatement1");
-        $instance->addStatement("testStatement2");
-        $this->assertEquals(["testStatement1", "testStatement2"], $property->getValue($instance));
-
-        $instance->addStatement("testStatement3");
-        $this->assertEquals(["testStatement1", "testStatement2", "testStatement3"], $property->getValue($instance));
+        $this->endpointConfigMock->method('getMethod')->willReturn([
+            EnumEndpointMethod::PUT,
+            EnumEndpointMethod::ANY,
+            EnumEndpointMethod::OPTIONS,
+        ]);
+        $this->assertEquals("any", $method->invoke($instance));
     }
 
-    public function test_output(): void
+    public function test_routePipesShouldNotBeExecutedIfRouteIsNotAdded()
     {
-        $instance = $this->getInstance($this->defaultConfig);
+        $mock = $this->getMock()
+            ->onlyMethods(["getRoute", "execPipes"])
+            ->getMock();
 
-        $this->assertEquals(
-            implode("->", [
-                "Route::match(['get','head','post'],'/fast/route',RouteClassNamespace::class)",
-                "setWheres(json_decode('[{\"number-param\":\"[0-9]+\"}]',true))",
-                "name('fast.route')",
-                "whereUuid('uuid')",
-                "whereUuid('guid')",
-                "whereUlid('ulid')",
-                "whereAlpha('name')",
-                "whereNumber('id')",
-                "whereNumber('age')",
-                "scopeBindings()",
-                "whereAlphaNumeric('sku');"
-            ]),
-            $instance->output()
+        $mock->method("getRoute")->willReturn(null);
+        $mock->expects($this->never())->method("execPipes");
+
+        $mock->generate();
+    }
+
+    public function test_routePipesShouldBeExecutedIfRouteIsAdded()
+    {
+        $route = new Route("GET", "/test", ["TestController@action"]);
+
+        $mock = $this->getMock()
+            ->onlyMethods(["getRoute", "execPipes"])
+            ->getMock();
+
+        $mock->method("getRoute")->willReturn($route);
+        $mock->expects($this->once())->method("execPipes")->willReturn($route);
+
+        $this->assertInstanceOf(Route::class, $mock->generate());
+    }
+
+    public function test_routeShouldNotMergeNamespaceConfigIfNotDetected()
+    {
+       $mock = $this->getMock()
+            ->onlyMethods(["getRoute", "detectNamespaceScopeConfig"])
+            ->getMock();
+
+        $mock->method("detectNamespaceScopeConfig")->willReturn(null);
+        $mock->method("getRoute")->willReturn($this->getRoute());
+
+        $this->endpointConfigMock
+            ->expects($this->never())
+            ->method("mergeCollection");
+
+        $mock->generate();
+    }
+
+    public function test_routeShouldMergeNamespaceConfigIfDetected()
+    {
+        $mock = $this->getMock()
+            ->onlyMethods(["getRoute", "detectNamespaceScopeConfig"])
+            ->getMock();
+
+        $mock->method("getRoute")->willReturn($this->getRoute());
+        $mock->method("detectNamespaceScopeConfig")->willReturn([
+            "config1" => ["name" => "test.name"],
+            "config2" => ["whereAlpha" => "name"],
+        ]);
+
+        $this->endpointConfigMock
+            ->expects($this->once())
+            ->method("mergeCollection")
+            ->with([
+                "config1" => ["name" => "test.name"],
+                "config2" => ["whereAlpha" => "name"],
+            ]);
+
+        $mock->generate();
+    }
+
+    public function test_namespaceConfigDetectionShouldBeNullIfEmptyPackageConfig()
+    {
+        Config::set("fast-endpoints.namespaces", null);
+
+        $mock = $this->getMock()
+            ->onlyMethods(["detectNamespaceScopeConfig"])
+            ->getMock();
+
+        $reflector = new ReflectionClass($mock);
+
+        $this->assertNull(
+            $reflector->getMethod("detectNamespaceScopeConfig")
+                ->invoke($mock)
         );
     }
 
+    public function test_namespaceConfigDetectionShouldBeEmptyBecauseNotMatchedNamespaces()
+    {
+        Config::set("fast-endpoints.namespaces", [
+            "namespace1" => [
+                "name" => "namespace.1",
+            ],
+            "namespace2" => [
+                "whereAlpha" => "name",
+            ],
+        ]);
+
+        $instance = $this->getInstance();
+        $reflector = new ReflectionClass($instance);
+
+        $this->assertEmpty(
+            $reflector->getMethod("detectNamespaceScopeConfig")->invoke($instance)
+        );
+    }
+
+    public function test_namespaceConfigDetectionShouldReturnTwoMatchedNamespaces()
+    {
+        Config::set("fast-endpoints.namespaces", [
+            "App\\Http\\Endpoints" => [
+                "middleware" => ["auth:api"],
+            ],
+            "App\\Http\\Endpoints\\Posts\\PostDelete" => [
+                "can" => ["delete", "post"],
+            ],
+            "App\\Http\\Endpoints\\Users" => [
+                "prefix" => "users",
+                "name" => "users.actions",
+            ],
+            "App\\Http\\Endpoints\\Users\\CreateUser" => [
+                "can" => ["create", "user"],
+            ],
+        ]);
+
+        $instance = $this->getInstance();
+        $reflector = new ReflectionClass($instance);
+
+        $this->assertEquals(
+            $reflector->getMethod("detectNamespaceScopeConfig")->invoke($instance),
+            [
+                [
+                    "middleware" => ["auth:api"],
+                ],
+                [
+                    "prefix" => "users",
+                    "name" => "users.actions",
+                ],
+                [
+                    "can" => ["create", "user"],
+                ],
+            ]
+        );
+    }
 }

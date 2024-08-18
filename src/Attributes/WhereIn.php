@@ -1,10 +1,10 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Attributes;
+namespace Baghunts\LaravelFastEndpoints\Attributes;
 
 use Attribute;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\EndpointConfigWhereInContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\WhereInContract;
 
 #[Attribute(Attribute::TARGET_CLASS | Attribute::IS_REPEATABLE)]
 class WhereIn extends EndpointAttribute
@@ -16,7 +16,7 @@ class WhereIn extends EndpointAttribute
     {
     }
 
-    public function apply(EndpointConfigWhereInContract $endpointConfig): self
+    public function apply(WhereInContract $endpointConfig): self
     {
         $endpointConfig->addWhereIn($this->parameters, $this->values);
         return $this;

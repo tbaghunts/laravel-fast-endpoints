@@ -2,21 +2,18 @@
 
 namespace Tests\Unit\Generator;
 
+use ReflectionException;
+
 use Illuminate\Support\Str;
-use \Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\{Config};
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Routing\Router;
 
 use Orchestra\Testbench\TestCase;
-use Orchestra\Testbench\Concerns\WithWorkbench;
 
 use PHPUnit\Framework\MockObject\Exception;
 use PHPUnit\Framework\MockObject\MockObject;
 
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
-use Baghunts\LaravelFastEndpoint\Generator\RouterGenerator;
-use Psr\SimpleCache\InvalidArgumentException;
-use Baghunts\LaravelFastEndpoint\Contracts\{
+use Baghunts\LaravelFastEndpoints\Generator\RouterGenerator;
+use Baghunts\LaravelFastEndpoints\Contracts\{
     ScannerContract,
     RouteGeneratorContract,
     RouterGeneratorContract
@@ -24,8 +21,7 @@ use Baghunts\LaravelFastEndpoint\Contracts\{
 
 class RouterGeneratorTest extends TestCase
 {
-    use WithWorkbench, RefreshDatabase;
-
+    private ?MockObject $routerStub = null;
     private ?MockObject $scannerStub = null;
     private ?MockObject $routeGeneratorStub = null;
 
@@ -38,14 +34,19 @@ class RouterGeneratorTest extends TestCase
     {
         $this->randomEndpointsPrefixKey = Str::random(6);
 
+        $this->routerStub = $this->createMock(Router::class);
         $this->scannerStub = $this->createMock(ScannerContract::class);
         $this->routeGeneratorStub = $this->createMock(RouteGeneratorContract::class);
 
         $this->afterApplicationCreated(function () {
-            Config::set("fast-endpoints.prefix", $this->randomEndpointsPrefixKey);
+            \config()->set("fast-endpoints", [
+                "dist" => "dist.mock",
+                "domain" => "{domain}.mock",
+                "middleware" => ["mid1", "mid2"],
+                "prefix" => $this->randomEndpointsPrefixKey,
+            ]);
 
             $this->app->bind(ScannerContract::class, fn() => $this->scannerStub);
-            $this->app->bind(RouterGeneratorContract::class, RouterGenerator::class);
             $this->app->bind(RouteGeneratorContract::class, fn() => $this->routeGeneratorStub);
         });
 
@@ -54,77 +55,58 @@ class RouterGeneratorTest extends TestCase
 
     public function getInstance(): RouterGeneratorContract
     {
-        return app(RouterGenerator::class);
+        return new RouterGenerator($this->routerStub, $this->scannerStub);
     }
 
-    public function test_getRoutesSourceWithoutEndpoints()
+    public function test_generateWithoutFoundEndpoints()
     {
-        $instance = $this->getInstance();
-        $this->scannerStub->method('findEndpoints')->willReturn(collect());
+        $this->scannerStub->expects($this->once())->method("findEndpoints")->willReturn([]);
 
-        $this->assertEquals(
-            sprintf(<<<PHP
-            <?php
-            use Illuminate\Support\Facades\Route;
-            
-            Route::prefix('%s')->group(function() {
-            
-            });
-            PHP, $this->randomEndpointsPrefixKey),
-            $instance->getRoutesSource()
-        );
+        $this->routerStub->expects($this->never())->method("group");
+
+        $this->getInstance()->generate();
     }
 
-    public function test_getRoutesSourceWithEndpoints()
+    public function test_generateWithFoundEndpoints()
     {
-        $instance = $this->getInstance();
-        $this->scannerStub->method('findEndpoints')->willReturn(collect([
-            new EndpointConfig(),
-            new EndpointConfig(),
-            new EndpointConfig(),
-        ]));
-        $this->routeGeneratorStub->method('output')->willReturn("route-generator-output");
+        $this->scannerStub->expects($this->once())->method("findEndpoints")->willReturn([
+            "users-endpoint" => [],
+            "pages-endpoint" => [],
+        ]);
 
-        $this->assertEquals(
-            sprintf(<<<PHP
-            <?php
-            use Illuminate\Support\Facades\Route;
-            
-            Route::prefix('%s')->group(function() {
-            route-generator-output
-            route-generator-output
-            route-generator-output
-            });
-            PHP, $this->randomEndpointsPrefixKey),
-            $instance->getRoutesSource()
+        $this->routerStub->expects($this->once())->method("group")->with(
+            [
+                "domain" => "{domain}.mock",
+                "middleware" => ["mid1", "mid2"],
+                "prefix" => $this->randomEndpointsPrefixKey,
+            ],
+            $this->anything()
         );
+
+        $this->getInstance()->generate();
     }
 
     /**
+     * @throws ReflectionException
      */
-    public function test_getRoutesSourceWithCachedData()
+    public function test_generateRoutesShouldCallRouteGeneratorGenerate()
     {
-        $instance = $this->getInstance();
-        $this->scannerStub->method('findEndpoints')->willReturn(collect());
+        $instance = new \ReflectionClass($this->getInstance());
+        $method = $instance->getMethod("generateRoutes");
 
-        Cache::set(config("fast-endpoints.cache_key"), "Shikagi");
+        $this->routeGeneratorStub
+            ->expects($this->exactly(2))
+            ->method("generate");
 
-        $this->assertEquals(
-            "Shikagi",
-            $instance->getRoutesSource()
-        );
+        $method->invoke($this->getInstance(), [
+            "users-endpoint" => [
+                "path" => "users",
+                "name" => "users.endpoint"
+            ],
+            "pages-endpoint" => [
+                "path" => "pages",
+                "name" => "pages.endpoint"
+            ],
+        ]);
     }
-
-    public function test_getRoutesGeneratedFileMeta()
-    {
-        $instance = $this->getInstance();
-        $meta = $instance->getRoutesGeneratedFileMeta();
-
-        $this->assertIsArray($meta);
-        $this->assertCount(2, $meta);
-
-        $this->assertTrue(is_string($meta[0]));
-        $this->assertTrue(is_resource($meta[1]));
-    }
-
 }

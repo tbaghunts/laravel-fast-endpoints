@@ -2,11 +2,11 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\WithTrashed;
+use Baghunts\LaravelFastEndpoints\Attributes\WithTrashed;
 
-use Tests\Unit\Attributes\Abstract\TestCase;
+use Tests\Unit\Attributes\Abstract\BoolTestCase;
 
-class WithTrashedTest extends TestCase
+class WithTrashedTest extends BoolTestCase
 {
 
     public function getNamespace(): string
@@ -14,18 +14,8 @@ class WithTrashedTest extends TestCase
         return WithTrashed::class;
     }
 
-    public function test_withTrashed()
+    protected function getConfigMethodName(): string
     {
-        $this->endpointConfig->withoutTrashed();
-
-        $this->assertFalse(
-            $this->endpointConfig->getWithTrashed()
-        );
-
-        $this->getInstance();
-
-        $this->assertTrue(
-            $this->endpointConfig->getWithTrashed()
-        );
+        return "getWithTrashed";
     }
 }

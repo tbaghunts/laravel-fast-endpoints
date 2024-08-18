@@ -1,10 +1,9 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\Pipes;
+namespace Baghunts\LaravelFastEndpoints\Generator\Pipes;
 
+use Baghunts\LaravelFastEndpoints\Contracts\RouteGeneratorContract;
 use Closure;
-
-use Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract;
 
 class WherePipe extends RoutePipe
 {
@@ -12,12 +11,7 @@ class WherePipe extends RoutePipe
     {
         $endpointWhere = $generator->getEndpointConfiguration()->getWhere();
         if (!empty($endpointWhere)) {
-            $generator->addStatement(
-                sprintf(
-                    "setWheres(json_decode('%s',true))",
-                    json_encode($endpointWhere)
-                )
-            );
+            $generator->getRoute()->setWheres($endpointWhere);
         }
 
         $next($generator);

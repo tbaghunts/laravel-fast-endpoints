@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Where;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Attributes\Where;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
 
 use Tests\Unit\Attributes\Abstract\TestCase;
 
@@ -26,7 +26,7 @@ class WhereTest extends TestCase
     {
         $this->assertEquals(
             [
-                ["whereName", "whereExpression"],
+                "whereName" => "whereExpression",
             ],
             $this->makeInstance("whereName", "whereExpression")->getWhere()
         );
@@ -36,11 +36,9 @@ class WhereTest extends TestCase
     {
         $this->assertEquals(
             [
-                [
-                    "where1" => "where1Expression",
-                    "where2" => "where2Expression",
-                    "where3" => "where3Expression",
-                ],
+                "where1" => "where1Expression",
+                "where2" => "where2Expression",
+                "where3" => "where3Expression",
             ],
             $this->makeInstance([
                 "where1" => "where1Expression",

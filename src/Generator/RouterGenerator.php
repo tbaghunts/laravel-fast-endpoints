@@ -1,13 +1,11 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator;
+namespace Baghunts\LaravelFastEndpoints\Generator;
 
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Cache;
+use Illuminate\Routing\Router;
 
-use Baghunts\LaravelFastEndpoint\Contracts\{
+use Baghunts\LaravelFastEndpoints\Contracts\{
     ScannerContract,
-    EndpointConfigContract,
     RouteGeneratorContract,
     RouterGeneratorContract
 };
@@ -15,62 +13,46 @@ use Baghunts\LaravelFastEndpoint\Contracts\{
 readonly class RouterGenerator implements RouterGeneratorContract
 {
     public function __construct(
-        private ScannerContract $scanner
+        private Router $router,
+        private ScannerContract $scanner,
     )
     {
     }
 
-    public function getRoutesSource(): string
+    public function generate(): void
     {
-        $cache = $this->getFromCache();
-        return !empty($cache) ? $cache : $this->generateRoutesOutput();
-    }
-    public function getRoutesGeneratedFileMeta(): array
-    {
-        return $this->makeTmpFile($this->getRoutesSource());
+        $endpoints = $this->scanner->findEndpoints();
+
+        if (empty($endpoints)) {
+            return;
+        }
+
+        $this->registerRouterGroup($endpoints);
     }
 
-    protected function generateRoutesOutput(): string
+    private function registerRouterGroup(array $endpoints): void
     {
-        $generatedRoutes = $this->generateRoutes();
+        $fastEndpoints = config('fast-endpoints');
 
-        return sprintf(
-            <<<PHP
-            <?php
-            use Illuminate\Support\Facades\Route;
-            
-            Route::prefix('%s')->group(function() {
-            %s
-            });
-            PHP,
-            config("fast-endpoints.prefix"),
-            $generatedRoutes->join(PHP_EOL)
+        $this->router->group(
+            [
+                "domain" => $fastEndpoints["domain"],
+                "prefix" => $fastEndpoints["prefix"],
+                "middleware" => $fastEndpoints["middleware"],
+            ],
+            function () use ($endpoints) {
+                $this->generateRoutes($endpoints);
+            }
         );
     }
-    protected function generateRoutes(): Collection
+    private function generateRoutes(array $endpoints): void
     {
-        $routes = $this->scanner->findEndpoints()->map(function (EndpointConfigContract $config, string $name) {
-            return app(RouteGeneratorContract::class, [
+        foreach ($endpoints as $name => $config) {
+            app(RouteGeneratorContract::class, [
+                'router' => $this->router,
                 'classNamespace' => $name,
                 'endpointConfig' => $config,
-            ])->output();
-        });
-
-        return collect($routes);
-    }
-
-    protected function makeTmpFile(string $output): array
-    {
-        $file = tmpfile();
-        fwrite($file, $output);
-        $path = stream_get_meta_data($file)['uri'];
-
-        return [$path, $file];
-    }
-
-    protected function getFromCache(): ?string
-    {
-        $cache = Cache::get(config("fast-endpoints.cache_key"));
-        return empty($cache) ? null : (string)$cache;
+            ])->generate();
+        }
     }
 }

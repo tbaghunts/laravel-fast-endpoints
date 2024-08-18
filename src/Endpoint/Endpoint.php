@@ -1,11 +1,13 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Endpoint;
+namespace Baghunts\LaravelFastEndpoints\Endpoint;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointContract;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+use Illuminate\Routing\Controller;
 
-abstract class Endpoint implements EndpointContract
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
+
+abstract class Endpoint extends Controller implements EndpointContract
 {
     public function __construct(
         protected EndpointConfigContract $config

@@ -1,10 +1,10 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Attributes;
+namespace Baghunts\LaravelFastEndpoints\Attributes;
 
 use Attribute;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\EndpointConfigMiddlewareContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\MiddlewareContract;
 
 #[Attribute(Attribute::TARGET_CLASS | Attribute::IS_REPEATABLE)]
 class Middleware extends EndpointAttribute
@@ -15,7 +15,7 @@ class Middleware extends EndpointAttribute
     {
     }
 
-    public function apply(EndpointConfigMiddlewareContract $endpointConfig): self
+    public function apply(MiddlewareContract $endpointConfig): self
     {
         $endpointConfig->addMiddleware($this->middleware);
         return $this;

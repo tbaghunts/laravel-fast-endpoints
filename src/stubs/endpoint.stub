@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ NAMESPACE }};
+
+{{ IMPORTS }}
+
+{{ ATTRIBUTES }}
+class {{ CLASS }} extends {{ BASE }}
+{
+    /**
+     * {{ METHOD_COMMENT }}
+     *
+     * {{ REQUEST_PARAM }}
+     * @return {{ RETURN }}
+     */
+    public function __invoke({{ REQUEST }}): {{ RETURN }}
+    {
+        {{ RESPONSE }}
+    }
+}
