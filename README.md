@@ -52,4 +52,3 @@ Route::get('/hello-world', HelloWorldEndpoint::class)
 That's it! You've just created and accessed an API endpoint using LFE with minimal setup. For more details and advanced usage, explore the rest of the [documentation](https://tbaghunts.github.io/laravel-fast-endpoints/).
 
 This quick example will give users a hands-on feel for how LFE simplifies the process of creating API endpoints, making the benefits immediately clear.
-
