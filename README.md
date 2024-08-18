@@ -30,13 +30,13 @@ use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
 class HelloWorldEndpoint extends Endpoint  
 {  
     /**  
-     * Handle the incoming request for the endpoint with path "/hello-world
-	 *
-	 * @return string  
+     * Handle the incoming request for the endpoint with path '/hello-world'
+     * 
+     * @return string  
      */
 	public function __invoke(): string  
     {  
-        return "Hello World!";  
+        return 'Hello World!';  
     }  
 }
 ```
