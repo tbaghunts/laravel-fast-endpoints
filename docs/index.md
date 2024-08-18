@@ -1,7 +1,11 @@
----
-layout: default
-title: Get Started
----
+# Get Started
+
+[Get Started](index.md)\
+[Installation](installation.md)\
+[Configuration](configuration.md)\
+[Endpoints](endpoints.md)\
+[Attributes](attributes.md)\
+[Commands](commands.md)
 
 **LFE (Laravel Fast Endpoints)** is a developer-friendly and efficient alternative to traditional MVC for providing API services to clients. It introduces a new, fast approach using PHP Attributes and a File-Driven architecture. With LFE, there's no need to manually define routes—they are automatically registered, streamlining the development process.
 
@@ -48,4 +52,4 @@ Route::get('/hello-world', HelloWorldEndpoint::class)
 
 That's it! You've just created and accessed an API endpoint using LFE with minimal setup. 
 
-To begin, you need to install the package. Follow the instructions on the [Installation](installation.md) page.
+[Next - installation](installation.md)

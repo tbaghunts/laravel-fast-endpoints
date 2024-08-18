@@ -1,7 +1,12 @@
----
-layout: default
-title: Configuration
----
+# Configuration
+
+[Get Started](index.md)\
+[Installation](installation.md)\
+[Configuration](configuration.md)\
+[Endpoints](endpoints.md)\
+[Attributes](attributes.md)\
+[Commands](commands.md)
+
 The **Laravel Fast Endpoints (LFE)** package allows for a variety of configurations to suit your project's needs. You can configure the package by modifying the `fast-endpoints.php` configuration file. Below is a detailed explanation of each configuration option along with code examples.
 
 #### Filesystem Destination  `dist`
@@ -146,3 +151,5 @@ To customize the response handling, extend the default `Response` class:
 ```php
 'response' => App\Http\Responses\CustomResponse::class,
 ```
+
+[Prev - Installation](installation.md) | [Next - Endpoints](endpoints.md)

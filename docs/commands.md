@@ -1,11 +1,9 @@
----
-layout: default
-title: Commands
----
+# Commands
 
 [Get Started](index.md)\
 [Installation](installation.md)\
 [Configuration](configuration.md)\
 [Endpoints](endpoints.md)\
 [Attributes](attributes.md)\
-[Command](commands.md)
+[Commands](commands.md)
+

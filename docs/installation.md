@@ -1,7 +1,11 @@
----
-layout: default
-title: Installation
----
+# Installation
+
+[Get Started](index.md)\
+[Installation](installation.md)\
+[Configuration](configuration.md)\
+[Endpoints](endpoints.md)\
+[Attributes](attributes.md)\
+[Commands](commands.md)
 
 ### Requirements
 
@@ -35,3 +39,5 @@ Publishing vendor resources allows you to customize the package's behavior to be
 
 2. **Stubs**
    Stubs are template files that the package uses when generating new endpoint classes or other related files. By publishing and modifying these stubs, you can tailor the generated code to follow your project’s conventions and standards.
+
+[Prev - installation](index.md) | [Next - installation](configuration.md)
