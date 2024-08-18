@@ -34,7 +34,7 @@ class HelloWorldEndpoint extends Endpoint
      * 
      * @return string  
      */
-	public function __invoke(): string  
+    public function __invoke(): string  
     {  
         return 'Hello World!';  
     }  
