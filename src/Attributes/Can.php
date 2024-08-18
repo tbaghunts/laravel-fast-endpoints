@@ -6,7 +6,7 @@ use Attribute;
 
 use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\CanContract;
 
-#[Attribute(Attribute::TARGET_CLASS | Attribute::TARGET_PROPERTY)]
+#[Attribute(Attribute::TARGET_CLASS | Attribute::IS_REPEATABLE)]
 class Can extends EndpointAttribute
 {
     public function __construct(
