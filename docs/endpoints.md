@@ -11,8 +11,8 @@ and understand the functionality of each endpoint
 without having to scroll through large controller files to locate and comprehend specific endpoint methods.
 
 ## Endpoint Classes
-An endpoint in LFE is essentially a Laravel Single Action Controller.
-This means that the request handling logic is contained within the __invoke method of the class.
+An endpoint in LFE is essentially a **Laravel Single Action Controller**.
+This means that the request handling logic is contained within the `__invoke` method of the class.
 This single-responsibility design pattern makes each endpoint more focused and easier to maintain.
 
 ### Example of an Endpoint Class
