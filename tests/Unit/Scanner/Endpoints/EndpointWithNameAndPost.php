@@ -2,9 +2,9 @@
 
 namespace Tests\Unit\Scanner\Endpoints;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Name;
-use Baghunts\LaravelFastEndpoint\Attributes\Post;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Attributes\Name;
+use Baghunts\LaravelFastEndpoints\Attributes\Post;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
 
 #[Post('/with/name/post')]
 #[Name('with.name.and.post')]

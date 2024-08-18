@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Generator\Pipes;
 
-use Baghunts\LaravelFastEndpoint\Generator\Pipes\ThrottlePipe;
+use Baghunts\LaravelFastEndpoints\Generator\Pipes\ThrottlePipe;
 use Tests\Unit\Generator\Pipes\Abstract\PipeTestCase;
 
 class ThrottlePipeTest extends PipeTestCase

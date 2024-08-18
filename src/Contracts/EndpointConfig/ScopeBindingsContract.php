@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig;
+namespace Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig;
 
 interface ScopeBindingsContract
 {

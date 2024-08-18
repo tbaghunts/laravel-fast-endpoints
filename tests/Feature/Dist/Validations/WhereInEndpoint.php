@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Dist\Validations;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Post;
-use Baghunts\LaravelFastEndpoint\Attributes\WhereIn;
+use Baghunts\LaravelFastEndpoints\Attributes\Post;
+use Baghunts\LaravelFastEndpoints\Attributes\WhereIn;
 
 #[WhereIn('required', ["id", "uuid"])]
 #[WhereIn('sometimes', ["created_at", "updated_at"])]

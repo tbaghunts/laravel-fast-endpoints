@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\WithoutThrottle;
+use Baghunts\LaravelFastEndpoints\Attributes\WithoutThrottle;
 
 use Tests\Unit\Attributes\Abstract\TestCase;
 

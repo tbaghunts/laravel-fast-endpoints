@@ -4,9 +4,9 @@ namespace Tests\Feature\Dist\Permissions;
 
 use Illuminate\Http\Request;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Post;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
-use Baghunts\LaravelFastEndpoint\Attributes\Throttle;
+use Baghunts\LaravelFastEndpoints\Attributes\Post;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Attributes\Throttle;
 
 #[Throttle(
     requests: 2,

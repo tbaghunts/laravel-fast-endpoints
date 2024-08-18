@@ -1,18 +1,18 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\ClassGenerator;
+namespace Baghunts\LaravelFastEndpoints\Generator\ClassGenerator;
 
 use Arr;
 use Str;
 
 use Illuminate\Support\Facades\Pipeline;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Any;
-use Baghunts\LaravelFastEndpoint\Generator\ClassGenerator;
-use Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\{
+use Baghunts\LaravelFastEndpoints\Attributes\Any;
+use Baghunts\LaravelFastEndpoints\Generator\ClassGenerator;
+use Baghunts\LaravelFastEndpoints\Contracts\ClassGenerator\{
     EndpointClassGeneratorContract
 };
-use Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\{
+use Baghunts\LaravelFastEndpoints\Generator\ClassGenerator\Pipes\{
     CanPipe,
     NamePipe,
     GuestPipe,
@@ -31,7 +31,7 @@ use Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes\{
     WithoutMiddlewarePipe,
 };
 
-use Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Traits\WithRequestGenerator;
+use Baghunts\LaravelFastEndpoints\Generator\ClassGenerator\Traits\WithRequestGenerator;
 
 class EndpointClassGenerator extends ClassGenerator implements EndpointClassGeneratorContract
 {

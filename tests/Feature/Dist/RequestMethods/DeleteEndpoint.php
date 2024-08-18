@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Dist\RequestMethods;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Delete;
+use Baghunts\LaravelFastEndpoints\Attributes\Delete;
 
 #[Delete("/delete")]
 class DeleteEndpoint extends Method {}

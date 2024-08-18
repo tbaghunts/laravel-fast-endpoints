@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Dist\Validations;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Put;
-use Baghunts\LaravelFastEndpoint\Attributes\WhereUuid;
+use Baghunts\LaravelFastEndpoints\Attributes\Put;
+use Baghunts\LaravelFastEndpoints\Attributes\WhereUuid;
 
 #[WhereUuid("required")]
 #[WhereUuid("sometimes")]

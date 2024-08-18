@@ -2,9 +2,9 @@
 
 namespace Tests\Unit\Generator\Pipes\Abstract;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
-use Baghunts\LaravelFastEndpoint\Contracts\RouteGeneratorContract;
-use Baghunts\LaravelFastEndpoint\Generator\Pipes\RoutePipe;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Contracts\RouteGeneratorContract;
+use Baghunts\LaravelFastEndpoints\Generator\Pipes\RoutePipe;
 use Closure;
 use Illuminate\Routing\Route;
 use Orchestra\Testbench\TestCase;

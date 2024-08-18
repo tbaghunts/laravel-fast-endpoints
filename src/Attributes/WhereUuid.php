@@ -1,10 +1,10 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Attributes;
+namespace Baghunts\LaravelFastEndpoints\Attributes;
 
 use Attribute;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WhereUuidContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\WhereUuidContract;
 
 #[Attribute(Attribute::TARGET_CLASS | Attribute::IS_REPEATABLE)]
 class WhereUuid extends EndpointAttribute

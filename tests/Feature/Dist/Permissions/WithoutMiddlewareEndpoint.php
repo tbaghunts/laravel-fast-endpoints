@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Dist\Permissions;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Post;
-use Baghunts\LaravelFastEndpoint\Attributes\WithoutMiddleware;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Attributes\Post;
+use Baghunts\LaravelFastEndpoints\Attributes\WithoutMiddleware;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
 use Tests\Feature\Assets\Middlewares\SecureMiddleware;
 use Illuminate\Http\Request;
 

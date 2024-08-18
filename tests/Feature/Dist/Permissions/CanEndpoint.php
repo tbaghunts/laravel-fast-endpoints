@@ -4,9 +4,9 @@ namespace Tests\Feature\Dist\Permissions;
 
 use Illuminate\Http\Request;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Can;
-use Baghunts\LaravelFastEndpoint\Attributes\Put;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Attributes\Can;
+use Baghunts\LaravelFastEndpoints\Attributes\Put;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
 
 #[Can('update-permission')]
 #[Put('/permissions/can/{required}/{sometimes?}')]

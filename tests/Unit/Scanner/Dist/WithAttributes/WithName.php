@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Scanner\Dist\WithAttributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Name;
+use Baghunts\LaravelFastEndpoints\Attributes\Name;
 
 #[Name('with.name')]
 class WithName

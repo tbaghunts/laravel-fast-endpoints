@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
 
-use Baghunts\LaravelFastEndpoint\ServiceProvider;
+use Baghunts\LaravelFastEndpoints\ServiceProvider;
 use Tests\Feature\Assets\Models\User;
 
 abstract class TestCase extends TestbenchTestCase

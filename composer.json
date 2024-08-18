@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Baghunts\\LaravelFastEndpoint\\": "src/"
+            "Baghunts\\LaravelFastEndpoints\\": "src/"
         }
     },
     "authors": [
@@ -24,10 +24,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Baghunts\\LaravelFastEndpoint\\ServiceProvider"
+                "Baghunts\\LaravelFastEndpoints\\ServiceProvider"
             ],
             "aliasses": {
-                "LaravelFastEndpoint": "Baghunts\\LaravelFastEndpoint\\ServiceProvider"
+                "LaravelFastEndpoint": "Baghunts\\LaravelFastEndpoints\\ServiceProvider"
             }
         }
     },

@@ -1,10 +1,10 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\ClassGenerator;
+namespace Baghunts\LaravelFastEndpoints\Generator\ClassGenerator;
 
-use Baghunts\LaravelFastEndpoint\Generator\ClassGenerator;
-use Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Traits\WithRequestGenerator;
-use Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointWithRequestGeneratorContract;
+use Baghunts\LaravelFastEndpoints\Generator\ClassGenerator;
+use Baghunts\LaravelFastEndpoints\Generator\ClassGenerator\Traits\WithRequestGenerator;
+use Baghunts\LaravelFastEndpoints\Contracts\ClassGenerator\EndpointWithRequestGeneratorContract;
 
 class EndpointRequestClassGeneratorContract extends ClassGenerator implements EndpointWithRequestGeneratorContract
 {

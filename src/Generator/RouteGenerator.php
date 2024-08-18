@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator;
+namespace Baghunts\LaravelFastEndpoints\Generator;
 
 use Illuminate\Routing\{
     Route,
@@ -9,12 +9,12 @@ use Illuminate\Routing\{
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Pipeline;
 
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
-use Baghunts\LaravelFastEndpoint\Contracts\{
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Contracts\{
     EndpointConfigContract,
     RouteGeneratorContract,
 };
-use Baghunts\LaravelFastEndpoint\Generator\Pipes\{
+use Baghunts\LaravelFastEndpoints\Generator\Pipes\{
     CanPipe,
     WherePipe,
     GroupPipe,

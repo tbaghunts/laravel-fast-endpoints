@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Generator\Pipes;
 
-use Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereAlphaPipe;
+use Baghunts\LaravelFastEndpoints\Generator\Pipes\WhereAlphaPipe;
 use Tests\Unit\Generator\Pipes\Abstract\PipeWhereTestCase;
 
 class WhereAlphaPipeTest extends PipeWhereTestCase

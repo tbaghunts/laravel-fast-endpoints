@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Generator\Pipes;
 
-use Baghunts\LaravelFastEndpoint\Generator\Pipes\CanPipe;
+use Baghunts\LaravelFastEndpoints\Generator\Pipes\CanPipe;
 use Tests\Unit\Generator\Pipes\Abstract\PipeTestCase;
 
 class CanPipeTest extends PipeTestCase

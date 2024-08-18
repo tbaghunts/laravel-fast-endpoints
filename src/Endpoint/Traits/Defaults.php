@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Endpoint\Traits;
+namespace Baghunts\LaravelFastEndpoints\Endpoint\Traits;
 
 trait Defaults
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Attributes;
+namespace Baghunts\LaravelFastEndpoints\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\MethodContract;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\MethodContract;
 
 abstract class Method extends EndpointAttribute
 {

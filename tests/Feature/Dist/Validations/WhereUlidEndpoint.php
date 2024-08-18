@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Dist\Validations;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Delete;
-use Baghunts\LaravelFastEndpoint\Attributes\WhereUlid;
+use Baghunts\LaravelFastEndpoints\Attributes\Delete;
+use Baghunts\LaravelFastEndpoints\Attributes\WhereUlid;
 
 #[WhereUlid(['required', 'sometimes'])]
 #[Delete('/validation/where-ulid/{required}/{sometimes?}')]

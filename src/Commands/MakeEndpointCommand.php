@@ -1,16 +1,16 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Commands;
+namespace Baghunts\LaravelFastEndpoints\Commands;
 
-use Baghunts\LaravelFastEndpoint\Contracts\ClassGeneratorContract;
+use Baghunts\LaravelFastEndpoints\Contracts\ClassGeneratorContract;
 use Str;
 use Storage;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Stringable;
 
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
-use Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\{
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Generator\ClassGenerator\{
     EndpointClassGenerator,
     EndpointResponseClassGenerator,
     EndpointRequestClassGeneratorContract,
@@ -267,7 +267,7 @@ class MakeEndpointCommand extends Command
             return 'Endpoint';
         }
 
-        return $selectedMethod[0];
+        return $selectedMethod[0] ?? 'Any';
     }
 
     private function getRequestNamespace(): ?string

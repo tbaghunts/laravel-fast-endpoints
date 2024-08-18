@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\RequestMethods;
 
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
 
 class OptionsTest extends MethodTestCase
 {

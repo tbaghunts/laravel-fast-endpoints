@@ -1,12 +1,12 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator;
+namespace Baghunts\LaravelFastEndpoints\Generator;
 
 use Str;
 
 use Illuminate\Support\Facades\File;
 
-use Baghunts\LaravelFastEndpoint\Contracts\ClassGeneratorContract;
+use Baghunts\LaravelFastEndpoints\Contracts\ClassGeneratorContract;
 
 abstract class ClassGenerator implements ClassGeneratorContract
 {

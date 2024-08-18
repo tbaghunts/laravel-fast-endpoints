@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Dist\Validations;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Post;
-use Baghunts\LaravelFastEndpoint\Attributes\WhereAlpha;
-use Baghunts\LaravelFastEndpoint\Attributes\WhereAlphaNumeric;
+use Baghunts\LaravelFastEndpoints\Attributes\Post;
+use Baghunts\LaravelFastEndpoints\Attributes\WhereAlpha;
+use Baghunts\LaravelFastEndpoints\Attributes\WhereAlphaNumeric;
 
 #[WhereAlpha('required')]
 #[WhereAlphaNumeric('sometimes')]

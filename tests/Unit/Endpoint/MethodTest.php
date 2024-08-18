@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Endpoint;
 
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
 
 use Tests\Unit\Endpoint\Abstract\EndpointConfigTestCase;
 

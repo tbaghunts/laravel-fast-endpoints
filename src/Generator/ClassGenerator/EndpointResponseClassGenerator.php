@@ -1,11 +1,11 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\ClassGenerator;
+namespace Baghunts\LaravelFastEndpoints\Generator\ClassGenerator;
 
 use Illuminate\Http\Request;
 
-use Baghunts\LaravelFastEndpoint\Generator\ClassGenerator;
-use Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Traits\WithRequestGenerator;
+use Baghunts\LaravelFastEndpoints\Generator\ClassGenerator;
+use Baghunts\LaravelFastEndpoints\Generator\ClassGenerator\Traits\WithRequestGenerator;
 
 class EndpointResponseClassGenerator extends ClassGenerator
 {

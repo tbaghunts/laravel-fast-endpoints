@@ -1,9 +1,9 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Endpoint;
+namespace Baghunts\LaravelFastEndpoints\Endpoint;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
-use Baghunts\LaravelFastEndpoint\Endpoint\Traits\{
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Endpoint\Traits\{
     Can,
     Where,
     Group,

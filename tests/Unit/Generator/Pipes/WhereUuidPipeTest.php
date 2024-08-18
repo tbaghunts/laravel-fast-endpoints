@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Generator\Pipes;
 
-use Baghunts\LaravelFastEndpoint\Generator\Pipes\WhereUuidPipe;
+use Baghunts\LaravelFastEndpoints\Generator\Pipes\WhereUuidPipe;
 use Tests\Unit\Generator\Pipes\Abstract\PipeWhereTestCase;
 
 class WhereUuidPipeTest extends PipeWhereTestCase

@@ -12,8 +12,8 @@ use Orchestra\Testbench\TestCase;
 use PHPUnit\Framework\MockObject\Exception;
 use PHPUnit\Framework\MockObject\MockObject;
 
-use Baghunts\LaravelFastEndpoint\Generator\RouterGenerator;
-use Baghunts\LaravelFastEndpoint\Contracts\{
+use Baghunts\LaravelFastEndpoints\Generator\RouterGenerator;
+use Baghunts\LaravelFastEndpoints\Contracts\{
     ScannerContract,
     RouteGeneratorContract,
     RouterGeneratorContract

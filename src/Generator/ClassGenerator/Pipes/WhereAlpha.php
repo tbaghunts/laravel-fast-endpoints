@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes;
+namespace Baghunts\LaravelFastEndpoints\Generator\ClassGenerator\Pipes;
 
 class WhereAlpha extends WhereFamilyPipe
 {

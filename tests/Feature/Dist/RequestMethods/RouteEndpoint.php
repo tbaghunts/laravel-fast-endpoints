@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Dist\RequestMethods;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Route;
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Attributes\Route;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
 
 #[Route("/route", EnumEndpointMethod::POST)]
 class RouteEndpoint extends Method {}

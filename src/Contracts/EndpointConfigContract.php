@@ -1,8 +1,8 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Contracts;
+namespace Baghunts\LaravelFastEndpoints\Contracts;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\{
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\{
     CanContract,
     WhereContract,
     GroupContract,

@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Validations;
 
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
 
 class WhereTest extends ValidationTestCase
 {

@@ -4,7 +4,7 @@ namespace Tests\Feature\RequestMethods;
 
 use Illuminate\Support\Str;
 
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
 
 use Tests\Feature\TestCase;
 

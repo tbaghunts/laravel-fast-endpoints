@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\WhereUuid;
+use Baghunts\LaravelFastEndpoints\Attributes\WhereUuid;
 
 use Tests\Unit\Attributes\Abstract\SingleParametricWhereTestCase;
 

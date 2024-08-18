@@ -4,7 +4,7 @@ namespace Tests\Feature\Validations;
 
 use Illuminate\Testing\TestResponse;
 
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
 
 use Tests\Feature\TestCase;
 

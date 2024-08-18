@@ -4,9 +4,9 @@ namespace Tests\Feature\Dist\Basic;
 
 use Illuminate\Http\Request;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Get;
-use Baghunts\LaravelFastEndpoint\Attributes\Name;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Attributes\Get;
+use Baghunts\LaravelFastEndpoints\Attributes\Name;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
 
 #[Name('echo')]
 #[Get("/basic/echo")]

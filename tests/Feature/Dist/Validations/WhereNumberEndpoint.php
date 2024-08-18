@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Dist\Validations;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Post;
-use Baghunts\LaravelFastEndpoint\Attributes\WhereNumber;
+use Baghunts\LaravelFastEndpoints\Attributes\Post;
+use Baghunts\LaravelFastEndpoints\Attributes\WhereNumber;
 
 #[WhereNumber(['required', 'sometimes'])]
 #[Post('/validation/where-number/{required}/{sometimes?}')]

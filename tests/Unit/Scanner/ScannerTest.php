@@ -9,10 +9,10 @@ use Orchestra\Testbench\TestCase;
 
 use PHPUnit\Framework\MockObject\MockBuilder;
 
-use Baghunts\LaravelFastEndpoint\Scanner\Scanner;
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
-use Baghunts\LaravelFastEndpoint\Endpoint\{Endpoint, EndpointConfig};
+use Baghunts\LaravelFastEndpoints\Scanner\Scanner;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Endpoint\{Endpoint, EndpointConfig};
 
 use Tests\Unit\Scanner\Dist\WithAttributes\{WithName, WithNameAndPost};
 

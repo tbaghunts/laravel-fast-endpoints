@@ -2,10 +2,10 @@
 
 namespace Tests\Feature\Dist\Permissions;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Get;
-use Baghunts\LaravelFastEndpoint\Attributes\Middleware;
-use Baghunts\LaravelFastEndpoint\Attributes\Name;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Attributes\Get;
+use Baghunts\LaravelFastEndpoints\Attributes\Middleware;
+use Baghunts\LaravelFastEndpoints\Attributes\Name;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
 use Tests\Feature\Assets\Middlewares\SecureMiddleware;
 use Illuminate\Http\Request;
 

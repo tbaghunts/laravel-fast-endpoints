@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Scanner;
+namespace Baghunts\LaravelFastEndpoints\Scanner;
 
 use ReflectionClass;
 use ReflectionAttribute;
@@ -10,9 +10,9 @@ use RecursiveDirectoryIterator;
 
 use Illuminate\Support\Facades\File;
 
-use Baghunts\LaravelFastEndpoint\Contracts\ScannerContract;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointAttributeContract;
+use Baghunts\LaravelFastEndpoints\Contracts\ScannerContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointAttributeContract;
 
 class Scanner implements ScannerContract
 {

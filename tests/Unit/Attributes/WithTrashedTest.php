@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\WithTrashed;
+use Baghunts\LaravelFastEndpoints\Attributes\WithTrashed;
 
 use Tests\Unit\Attributes\Abstract\BoolTestCase;
 

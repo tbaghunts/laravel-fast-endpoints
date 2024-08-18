@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator;
+namespace Baghunts\LaravelFastEndpoints\Contracts\ClassGenerator;
 
 interface EndpointWithRequestGeneratorContract
 {

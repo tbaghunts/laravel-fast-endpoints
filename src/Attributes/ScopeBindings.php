@@ -1,10 +1,10 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Attributes;
+namespace Baghunts\LaravelFastEndpoints\Attributes;
 
 use Attribute;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\ScopeBindingsContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\ScopeBindingsContract;
 
 #[Attribute(Attribute::TARGET_CLASS)]
 class ScopeBindings extends EndpointAttribute

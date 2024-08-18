@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Generator\Pipes;
 
-use Baghunts\LaravelFastEndpoint\Generator\Pipes\GroupPipe;
+use Baghunts\LaravelFastEndpoints\Generator\Pipes\GroupPipe;
 use Illuminate\Support\Facades\Config;
 use Tests\Unit\Generator\Pipes\Abstract\PipeTestCase;
 

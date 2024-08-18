@@ -4,9 +4,9 @@ namespace Tests\Feature\Dist\Permissions;
 
 use Illuminate\Http\Request;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Post;
-use Baghunts\LaravelFastEndpoint\Attributes\Guest;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Attributes\Post;
+use Baghunts\LaravelFastEndpoints\Attributes\Guest;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
 
 #[Guest]
 #[Post('/permissions/guest')]

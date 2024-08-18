@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Dist\RequestMethods;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Patch;
+use Baghunts\LaravelFastEndpoints\Attributes\Patch;
 
 #[Patch('/patch')]
 class

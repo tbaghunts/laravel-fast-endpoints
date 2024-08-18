@@ -1,12 +1,12 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes;
+namespace Baghunts\LaravelFastEndpoints\Generator\ClassGenerator\Pipes;
 
 use Closure;
 
 use Illuminate\Support\Str;
 
-use Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract;
+use Baghunts\LaravelFastEndpoints\Contracts\ClassGenerator\EndpointClassGeneratorContract;
 
 class DefaultsPipe extends MakeEndpointPipe
 {

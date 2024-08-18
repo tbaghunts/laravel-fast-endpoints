@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Generator\Pipes;
 
-use Baghunts\LaravelFastEndpoint\Generator\Pipes\DefaultsPipe;
+use Baghunts\LaravelFastEndpoints\Generator\Pipes\DefaultsPipe;
 use Tests\Unit\Generator\Pipes\Abstract\PipeTestCase;
 
 class DefaultsPipeTest extends PipeTestCase

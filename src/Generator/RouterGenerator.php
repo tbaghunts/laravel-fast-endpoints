@@ -1,10 +1,10 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator;
+namespace Baghunts\LaravelFastEndpoints\Generator;
 
 use Illuminate\Routing\Router;
 
-use Baghunts\LaravelFastEndpoint\Contracts\{
+use Baghunts\LaravelFastEndpoints\Contracts\{
     ScannerContract,
     RouteGeneratorContract,
     RouterGeneratorContract

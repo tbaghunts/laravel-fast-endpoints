@@ -1,10 +1,10 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Endpoint\Traits;
+namespace Baghunts\LaravelFastEndpoints\Endpoint\Traits;
 
 use Illuminate\Support\Arr;
 
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
 
 trait Method
 {

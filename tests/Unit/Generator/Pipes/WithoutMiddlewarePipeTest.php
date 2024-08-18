@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Generator\Pipes;
 
-use Baghunts\LaravelFastEndpoint\Generator\Pipes\WithoutMiddlewarePipe;
+use Baghunts\LaravelFastEndpoints\Generator\Pipes\WithoutMiddlewarePipe;
 use Tests\Unit\Generator\Pipes\Abstract\PipeTestCase;
 
 class WithoutMiddlewarePipeTest extends PipeTestCase

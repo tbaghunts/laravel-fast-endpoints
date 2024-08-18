@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Enums;
+namespace Baghunts\LaravelFastEndpoints\Enums;
 
 enum EnumEndpointMethod: string
 {

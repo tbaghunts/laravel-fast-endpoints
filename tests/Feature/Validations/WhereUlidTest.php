@@ -4,7 +4,7 @@ namespace Tests\Feature\Validations;
 
 use Illuminate\Support\Str;
 
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
 
 class WhereUlidTest extends ValidationTestCase
 {

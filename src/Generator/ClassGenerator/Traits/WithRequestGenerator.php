@@ -1,6 +1,6 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Traits;
+namespace Baghunts\LaravelFastEndpoints\Generator\ClassGenerator\Traits;
 
 use Str;
 

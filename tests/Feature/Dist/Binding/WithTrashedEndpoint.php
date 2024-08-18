@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Dist\Binding;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Get;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
-use Baghunts\LaravelFastEndpoint\Attributes\WithTrashed;
+use Baghunts\LaravelFastEndpoints\Attributes\Get;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Attributes\WithTrashed;
 
 use Tests\Feature\Assets\Models\User;
 

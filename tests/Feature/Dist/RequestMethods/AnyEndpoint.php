@@ -4,8 +4,8 @@ namespace Tests\Feature\Dist\RequestMethods;
 
 use Illuminate\Http\Request;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Any;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Attributes\Any;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
 
 #[Any('/any')]
 class AnyEndpoint extends Endpoint

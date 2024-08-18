@@ -1,25 +1,25 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint;
+namespace Baghunts\LaravelFastEndpoints;
 
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
-use Baghunts\LaravelFastEndpoint\Scanner\Scanner;
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
-use Baghunts\LaravelFastEndpoint\Contracts\{
+use Baghunts\LaravelFastEndpoints\Scanner\Scanner;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Endpoint\EndpointConfig;
+use Baghunts\LaravelFastEndpoints\Contracts\{
     ScannerContract,
     EndpointConfigContract,
     RouteGeneratorContract,
-    RouterGeneratorContract,
     ClassGeneratorContract,
+    RouterGeneratorContract,
 };
-use Baghunts\LaravelFastEndpoint\Commands\{MakeEndpointCommand};
-use Baghunts\LaravelFastEndpoint\Generator\{
+use Baghunts\LaravelFastEndpoints\Commands\MakeEndpointCommand;
+use Baghunts\LaravelFastEndpoints\Generator\{
     RouteGenerator,
-    RouterGenerator,
     ClassGenerator,
+    RouterGenerator,
 };
 
 class ServiceProvider extends IlluminateServiceProvider

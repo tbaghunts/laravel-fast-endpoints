@@ -4,7 +4,7 @@ namespace Tests\Feature\Dist\Validations;
 
 use Illuminate\Http\Request;
 
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
 
 class Validation extends Endpoint
 {

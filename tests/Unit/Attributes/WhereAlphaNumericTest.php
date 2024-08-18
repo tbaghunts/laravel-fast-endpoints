@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\WhereAlphaNumeric;
+use Baghunts\LaravelFastEndpoints\Attributes\WhereAlphaNumeric;
 
 use Tests\Unit\Attributes\Abstract\SingleParametricWhereTestCase;
 

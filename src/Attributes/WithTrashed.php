@@ -1,10 +1,10 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Attributes;
+namespace Baghunts\LaravelFastEndpoints\Attributes;
 
 use Attribute;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\WithTrashedContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\WithTrashedContract;
 
 #[Attribute(Attribute::TARGET_CLASS)]
 class WithTrashed extends EndpointAttribute

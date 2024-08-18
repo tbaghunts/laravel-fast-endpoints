@@ -1,8 +1,8 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Generator\ClassGenerator\Pipes;
+namespace Baghunts\LaravelFastEndpoints\Generator\ClassGenerator\Pipes;
 
-use Baghunts\LaravelFastEndpoint\Contracts\ClassGenerator\EndpointClassGeneratorContract;
+use Baghunts\LaravelFastEndpoints\Contracts\ClassGenerator\EndpointClassGeneratorContract;
 use Closure;
 
 class ScopeBindingsPipe extends MakeEndpointPipe

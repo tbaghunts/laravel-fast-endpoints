@@ -4,7 +4,7 @@ namespace Tests\Feature\Dist\RequestMethods;
 
 use Illuminate\Http\Request;
 
-use Baghunts\LaravelFastEndpoint\Endpoint\Endpoint;
+use Baghunts\LaravelFastEndpoints\Endpoint\Endpoint;
 
 class Method extends Endpoint
 {

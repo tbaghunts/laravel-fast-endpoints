@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Dist\Validations;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Get;
-use Baghunts\LaravelFastEndpoint\Attributes\Where;
+use Baghunts\LaravelFastEndpoints\Attributes\Get;
+use Baghunts\LaravelFastEndpoints\Attributes\Where;
 
 #[Where('required', '[0-9]+')]
 #[Where(['sometimes' => '[A-Za-z-]+'])]

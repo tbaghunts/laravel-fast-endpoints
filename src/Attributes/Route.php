@@ -1,12 +1,12 @@
 <?php
 
-namespace Baghunts\LaravelFastEndpoint\Attributes;
+namespace Baghunts\LaravelFastEndpoints\Attributes;
 
 use Attribute;
 
 use Illuminate\Support\Arr;
 
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfig\MethodContract;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfig\MethodContract;
 
 #[Attribute(Attribute::TARGET_CLASS)]
 final class Route extends EndpointAttribute

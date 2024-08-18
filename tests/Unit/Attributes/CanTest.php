@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Attributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Can;
+use Baghunts\LaravelFastEndpoints\Attributes\Can;
 
 use Tests\Unit\Attributes\Abstract\TestCase;
 

@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Scanner\Dist\WithAttributes;
 
-use Baghunts\LaravelFastEndpoint\Attributes\Name;
-use Baghunts\LaravelFastEndpoint\Attributes\Post;
+use Baghunts\LaravelFastEndpoints\Attributes\Name;
+use Baghunts\LaravelFastEndpoints\Attributes\Post;
 
 #[Name('with.name')]
 #[Post('/with/name')]

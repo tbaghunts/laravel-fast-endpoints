@@ -14,9 +14,9 @@ use Illuminate\Routing\Route;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Config;
 
-use Baghunts\LaravelFastEndpoint\Enums\EnumEndpointMethod;
-use Baghunts\LaravelFastEndpoint\Generator\RouteGenerator;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Enums\EnumEndpointMethod;
+use Baghunts\LaravelFastEndpoints\Generator\RouteGenerator;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
 
 class RouteGeneratorTest extends TestCase
 {

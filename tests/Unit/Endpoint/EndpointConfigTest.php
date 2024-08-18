@@ -4,8 +4,8 @@ namespace Tests\Unit\Endpoint;
 
 use Orchestra\Testbench\TestCase;
 
-use Baghunts\LaravelFastEndpoint\Endpoint\EndpointConfig;
-use Baghunts\LaravelFastEndpoint\Contracts\EndpointConfigContract;
+use Baghunts\LaravelFastEndpoints\Endpoint\EndpointConfig;
+use Baghunts\LaravelFastEndpoints\Contracts\EndpointConfigContract;
 
 class EndpointConfigTest extends TestCase
 {
