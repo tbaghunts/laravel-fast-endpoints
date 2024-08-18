@@ -17,11 +17,12 @@ php artisan make:fast-endpoint /users/{id} --get --with-request --with-response
 ```
 
 ### Description
-The make:fast-endpoint command generates a Fast Endpoint class with optional request and response handlers.
+The `make:fast-endpoint` command generates a Fast Endpoint class with optional request and response handlers.
 It allows customization of the endpoint through various options,
 including HTTP methods, authorization, middleware, and validation rules.
 
 ### Options and Arguments
+
 | Option/Argument         | Description                                                                                                         |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------|
 | `path`                  | The URI path for the endpoint. This is a required argument.                                                          |
