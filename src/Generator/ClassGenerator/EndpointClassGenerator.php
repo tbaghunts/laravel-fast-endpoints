@@ -196,7 +196,7 @@ class EndpointClassGenerator extends ClassGenerator implements EndpointClassGene
 
         $value = '.';
         if ($routePath) {
-            $value = sprintf(' with path "%s".', $this->getRoutePath());
+            $value = sprintf(' with path \'%s\'.', $this->getRoutePath());
         }
 
         return sprintf(
