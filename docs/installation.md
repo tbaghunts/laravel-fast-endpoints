@@ -1,7 +1,6 @@
----
-layout: default
-title: Installation
----
+# Installation
+
+[Get Started](index.md) | [Installation](installation.md) | [Configuration](configuration.md) | [Endpoints](endpoints.md) | [Attributes](attributes.md) | [Commands](commands.md)
 
 ### Requirements
 
@@ -32,6 +31,16 @@ Publishing vendor resources allows you to customize the package's behavior to be
 
 1. **Configuration File (`config/fast-endpoints.php`)**
    This file contains various settings that control how the LFE package operates, such as the directory for endpoint classes, route prefixes, middleware, and more. Publishing this file allows you to adjust these settings to fit your specific requirements.
+   
+   ```shell
+   php artisan vendor:publish --provider="Baghunts\LaravelFastEndpoints\ServiceProvider" --tag=config
+   ```
 
 2. **Stubs**
    Stubs are template files that the package uses when generating new endpoint classes or other related files. By publishing and modifying these stubs, you can tailor the generated code to follow your project’s conventions and standards.
+
+   ```shell
+   php artisan vendor:publish --provider="Baghunts\LaravelFastEndpoints\ServiceProvider" --tag=stubs
+   ```
+
+[Prev - Get started](index.md) | [Next - Configuration](configuration.md)
