@@ -1,1 +1,4 @@
-## Attributes
+---
+layout: default
+title: Attributes
+---
