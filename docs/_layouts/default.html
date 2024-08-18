@@ -4,7 +4,47 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ page.title }}</title>
-        <link rel="stylesheet" href="{{ '/docs/assets/css/default-layout.css' | relative_url }}">
+
+        <style>
+            @import "{{ site.theme }}";
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .main {
+                gap: 20px;
+                display: grid;
+            }
+
+            .aside {
+
+            }
+
+            .content {
+
+            }
+
+            .menu {
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin: 0;
+                padding: 0;
+
+                list-style: none;
+            }
+
+            @media screen and (min-width: 768px) {
+                .main {
+                    gap: 40px;
+                    grid-template-columns: 250px 1fr;
+                }
+            }
+        </style>
     </head>
     <body>
         <main class="main">
