@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="{{ '/docs/assets/css/default-layout.css' | relative_url }}">
+    </head>
+    <body>
+        <main class="main">
+            <aside class="aside">
+                <h2>{{ site.title }}</h2>
+                <ul class="menu">
+                    <li><a href="{{ '/docs/' | relative_url }}">Get Started</a></li>
+                    <li><a href="{{ '/docs/installation.html' | relative_url }}">Installation</a></li>
+                    <li><a href="{{ '/docs/configuration.html' | relative_url }}">Configuration</a></li>
+                    <li><a href="{{ '/docs/endpoints.html' | relative_url }}">Endpoints</a></li>
+                    <li><a href="{{ '/docs/attributes.html' | relative_url }}">Attributes</a></li>
+                    <li><a href="{{ '/docs/commands.html' | relative_url }}">Commands</a></li>
+                </ul>
+            </aside>
+            <section class="content">
+                {{ content }}
+            </section>
+        </main>
+    </body>
+</html>

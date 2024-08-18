@@ -31,8 +31,8 @@ class HelloWorldEndpoint extends Endpoint
 {  
     /**  
      * Handle the incoming request for the endpoint with path "/hello-world
-	 *
-	 * @return string  
+     * 
+     * @return string  
      */
 	public function __invoke(): string  
     {  
