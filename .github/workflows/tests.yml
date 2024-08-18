@@ -49,10 +49,11 @@ jobs:
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
+          verbose: true
           flags: unittests
           name: codecov-umbrella
           fail_ci_if_error: true
-          files: coverage/index.xml
+          files: xml-coverage/index.xml
           token: ${{ secrets.CODECOV_TOKEN }}
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
